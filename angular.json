@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "brorfelde"
+  "defaultProject": "brorfelde",
+  "cli": {
+    "analytics": false
+  }
 }
