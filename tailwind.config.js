@@ -10,9 +10,13 @@ module.exports = (isProd) => ({
     darkMode: false, // or 'media' or 'class'
     theme: {
       extend: {},
+      backgroundColor: theme => ({
+        'base': '#c33a5e',
+       }),
     },
     variants: {
       extend: {},
     },
     plugins: [],
 });
+
