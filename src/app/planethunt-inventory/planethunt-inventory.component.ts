@@ -7,70 +7,98 @@ import { Component, OnInit } from '@angular/core';
 
 export class PlanethuntInventoryComponent implements OnInit {
 
+  // The array below is inserted to fill out the template during initial setup
   planetArray = [
     {
       name: 'Solen',
       points: 3,
       letter: 'a',
+      Fakta: 'Solen er meget stor, større end du tror.',
       imgurl: '../../assets/images/placeholder-planet.jpg'
     },
     {
-      name: 'Merkur',
-      points: 2,
-      letter: 'b',
+      name: 'Solen',
+      points: 3,
+      letter: 'a',
+      Fakta: 'Solen er meget stor, større end du tror.',
       imgurl: '../../assets/images/placeholder-planet.jpg'
     },
     {
-      name: 'Merkur',
-      points: 2,
-      letter: 'b',
+      name: 'Solen',
+      points: 3,
+      letter: 'a',
+      Fakta: 'Solen er meget stor, større end du tror.',
       imgurl: '../../assets/images/placeholder-planet.jpg'
     },
     {
-      name: 'Merkur',
-      points: 2,
-      letter: 'b',
+      name: 'Solen',
+      points: 1,
+      letter: '?',
+      Fakta: 'Solen er meget stor, større end du tror.',
       imgurl: '../../assets/images/placeholder-planet.jpg'
     },
     {
-      name: 'Merkur',
-      points: 2,
-      letter: 'b',
+      name: 'Solen',
+      points: 3,
+      letter: 'r',
+      Fakta: 'Solen er meget stor, større end du tror.',
       imgurl: '../../assets/images/placeholder-planet.jpg'
     },
     {
-      name: 'Merkur',
+      name: 'Solen',
       points: 2,
-      letter: 'b',
+      letter: 'a',
+      Fakta: 'Solen er meget stor, større end du tror.',
       imgurl: '../../assets/images/placeholder-planet.jpg'
     },
     {
-      name: 'Merkur',
-      points: 2,
-      letter: 'b',
+      name: 'Solen',
+      points: 3,
+      letter: 'm',
+      Fakta: 'Solen er meget stor, større end du tror.',
       imgurl: '../../assets/images/placeholder-planet.jpg'
     },
     {
-      name: 'Merkur',
-      points: 2,
-      letter: 'b',
+      name: 'Solen',
+      points: 3,
+      letter: 'a',
+      Fakta: 'Solen er meget stor, større end du tror.',
       imgurl: '../../assets/images/placeholder-planet.jpg'
     },
     {
-      name: 'Merkur',
-      points: 2,
-      letter: 'b',
+      name: 'Solen',
+      points: 1,
+      letter: 'a',
+      Fakta: 'Solen er meget stor, større end du tror.',
       imgurl: '../../assets/images/placeholder-planet.jpg'
     },
     {
-      name: 'Merkur',
+      name: 'Solen',
       points: 2,
-      letter: 'b',
+      letter: 'a',
+      Fakta: 'Solen er meget stor, større end du tror.',
       imgurl: '../../assets/images/placeholder-planet.jpg'
     },
   ]
 
+  totalpoints: number = 0;
+
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.calculatePointTotal();
+  }
+
+  // TODO: get planets from database to populate the planetArray. OBS! Initiate all planets with a letter value of ? (question mark)
+
+  // TODO: When first hololink is opened, start timer
+
+  calculatePointTotal() {
+    this.planetArray.forEach(planet => {
+      this.totalpoints = this.totalpoints + planet.points;
+    });
+  }
+
+
+
 }

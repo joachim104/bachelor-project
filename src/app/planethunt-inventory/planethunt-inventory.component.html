@@ -6,9 +6,9 @@
     Letter: {{ planet.letter }}
   </div>
   <div class="col-start-2 col-end-4 p-1 grid grid-col">
-    <div class="grid grid-col">
+    <div class="grid grid-col text-xl">
       <div>
-        Point Total: 29
+        Point Total: {{ totalpoints }}
       </div>
       <div>
         Tid: 00:12:34
@@ -18,7 +18,7 @@
       </div>
     </div>
     <div>
-      <p class="float-left" *ngFor=" let planet of planetArray">
+      <p class="float-left uppercase" *ngFor=" let planet of planetArray">
         {{ planet.letter }} &nbsp;
       </p>
     </div>
