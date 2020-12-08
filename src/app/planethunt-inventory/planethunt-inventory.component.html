@@ -1,0 +1,26 @@
+<div class="grid grid-cols-3 gap-4 p-4 text-white">
+  <div class="col-span-3 text-center p-4 text-4xl uppercase">mine planeter</div>
+  <div class="" *ngFor=" let planet of planetArray">
+    <img src="{{ planet.imgurl }}" alt="plant image">
+    Points: {{ planet.points }} <br>
+    Letter: {{ planet.letter }}
+  </div>
+  <div class="col-start-2 col-end-4 p-1 grid grid-col">
+    <div class="grid grid-col">
+      <div>
+        Point Total: 29
+      </div>
+      <div>
+        Tid: 00:12:34
+      </div>
+      <div>
+        Mine bogstaver:
+      </div>
+    </div>
+    <div>
+      <p class="float-left" *ngFor=" let planet of planetArray">
+        {{ planet.letter }} &nbsp;
+      </p>
+    </div>
+  </div>
+</div>

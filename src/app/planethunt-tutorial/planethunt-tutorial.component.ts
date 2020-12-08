@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class PlanetHuntTutorialComponent implements OnInit {
+
+
+
+
   constructor() { }
 
   ngOnInit() { }
