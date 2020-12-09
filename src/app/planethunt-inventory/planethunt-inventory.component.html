@@ -1,9 +1,13 @@
 <div class="grid grid-cols-3 gap-4 p-4 text-white">
-  <div class="col-span-3 text-center p-4 text-4xl uppercase">mine planeter</div>
-  <div class="" *ngFor=" let planet of planetArray">
-    <img src="{{ planet.imgurl }}" alt="plant image">
-    Points: {{ planet.points }} <br>
-    Letter: {{ planet.letter }}
+  <div class="col-span-3 text-center p-4 text-4xl uppercase">
+    mine planeter
+  </div>
+  <div *ngFor="let planet of planetArray">
+    <button (click)="scroll(planet.id)">
+      <img src="{{ planet.imgurl }}" alt="planet image">
+      Point: {{ planet.points }} <br>
+      Bogstav: {{ planet.letter }}
+    </button>
   </div>
   <div class="col-start-2 col-end-4 p-1 grid grid-col">
     <div class="grid grid-col text-xl">
@@ -24,3 +28,26 @@
     </div>
   </div>
 </div>
+
+
+<ng-container *ngFor="let planet of planetArray">
+  <div id="{{ planet.id }}"  class="flex flex-col p-4 h-screen text-white">
+    <p class="text-white text-6xl text-center uppercase p-4">
+      {{ planet.name }}
+    </p>
+    <img class="mx-auto max-h-planetcard max-w-planetcard" src="{{ planet.imgurl }}" alt="planet image">
+    <div class="p-4">
+      <p class="text-2xl capitalize pb-2">
+        Fakta om {{ planet.name }}:
+      </p>
+      <p class="text-lg py-2">
+        {{ planet.fakta }}
+      </p>
+      <p class="text-2xl py-2">
+        Point: {{ planet.points }}
+        <br>
+        Bogstav: <span class="uppercase">{{ planet.letter }}</span>
+      </p>
+    </div>
+  </div>
+</ng-container>

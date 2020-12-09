@@ -10,73 +10,83 @@ export class PlanethuntInventoryComponent implements OnInit {
   // The array below is inserted to fill out the template during initial setup
   planetArray = [
     {
+      id: 1,
       name: 'Solen',
       points: 3,
       letter: 'a',
-      Fakta: 'Solen er meget stor, større end du tror.',
+      fakta: 'Solen er meget stor, større end du tror.',
       imgurl: '../../assets/images/placeholder-planet.jpg'
     },
     {
+      id: 2,
       name: 'Solen',
       points: 3,
       letter: 'a',
-      Fakta: 'Solen er meget stor, større end du tror.',
+      fakta: 'Solen er meget stor, større end du tror.',
       imgurl: '../../assets/images/placeholder-planet.jpg'
     },
     {
+      id: 3,
       name: 'Solen',
       points: 3,
       letter: 'a',
-      Fakta: 'Solen er meget stor, større end du tror.',
+      fakta: 'Solen er meget stor, større end du tror.',
       imgurl: '../../assets/images/placeholder-planet.jpg'
     },
     {
+      id: 4,
       name: 'Solen',
       points: 1,
       letter: '?',
-      Fakta: 'Solen er meget stor, større end du tror.',
+      fakta: 'Solen er meget stor, større end du tror.',
       imgurl: '../../assets/images/placeholder-planet.jpg'
     },
     {
+      id: 5,
       name: 'Solen',
       points: 3,
       letter: 'r',
-      Fakta: 'Solen er meget stor, større end du tror.',
+      fakta: 'Solen er meget stor, større end du tror.',
       imgurl: '../../assets/images/placeholder-planet.jpg'
     },
     {
+      id: 6,
       name: 'Solen',
       points: 2,
       letter: 'a',
-      Fakta: 'Solen er meget stor, større end du tror.',
+      fakta: 'Solen er meget stor, større end du tror.',
       imgurl: '../../assets/images/placeholder-planet.jpg'
     },
     {
+      id: 7,
       name: 'Solen',
       points: 3,
       letter: 'm',
-      Fakta: 'Solen er meget stor, større end du tror.',
+      fakta: 'Solen er meget stor, større end du tror.',
       imgurl: '../../assets/images/placeholder-planet.jpg'
     },
     {
+      id: 8,
       name: 'Solen',
       points: 3,
       letter: 'a',
-      Fakta: 'Solen er meget stor, større end du tror.',
+      fakta: 'Solen er meget stor, større end du tror.',
       imgurl: '../../assets/images/placeholder-planet.jpg'
     },
     {
+      id: 9,
       name: 'Solen',
       points: 1,
       letter: 'a',
-      Fakta: 'Solen er meget stor, større end du tror.',
+      fakta: 'Solen er meget stor, større end du tror.',
       imgurl: '../../assets/images/placeholder-planet.jpg'
     },
     {
+      id: 10,
       name: 'Solen',
       points: 2,
       letter: 'a',
-      Fakta: 'Solen er meget stor, større end du tror.',
+      fakta: 'Solen er meget stor, større end du tror.',
       imgurl: '../../assets/images/placeholder-planet.jpg'
     },
   ]
@@ -93,6 +103,13 @@ export class PlanethuntInventoryComponent implements OnInit {
 
   // TODO: When first hololink is opened, start timer
 
+  // Scroll to specific HTML element on page
+  scroll(id: string) {
+    const el: any = document.getElementById(id);
+    el.scrollIntoView({behavior: "smooth"});
+  }
+
+  // Calculate the total points based on the points for each planet
   calculatePointTotal() {
     this.planetArray.forEach(planet => {
       this.totalpoints = this.totalpoints + planet.points;

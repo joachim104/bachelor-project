@@ -12,7 +12,7 @@ import { PlanethuntInventoryComponent } from './planethunt-inventory/planethunt-
     AppComponent,
     PlanethuntStartpageComponent,
     PlanetHuntTutorialComponent,
-    PlanethuntInventoryComponent
+    PlanethuntInventoryComponent,
   ],
   imports: [
     BrowserModule,
