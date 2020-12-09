@@ -1,1 +1,47 @@
+<div class="text-white">
+  <div class="top-0 left-0 grid grid-cols-5 fixed text-center w-full p-4">
+    <div *ngIf="position !== 1">
+      <button (click)="clickLeft()">
+        <img class="max-h-10" src="../../assets/images/arrow-left.png" alt="left arrow">
+      </button>
+    </div>
+    <div class="col-start-2 col-end-5 uppercase text-3xl">
+      sådan gør du
+    </div>
+    <div *ngIf="position !== 4">
+      <button (click)="clickRight()">
+        <img class="max-h-10 transform rotate-180 float-right" src="../../assets/images/arrow-left.png" alt="left arrow">
+      </button>
+    </div>
+  </div>
 
+  <div class="w-tutorial">
+    <div id="1" class="float-left w-screen px-4 py-24">
+      <p class="text-center text-2xl">
+        1. Vælg en planet
+      </p>
+    </div>
+    <div id="2" class="float-left w-screen px-4 py-24">
+      <p class="text-center text-2xl">
+        2. Klik på planeten
+      </p>
+    </div>
+    <div id="3" class="float-left w-screen px-4 py-24">
+      <p class="text-center text-2xl">
+        3. Find en planetstolpe
+      </p>
+    </div>
+    <div id="4" class="float-left w-screen px-4 py-24">
+      <p class="text-center text-2xl">
+        4. Scan planetstolpen
+      </p>
+    </div>
+  </div>
+
+  <a routerLink="/inventory">
+    <p id="skip" class="bottom-0 left-0 fixed text-center w-full p-4 uppercase text-3xl">
+      skip vejledning
+    </p>
+  </a>
+
+</div>

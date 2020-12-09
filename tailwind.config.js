@@ -9,13 +9,17 @@ module.exports = (isProd) => ({
     },
     darkMode: false, // or 'media' or 'class'
     theme: {
-      maxHeight: {
-        'planetcard': '40vh',
+      extend: {
+        maxHeight: {
+          'planetcard': '40vh',
+        },
+        maxWidth: {
+          'planetcard': '40vh',
+        },
+        width: {
+          'tutorial': '400vw',
+        },
       },
-      maxWidth: {
-        'planetcard': '40vh',
-      },
-      extend: {},
       backgroundColor: theme => ({
         'base': '#c33a5e',
       }),

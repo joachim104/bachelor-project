@@ -103,9 +103,12 @@ export class PlanethuntInventoryComponent implements OnInit {
 
   // TODO: When first hololink is opened, start timer
 
+  // TODO: When a hololink is visited, update the image for that planet in the database
+
   // Scroll to specific HTML element on page
-  scroll(id: string) {
-    const el: any = document.getElementById(id);
+  scroll(id: number) {
+    const elId = String(id);
+    const el: any = document.getElementById(elId);
     el.scrollIntoView({behavior: "smooth"});
   }
 
