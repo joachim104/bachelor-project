@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PlanethuntStartpageComponent } from './planethunt-startpage/planethunt-startpage.component';
 import { PlanetHuntTutorialComponent } from './planethunt-tutorial/planethunt-tutorial.component';
 import { PlanethuntInventoryComponent } from './planethunt-inventory/planethunt-inventory.component';
+import { PlanethuntSignupComponent } from './planethunt-signup/planethunt-signup.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { PlanethuntInventoryComponent } from './planethunt-inventory/planethunt-
     PlanethuntStartpageComponent,
     PlanetHuntTutorialComponent,
     PlanethuntInventoryComponent,
+    PlanethuntSignupComponent
   ],
   imports: [
     BrowserModule,
