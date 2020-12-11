@@ -182,7 +182,7 @@ class PlanethuntStartpageComponent {
     }
 }
 PlanethuntStartpageComponent.ɵfac = function PlanethuntStartpageComponent_Factory(t) { return new (t || PlanethuntStartpageComponent)(); };
-PlanethuntStartpageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntStartpageComponent, selectors: [["planethunt-startpage"]], decls: 14, vars: 0, consts: [[1, "h-screen", "flex", "flex-col"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "text-center", "text-white", "pt-2", "text-xl"], [1, "uppercase"], [1, "text-center", "text-white", "p-4", "text-6xl"], [1, "w-full"], ["src", "../../assets/images/brorfelde-landscape.jpg", "alt", "Brorfelde landscape photo", 1, "mx-auto"], [1, "p-4", "w-full"], ["routerLink", "/tutorial"], ["src", "../../assets/images/sun.png", "alt", "The sun", 1, "max-h-72", "mx-auto"]], template: function PlanethuntStartpageComponent_Template(rf, ctx) { if (rf & 1) {
+PlanethuntStartpageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntStartpageComponent, selectors: [["planethunt-startpage"]], decls: 14, vars: 0, consts: [[1, "h-screen", "flex", "flex-col"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "text-center", "text-white", "pt-2", "text-xl"], [1, "uppercase"], [1, "text-center", "text-white", "p-4", "text-6xl"], [1, "w-full"], ["src", "../../assets/images/brorfelde-landscape.jpg", "alt", "Brorfelde landscape photo", 1, "mx-auto"], [1, "p-4", "w-full"], ["routerLink", "/signup"], ["src", "../../assets/images/sun.png", "alt", "The sun", 1, "max-h-72", "mx-auto"]], template: function PlanethuntStartpageComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0, 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "img", 2);
@@ -275,6 +275,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _userdata__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../userdata */ "yoaq");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "tyNb");
+
 
 
 
@@ -374,7 +376,7 @@ class PlanethuntUsernameFormComponent {
     ngOnInit() { }
 }
 PlanethuntUsernameFormComponent.ɵfac = function PlanethuntUsernameFormComponent_Factory(t) { return new (t || PlanethuntUsernameFormComponent)(); };
-PlanethuntUsernameFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntUsernameFormComponent, selectors: [["planethunt-username-form"]], decls: 9, vars: 1, consts: [[3, "ngSubmit"], ["usernameForm", "ngForm"], [1, "form-group"], ["type", "text", "placeholder", "skriv dit brugernavn her", "required", "", "name", "username", 1, "m-4", "form-control", "text-center", "bg-base", "border-2", "text-xl", "border-solid", 3, "ngModel", "ngModelChange"], [1, "text-center"], ["type", "submit", 1, "bg-indigo-800", "border-2", "border-solid", "rounded-lg", "p-4", 3, "click"]], template: function PlanethuntUsernameFormComponent_Template(rf, ctx) { if (rf & 1) {
+PlanethuntUsernameFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntUsernameFormComponent, selectors: [["planethunt-username-form"]], decls: 10, vars: 1, consts: [[3, "ngSubmit"], ["usernameForm", "ngForm"], [1, "form-group"], ["type", "text", "placeholder", "skriv dit brugernavn her", "required", "", "name", "username", 1, "m-4", "form-control", "text-center", "bg-base", "border-2", "text-xl", "border-solid", 3, "ngModel", "ngModelChange"], [1, "text-center"], ["routerLink", "/tutorial"], ["type", "submit", 1, "bg-indigo-800", "border-2", "border-solid", "rounded-lg", "p-4", 3, "click"]], template: function PlanethuntUsernameFormComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "form", 0, 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function PlanethuntUsernameFormComponent_Template_form_ngSubmit_0_listener() { return ctx.onSubmit(); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -385,16 +387,18 @@ PlanethuntUsernameFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "button", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PlanethuntUsernameFormComponent_Template_button_click_7_listener() { return ctx.onSubmit(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "START PLANETJAGTEN");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "a", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "button", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PlanethuntUsernameFormComponent_Template_button_click_8_listener() { return ctx.onSubmit(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "START PLANETJAGTEN");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.username);
-    } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgForm"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["RequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgModel"]], encapsulation: 2 });
+    } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgForm"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["RequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgModel"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLinkWithHref"]], encapsulation: 2 });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PlanethuntUsernameFormComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
