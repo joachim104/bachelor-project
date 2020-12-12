@@ -1,4 +1,4 @@
-<ng-container class="h-screen flex flex-col">
+<ng-container class="relative h-screen flex flex-col">
   <div class="grid grid-cols-3">
     <div class="l-0 t-0 p-2">
       <img class="max-h-16" src="../../assets/images/logo-cirkel.png" alt="Brorfelde Logo">
@@ -15,11 +15,22 @@
   <div class="text-white text-2xl text-center mx-4 mt-4">
     Tillykke. Vis denne skærm i billetkassen for at deltage i konkurrencen om en astronomisk præmie.
   </div>
-  <div class="max-h-1/2 my-6">
-    <img src="../../assets/images/goldmoon.png" alt="golden moon">
+  <div class="w-full">
+    <img class="mx-auto max-h-1/2" src="../../assets/images/goldmoon.png" alt="golden moon">
+    <div class="w-full text-center uppercase absolute text-white text-4xl">
+        {{ correctAnswer }}
+  </div>
   </div>
 
-  <div class="text-center">
+
+  <!--<div class="relative my-6 text-center">
+    <img class="absolute top-0 max-h-1/2" src="../../assets/images/goldmoon.png" alt="golden moon">
+    <div class="align-center uppercase absolute right-0 text-white text-4xl">
+        {{ correctAnswer }}
+    </div>
+  </div>-->
+
+  <div class="absolute text-center bottom-4">
     <button type="submit" (click)="onSubmitClicked()"
             class="p-4 mt-4 mx-4 uppercase text-xl text-white text-center rounded bg-gradient-to-r from-brorfelde-dark to-blue-900">
               Klik her for at gemme din high score og få en bonusoplevelse
