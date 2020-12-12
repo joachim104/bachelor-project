@@ -9,6 +9,8 @@ import { PlanethuntInventoryComponent } from './planethunt-inventory/planethunt-
 import { PlanethuntSignupComponent } from './planethunt-signup/planethunt-signup.component';
 import { PlanethuntUsernameFormComponent } from './planethunt-username-form/planethunt-username-form.component';
 import { FormsModule } from '@angular/forms';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { PlanethuntWordpuzzleComponent } from './planethunt-wordpuzzle/planethunt-wordpuzzle.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { FormsModule } from '@angular/forms';
     PlanetHuntTutorialComponent,
     PlanethuntInventoryComponent,
     PlanethuntSignupComponent,
-    PlanethuntUsernameFormComponent
+    PlanethuntUsernameFormComponent,
+    PlanethuntWordpuzzleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

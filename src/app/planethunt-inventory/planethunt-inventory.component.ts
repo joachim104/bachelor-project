@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'planethunt-inventory',
-  templateUrl: 'planethunt-inventory.component.html'
+  templateUrl: 'planethunt-inventory.component.html',
 })
 
 export class PlanethuntInventoryComponent implements OnInit {
@@ -93,7 +93,8 @@ export class PlanethuntInventoryComponent implements OnInit {
 
   totalpoints: number = 0;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
     this.calculatePointTotal();
@@ -118,7 +119,5 @@ export class PlanethuntInventoryComponent implements OnInit {
       this.totalpoints = this.totalpoints + planet.points;
     });
   }
-
-
 
 }

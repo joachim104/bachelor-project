@@ -19,9 +19,13 @@ module.exports = (isProd) => ({
         width: {
           'tutorial': '400vw',
         },
+        colors: {
+          'brorfelde-dark': "#3a3967",
+        }
       },
       backgroundColor: theme => ({
         'base': '#c33a5e',
+        'tile': '#e6ddc5',
       }),
     },
     variants: {

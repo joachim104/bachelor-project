@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "dev": "ng serve",
     "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
@@ -11,7 +12,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~11.0.0",
+    "@angular/animations": "^11.0.4",
     "@angular/cdk": "^11.0.2",
     "@angular/common": "~11.0.0",
     "@angular/compiler": "~11.0.0",
@@ -23,6 +24,7 @@
     "@angular/router": "~11.0.0",
     "express": "^4.17.1",
     "rxjs": "~6.6.0",
+    "save": "^2.4.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },

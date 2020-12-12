@@ -1,2 +1,31 @@
-This is where the wordpuzzle goes, where a user is presented with all of his/her letters that can be rearranged to create a new word.
-How do we catch the order of the letters? Maybe asign positions a value? Think.
+<ng-container class="h-screen flex flex-col">
+  <div class="grid grid-cols-3">
+    <div class="l-0 t-0 p-2">
+      <img class="max-h-16" src="../../assets/images/logo-cirkel.png" alt="Brorfelde Logo">
+    </div>
+    <div class="uppercase text-white text-4xl text-center pt-4">
+      ordgåden
+    </div>
+    <div class="top-0 right-0 mt-4 mr-4 fixed focus:outline-none">
+      <a routerLink="/inventory">
+        <img class="max-h-14" src="../../assets/images/inventory-icon-bg.png" alt="inventory navigation">
+      </a>
+    </div>
+  </div>
+  <div class="text-white text-xl m-16 text-center">
+    Tillykke. Du har samlet alle planeterne og alle bogstaverne.
+    <br><br>
+    Træk i bogstaverne og arrange dem så de danner navnet på en kendt videnskabsperson.
+  </div>
+
+  <div class="mx-4 my-32 w-full flex flex-row" cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)">
+    <div class="cursor-move shadow-sm border-r-1 mr-2 border-solid border-black rounded text-center bg-tile text-4xl text-black h-10 w-10" *ngFor="let letter of lettersArray" cdkDrag>{{letter}}</div>
+  </div>
+
+  <div class="content-center">
+    <div class="mx-16 uppercase text-xl text-white text-center rounded bg-gradient-to-r from-brorfelde-dark to-blue-900">indsend dit svar</div>
+  </div>
+</ng-container>
+
+
+
