@@ -12,6 +12,7 @@ module.exports = (isProd) => ({
       extend: {
         maxHeight: {
           'planetcard': '40vh',
+          '1/2': '50vh',
         },
         maxWidth: {
           'planetcard': '40vh',

@@ -1,0 +1,28 @@
+<ng-container class="h-screen flex flex-col">
+  <div class="grid grid-cols-3">
+    <div class="l-0 t-0 p-2">
+      <img class="max-h-16" src="../../assets/images/logo-cirkel.png" alt="Brorfelde Logo">
+    </div>
+    <div class="uppercase text-white text-4xl text-center pt-4">
+      ordgåden
+    </div>
+    <div class="top-0 right-0 mt-4 mr-4 fixed focus:outline-none">
+      <a routerLink="/inventory">
+        <img class="max-h-14" src="../../assets/images/inventory-icon-bg.png" alt="inventory navigation">
+      </a>
+    </div>
+  </div>
+  <div class="text-white text-2xl text-center mx-4 mt-4">
+    Tillykke. Vis denne skærm i billetkassen for at deltage i konkurrencen om en astronomisk præmie.
+  </div>
+  <div class="max-h-1/2 my-6">
+    <img src="../../assets/images/goldmoon.png" alt="golden moon">
+  </div>
+
+  <div class="text-center">
+    <button type="submit" (click)="onSubmitClicked()"
+            class="p-4 mt-4 mx-4 uppercase text-xl text-white text-center rounded bg-gradient-to-r from-brorfelde-dark to-blue-900">
+              Klik her for at gemme din high score og få en bonusoplevelse
+    </button>
+  </div>
+</ng-container>

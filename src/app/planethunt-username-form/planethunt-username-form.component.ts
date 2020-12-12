@@ -13,7 +13,6 @@ export class PlanethuntUsernameFormComponent implements OnInit {
   submitted = false;
 
   onSubmit() {
-    console.log('username: ', this.username);
     const newUser = new Userdata(this.username, [
         {
           id: 1,
@@ -96,7 +95,6 @@ export class PlanethuntUsernameFormComponent implements OnInit {
 			    visited: 0
         },
       ]);
-    console.log('new userdata: ', newUser);
     this.submitted = true;
   }
 

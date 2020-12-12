@@ -11,6 +11,7 @@ import { PlanethuntUsernameFormComponent } from './planethunt-username-form/plan
 import { FormsModule } from '@angular/forms';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { PlanethuntWordpuzzleComponent } from './planethunt-wordpuzzle/planethunt-wordpuzzle.component';
+import { PlanethuntCorrectanswerComponent } from './planethunt-correctanswer/planethunt-correctanswer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PlanethuntWordpuzzleComponent } from './planethunt-wordpuzzle/planethun
     PlanethuntInventoryComponent,
     PlanethuntSignupComponent,
     PlanethuntUsernameFormComponent,
-    PlanethuntWordpuzzleComponent
+    PlanethuntWordpuzzleComponent,
+    PlanethuntCorrectanswerComponent
   ],
   imports: [
     BrowserModule,
