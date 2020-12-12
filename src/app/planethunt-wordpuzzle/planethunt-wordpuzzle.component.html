@@ -23,10 +23,12 @@
   </div>
 
   <div *ngIf="correctanswer" class="text-center">
-    <button type="submit" (click)="onSubmitClicked()"
-            class="p-4 mt-4 uppercase text-xl text-white text-center rounded bg-gradient-to-r from-brorfelde-dark to-blue-900">
-              rigtigt! indsend dit svar
-            </button>
+    <a routerLink="/correctanswer">
+      <button type="submit" (click)="onSubmitClicked()"
+      class="p-4 mt-4 uppercase text-xl text-white text-center rounded bg-gradient-to-r from-brorfelde-dark to-blue-900">
+        rigtigt! indsend dit svar
+      </button>
+    </a>
   </div>
 </ng-container>
 

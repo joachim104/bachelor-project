@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { PlanethuntWordpuzzleComponent } from './planethunt-wordpuzzle/planethunt-wordpuzzle.component';
 import { PlanethuntCorrectanswerComponent } from './planethunt-correctanswer/planethunt-correctanswer.component';
+import { PlanethuntHighscoreComponent } from './planethunt-highscore/planethunt-highscore.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PlanethuntCorrectanswerComponent } from './planethunt-correctanswer/pla
     PlanethuntSignupComponent,
     PlanethuntUsernameFormComponent,
     PlanethuntWordpuzzleComponent,
-    PlanethuntCorrectanswerComponent
+    PlanethuntCorrectanswerComponent,
+    PlanethuntHighscoreComponent
   ],
   imports: [
     BrowserModule,

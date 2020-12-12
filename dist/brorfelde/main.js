@@ -184,7 +184,7 @@ class PlanethuntCorrectanswerComponent {
     }
 }
 PlanethuntCorrectanswerComponent.ɵfac = function PlanethuntCorrectanswerComponent_Factory(t) { return new (t || PlanethuntCorrectanswerComponent)(); };
-PlanethuntCorrectanswerComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntCorrectanswerComponent, selectors: [["planethunt-correctanswer"]], decls: 17, vars: 0, consts: [[1, "h-screen", "flex", "flex-col"], [1, "grid", "grid-cols-3"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "uppercase", "text-white", "text-4xl", "text-center", "pt-4"], [1, "top-0", "right-0", "mt-4", "mr-4", "fixed", "focus:outline-none"], ["routerLink", "/inventory"], ["src", "../../assets/images/inventory-icon-bg.png", "alt", "inventory navigation", 1, "max-h-14"], [1, "text-white", "text-2xl", "text-center", "mx-4", "mt-4"], [1, "relative", "max-h-1/2", "my-6"], [1, "absolute", "top-0", "left-0"], ["src", "../../assets/images/goldmoon.png", "alt", "golden moon", 1, ""], [1, "text-center"], ["type", "submit", 1, "p-4", "mt-4", "mx-4", "uppercase", "text-xl", "text-white", "text-center", "rounded", "bg-gradient-to-r", "from-brorfelde-dark", "to-blue-900", 3, "click"]], template: function PlanethuntCorrectanswerComponent_Template(rf, ctx) { if (rf & 1) {
+PlanethuntCorrectanswerComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntCorrectanswerComponent, selectors: [["planethunt-correctanswer"]], decls: 18, vars: 1, consts: [[1, "relative", "h-screen", "flex", "flex-col"], [1, "grid", "grid-cols-3"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "uppercase", "text-white", "text-4xl", "text-center", "pt-4"], [1, "top-0", "right-0", "mt-4", "mr-4", "fixed", "focus:outline-none"], ["routerLink", "/inventory"], ["src", "../../assets/images/inventory-icon-bg.png", "alt", "inventory navigation", 1, "max-h-14"], [1, "text-white", "text-2xl", "text-center", "mx-4", "mt-4"], [1, "w-full"], ["src", "../../assets/images/goldmoon.png", "alt", "golden moon", 1, "mx-auto", "max-h-1/2"], [1, "w-full", "text-center", "uppercase", "absolute", "text-white", "text-4xl"], [1, "absolute", "text-center", "bottom-4"], ["type", "submit", 1, "p-4", "mt-4", "mx-4", "uppercase", "text-xl", "text-white", "text-center", "rounded", "bg-gradient-to-r", "from-brorfelde-dark", "to-blue-900", 3, "click"]], template: function PlanethuntCorrectanswerComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0, 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -203,17 +203,21 @@ PlanethuntCorrectanswerComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, " Tillykke. Vis denne sk\u00E6rm i billetkassen for at deltage i konkurrencen om en astronomisk pr\u00E6mie. ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "img", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](12, "img", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "button", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PlanethuntCorrectanswerComponent_Template_button_click_15_listener() { return ctx.onSubmitClicked(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, " Klik her for at gemme din high score og f\u00E5 en bonusoplevelse ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "button", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PlanethuntCorrectanswerComponent_Template_button_click_16_listener() { return ctx.onSubmitClicked(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, " Klik her for at gemme din high score og f\u00E5 en bonusoplevelse ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx.correctAnswer, " ");
     } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"]], encapsulation: 2 });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PlanethuntCorrectanswerComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
