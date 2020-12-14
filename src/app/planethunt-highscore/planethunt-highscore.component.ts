@@ -7,7 +7,58 @@ import { Component, OnInit } from '@angular/core';
 
 export class PlanethuntHighscoreComponent implements OnInit {
 
-
+  hiScorePlaceholder = [
+    {
+      name : "Marsmanden",
+      points : 30,
+      time : "00:12:01"
+    },
+    {
+      name : "Marsmanden",
+      points : 30,
+      time : "00:12:01"
+    },
+    {
+      name : "Marsmanden",
+      points : 30,
+      time : "00:12:01"
+    },
+    {
+      name : "Marsmanden",
+      points : 30,
+      time : "00:12:01"
+    },
+    {
+      name : "Marsmanden",
+      points : 30,
+      time : "00:12:01"
+    },
+    {
+      name : "Marsmanden",
+      points : 30,
+      time : "00:12:01"
+    },
+    {
+      name : "Marsmanden",
+      points : 30,
+      time : "00:12:01"
+    },
+    {
+      name : "Marsmanden",
+      points : 30,
+      time : "00:12:01"
+    },
+    {
+      name : "Marsmanden",
+      points : 30,
+      time : "00:12:01"
+    },
+    {
+      name : "Marsmanden",
+      points : 30,
+      time : "00:12:01"
+    }
+  ]
 
 
   constructor() { }
