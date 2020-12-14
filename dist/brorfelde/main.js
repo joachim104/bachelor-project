@@ -250,6 +250,21 @@ class PlanethuntStartpageComponent {
     ngOnInit() {
         console.log('logged baby!');
     }
+    checkPlatformAndBrowser() {
+        // Check for different iOS devices and Chrome
+        var isIphone = navigator.userAgent.indexOf('iPhone') != -1;
+        var isIpod = navigator.userAgent.indexOf('iPod') != -1;
+        var isIpad = navigator.userAgent.indexOf('iPad') != -1;
+        var isChrome = navigator.userAgent.indexOf('CriOS') != -1;
+        // var isSafari = navigator.userAgent.indexOf('Safari') != -1;
+        // Set one variable for all iOS devices
+        var isIos = isIphone || isIpod || isIpad;
+        // If Chrome on iOS is accessed, show alert below
+        if (isIos && isChrome) {
+            window.alert('Desværre tillader Apple ikke AR oplevelser i din browser. Åben venligst Planetjagten');
+        }
+    }
+    ;
 }
 PlanethuntStartpageComponent.ɵfac = function PlanethuntStartpageComponent_Factory(t) { return new (t || PlanethuntStartpageComponent)(); };
 PlanethuntStartpageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntStartpageComponent, selectors: [["planethunt-startpage"]], decls: 14, vars: 0, consts: [[1, "h-screen", "flex", "flex-col"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "text-center", "text-white", "pt-2", "text-2xl"], [1, "uppercase"], [1, "max-w-full", "text-center", "text-white", "p-4", "text-4xl"], [1, "w-full"], ["src", "../../assets/images/brorfelde-landscape.jpg", "alt", "Brorfelde landscape photo", 1, "w-full"], [1, "p-4", "w-full"], ["routerLink", "/signup"], ["src", "../../assets/images/sun.png", "alt", "The sun", 1, "max-h-72", "mx-auto"]], template: function PlanethuntStartpageComponent_Template(rf, ctx) { if (rf & 1) {
@@ -1054,7 +1069,7 @@ class PlanethuntHighscoreComponent {
     ngOnInit() { }
 }
 PlanethuntHighscoreComponent.ɵfac = function PlanethuntHighscoreComponent_Factory(t) { return new (t || PlanethuntHighscoreComponent)(); };
-PlanethuntHighscoreComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntHighscoreComponent, selectors: [["planethunt-highscore"]], decls: 15, vars: 1, consts: [[1, "relative", "h-screen", "flex", "flex-col"], [1, "flex", "flex-row"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "uppercase", "text-white", "text-3xl", "text-center", "pt-4"], [1, "top-0", "right-0", "mt-2", "mr-2", "fixed"], ["routerLink", "/inventory"], ["src", "../../assets/images/inventory-icon-bg.png", "alt", "inventory navigation", 1, "max-h-14"], [1, "text-white", "w-full", "text-center"], [1, "list-disc"], [4, "ngFor", "ngForOf"], ["rel", "ar", "href", "https://roxanajula.com/wp-content/uploads/2020/09/Adidas_Originals_Stan_Smith.usdz"], ["src", "https://roxanajula.com/wp-content/uploads/2020/09/Adidas_Originals_Stan_Smith.jpg", 1, "mx-auto", "max-h-planetcard"]], template: function PlanethuntHighscoreComponent_Template(rf, ctx) { if (rf & 1) {
+PlanethuntHighscoreComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntHighscoreComponent, selectors: [["planethunt-highscore"]], decls: 15, vars: 1, consts: [[1, "relative", "h-screen", "flex", "flex-col"], [1, "flex", "flex-row"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "uppercase", "text-white", "text-3xl", "text-center", "pt-4"], [1, "top-0", "right-0", "mt-2", "mr-2", "fixed"], ["routerLink", "/inventory"], ["src", "../../assets/images/inventory-icon-bg.png", "alt", "inventory navigation", 1, "max-h-14"], [1, "text-white", "w-full", "text-center"], [1, "list-disc"], [4, "ngFor", "ngForOf"], ["rel", "ar", "href", "../../assets/3dmodels/Moon_1_3474.usdz"], ["src", "../../assets/images/goldmoon.png", "alt", "golden moon", 1, "mx-auto", "max-h-planetcard"]], template: function PlanethuntHighscoreComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0, 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
