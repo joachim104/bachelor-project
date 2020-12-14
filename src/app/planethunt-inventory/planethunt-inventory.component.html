@@ -1,51 +1,49 @@
 <div id="inventory" class="grid grid-cols-3 gap-4 p-4 text-white">
-  <div class="col-span-3 text-center p-4 text-4xl uppercase">
-    mine planeter
-  </div>
+  <div class="col-span-3 text-center p-4 text-4xl uppercase">mine planeter</div>
   <div *ngFor="let planet of planetArray">
     <button (click)="scroll(planet.id)">
-      <img src="{{ planet.imgurl }}" alt="planet image">
-      Point: {{ planet.points }} <br>
+      <img src="{{ planet.planetImage }}" alt="planet image" />
+      Point: {{ planet.points }} <br />
       Bogstav: {{ planet.letter }}
     </button>
   </div>
   <div class="col-start-2 col-end-4 p-1 grid grid-col">
     <div class="grid grid-col text-xl">
-      <div>
-        Point Total: {{ totalpoints }}
-      </div>
-      <div>
-        Tid: 00:12:34
-      </div>
-      <div>
-        Mine bogstaver:
-      </div>
+      <div>Point Total: {{ totalpoints }}</div>
+      <div>Tid: 00:12:34</div>
+      <div>Mine bogstaver:</div>
     </div>
     <div>
-      <div class="float-left text-center uppercase bg-tile text-black m-1" *ngFor="let planet of planetArray">
+      <div
+        class="float-left text-center uppercase bg-tile text-black m-1"
+        *ngFor="let planet of planetArray"
+      >
         {{ planet.letter }} &nbsp;
       </div>
     </div>
   </div>
 </div>
 
-
 <ng-container *ngFor="let planet of planetArray">
-  <div id="{{ planet.id }}"  class="flex flex-col p-4 h-screen text-white">
+  <div id="{{ planet.id }}" class="flex flex-col p-4 h-screen text-white">
     <p class="text-white text-6xl text-center uppercase p-4">
       {{ planet.name }}
     </p>
-    <img class="mx-auto max-h-planetcard max-w-planetcard" src="{{ planet.imgurl }}" alt="planet image">
+    <a href="{{ baseUrl }}{{ planet.name }}">
+      <img
+        class="mx-auto max-h-planetcard max-w-planetcard"
+        src="{{ planet.planetImage }}"
+        alt="planet image"
+      />
+    </a>
     <div class="p-4">
-      <p class="text-2xl capitalize pb-2">
-        Fakta om {{ planet.name }}:
-      </p>
+      <p class="text-2xl capitalize pb-2">Fakta om {{ planet.name }}:</p>
       <p class="text-lg py-2">
         {{ planet.fakta }}
       </p>
       <p class="text-2xl py-2">
         Point: {{ planet.points }}
-        <br>
+        <br />
         Bogstav: <span class="uppercase">{{ planet.letter }}</span>
       </p>
     </div>
@@ -54,6 +52,10 @@
 
 <div class="top-0 right-0 mt-4 mr-4 fixed focus:outline-none">
   <button (click)="scroll('inventory')">
-    <img class="max-h-14" src="../../assets/images/inventory-icon-bg.png" alt="inventory navigation">
+    <img
+      class="max-h-14"
+      src="../../assets/images/inventory-icon-bg.png"
+      alt="inventory navigation"
+    />
   </button>
 </div>

@@ -9,9 +9,9 @@ import { PlanetHuntTutorialComponent } from './planethunt-tutorial/planethunt-tu
 import { PlanethuntWordpuzzleComponent } from './planethunt-wordpuzzle/planethunt-wordpuzzle.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/startpag', pathMatch: 'full' },
-  { path: 'startpage', component: PlanethuntStartpageComponent},
-  { path: 'tutorial', component:  PlanetHuntTutorialComponent },
+  { path: '', redirectTo: '/startpage', pathMatch: 'full' },
+  { path: 'startpage', component: PlanethuntStartpageComponent },
+  { path: 'tutorial', component: PlanetHuntTutorialComponent },
   { path: 'inventory', component: PlanethuntInventoryComponent },
   { path: 'wordpuzzle', component: PlanethuntWordpuzzleComponent },
   { path: 'signup', component: PlanethuntSignupComponent },
@@ -21,6 +21,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

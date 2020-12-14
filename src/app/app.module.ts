@@ -13,6 +13,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { PlanethuntWordpuzzleComponent } from './planethunt-wordpuzzle/planethunt-wordpuzzle.component';
 import { PlanethuntCorrectanswerComponent } from './planethunt-correctanswer/planethunt-correctanswer.component';
 import { PlanethuntHighscoreComponent } from './planethunt-highscore/planethunt-highscore.component';
+import { UserService } from './services/user.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,15 +26,16 @@ import { PlanethuntHighscoreComponent } from './planethunt-highscore/planethunt-
     PlanethuntUsernameFormComponent,
     PlanethuntWordpuzzleComponent,
     PlanethuntCorrectanswerComponent,
-    PlanethuntHighscoreComponent
+    PlanethuntHighscoreComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    DragDropModule
+    DragDropModule,
+    HttpClientModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [UserService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
