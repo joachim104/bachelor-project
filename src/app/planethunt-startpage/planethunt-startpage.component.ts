@@ -10,8 +10,8 @@ export class PlanethuntStartpageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('logged baby!');
-   }
+    this.checkPlatformAndBrowser();
+  }
 
    checkPlatformAndBrowser() {
     // Check for different iOS devices and Chrome
