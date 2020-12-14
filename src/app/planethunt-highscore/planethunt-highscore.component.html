@@ -1,0 +1,34 @@
+<ng-container class="relative h-screen flex flex-col">
+  <div class="flex flex-row">
+    <div class="l-0 t-0 p-2">
+      <img class="max-h-16" src="../../assets/images/logo-cirkel.png" alt="Brorfelde Logo">
+    </div>
+    <div class="uppercase text-white text-3xl text-center pt-4">
+      High Score
+    </div>
+    <div class="top-0 right-0 mt-2 mr-2 fixed">
+      <a routerLink="/inventory">
+        <img class="max-h-14" src="../../assets/images/inventory-icon-bg.png" alt="inventory navigation">
+      </a>
+    </div>
+  </div>
+
+  <div class="text-white w-full text-center">
+    <ul class="list-disc">
+      <li *ngFor="let user of hiScorePlaceholder; let i = index">
+        {{ i + 1 }}. {{ user.name }} &nbsp; {{ user.points }}p &nbsp; {{ user.time }}
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <a rel="ar" href="../../assets/3dmodels/Moon_1_3474.usdz">
+        <img class="mx-auto max-h-planetcard" src="../../assets/images/goldmoon.png" alt="golden moon">
+    </a>
+  </div>
+
+  <!--<div class="w-full">
+    <img class="mx-auto max-h-planetcard" src="../../assets/images/goldmoon.png" alt="golden moon">
+  </div>-->
+
+</ng-container>

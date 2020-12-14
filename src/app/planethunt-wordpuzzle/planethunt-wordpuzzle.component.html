@@ -17,7 +17,7 @@
     Træk i bogstaverne og arranger dem så de danner navnet på en kendt videnskabsperson.
   </div>
 
-  <div id="wordpuzzle" class="px-4 py-28 w-full flex flex-row" cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)">
+  <div id="wordpuzzle" class="px-4 py-18 w-full flex flex-row" cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)">
     <div class="cursor-move shadow-sm border-r-1 mr-2 border-solid border-black rounded text-center bg-tile text-4xl text-black h-10 w-10" *ngFor="let letter of lettersArray" cdkDrag>{{letter}}</div>
   </div>
 
