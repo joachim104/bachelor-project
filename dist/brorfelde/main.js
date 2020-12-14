@@ -106,7 +106,7 @@ class PlanetHuntTutorialComponent {
     }
 }
 PlanetHuntTutorialComponent.ɵfac = function PlanetHuntTutorialComponent_Factory(t) { return new (t || PlanetHuntTutorialComponent)(); };
-PlanetHuntTutorialComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanetHuntTutorialComponent, selectors: [["planethunt-tutorial"]], decls: 22, vars: 2, consts: [[1, "text-white"], [1, "top-0", "left-0", "grid", "grid-cols-5", "fixed", "text-center", "w-full", "p-4"], [4, "ngIf"], [1, "col-start-2", "col-end-5", "uppercase", "text-3xl"], [1, "w-tutorial"], ["id", "1", 1, "float-left", "w-screen", "px-4", "py-24"], [1, "text-center", "text-2xl"], ["id", "2", 1, "float-left", "w-screen", "px-4", "py-24"], ["id", "3", 1, "float-left", "w-screen", "px-4", "py-24"], ["id", "4", 1, "float-left", "w-screen", "px-4", "py-24"], ["routerLink", "/inventory"], ["id", "skip", 1, "bottom-0", "left-0", "fixed", "text-center", "w-full", "p-4", "uppercase", "text-3xl"], [3, "click"], ["src", "../../assets/images/arrow-left.png", "alt", "left arrow", 1, "max-h-10"], ["src", "../../assets/images/arrow-left.png", "alt", "left arrow", 1, "max-h-10", "transform", "rotate-180", "float-right"]], template: function PlanetHuntTutorialComponent_Template(rf, ctx) { if (rf & 1) {
+PlanetHuntTutorialComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanetHuntTutorialComponent, selectors: [["planethunt-tutorial"]], decls: 22, vars: 2, consts: [[1, "text-white", "max-h-screen"], [1, "top-0", "left-0", "grid", "grid-cols-5", "fixed", "text-center", "w-screen", "p-4"], [4, "ngIf"], [1, "col-start-2", "col-end-5", "uppercase", "text-2xl"], [1, "w-tutorial"], ["id", "1", 1, "float-left", "w-screen", "px-4", "py-24"], [1, "text-center", "text-2xl"], ["id", "2", 1, "float-left", "w-screen", "px-4", "py-24"], ["id", "3", 1, "float-left", "w-screen", "px-4", "py-24"], ["id", "4", 1, "float-left", "w-screen", "px-4", "py-24"], ["routerLink", "/inventory"], ["id", "skip", 1, "bottom-0", "left-0", "fixed", "text-center", "w-screen", "p-4", "uppercase", "text-2xl"], [3, "click"], ["src", "../../assets/images/arrow-left.png", "alt", "left arrow", 1, "max-h-10"], ["src", "../../assets/images/arrow-left.png", "alt", "left arrow", 1, "max-h-10", "transform", "rotate-180", "float-right"]], template: function PlanetHuntTutorialComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, PlanetHuntTutorialComponent_div_2_Template, 3, 0, "div", 2);
@@ -184,7 +184,7 @@ class PlanethuntCorrectanswerComponent {
     }
 }
 PlanethuntCorrectanswerComponent.ɵfac = function PlanethuntCorrectanswerComponent_Factory(t) { return new (t || PlanethuntCorrectanswerComponent)(); };
-PlanethuntCorrectanswerComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntCorrectanswerComponent, selectors: [["planethunt-correctanswer"]], decls: 18, vars: 1, consts: [[1, "relative", "h-screen", "flex", "flex-col"], [1, "grid", "grid-cols-3"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "uppercase", "text-white", "text-4xl", "text-center", "pt-4"], [1, "top-0", "right-0", "mt-4", "mr-4", "fixed", "focus:outline-none"], ["routerLink", "/inventory"], ["src", "../../assets/images/inventory-icon-bg.png", "alt", "inventory navigation", 1, "max-h-14"], [1, "text-white", "text-2xl", "text-center", "mx-4", "mt-4"], [1, "w-full"], ["src", "../../assets/images/goldmoon.png", "alt", "golden moon", 1, "mx-auto", "max-h-1/2"], [1, "w-full", "text-center", "uppercase", "absolute", "text-white", "text-4xl"], [1, "absolute", "text-center", "bottom-4"], ["type", "submit", 1, "p-4", "mt-4", "mx-4", "uppercase", "text-xl", "text-white", "text-center", "rounded", "bg-gradient-to-r", "from-brorfelde-dark", "to-blue-900", 3, "click"]], template: function PlanethuntCorrectanswerComponent_Template(rf, ctx) { if (rf & 1) {
+PlanethuntCorrectanswerComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntCorrectanswerComponent, selectors: [["planethunt-correctanswer"]], decls: 18, vars: 1, consts: [[1, "relative", "h-screen", "flex", "flex-col"], [1, "flex", "flex-row"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "uppercase", "text-white", "text-3xl", "text-center", "pt-4"], [1, "top-0", "right-0", "mt-2", "mr-2", "fixed"], ["routerLink", "/inventory"], ["src", "../../assets/images/inventory-icon-bg.png", "alt", "inventory navigation", 1, "max-h-14"], [1, "text-white", "text-xl", "text-center", "mx-2", "mt-4", "mb-2"], [1, "w-full"], ["src", "../../assets/images/goldmoon.png", "alt", "golden moon", 1, "mx-auto", "max-h-1/2"], [1, "w-full", "text-center", "uppercase", "absolute", "text-white", "text-4xl"], [1, "absolute", "text-center", "bottom-4"], ["type", "submit", 1, "p-4", "mt-4", "mx-4", "uppercase", "text-xl", "text-white", "text-center", "rounded", "bg-gradient-to-r", "from-brorfelde-dark", "to-blue-900", 3, "click"]], template: function PlanethuntCorrectanswerComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0, 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -252,7 +252,7 @@ class PlanethuntStartpageComponent {
     }
 }
 PlanethuntStartpageComponent.ɵfac = function PlanethuntStartpageComponent_Factory(t) { return new (t || PlanethuntStartpageComponent)(); };
-PlanethuntStartpageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntStartpageComponent, selectors: [["planethunt-startpage"]], decls: 14, vars: 0, consts: [[1, "h-screen", "flex", "flex-col"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "text-center", "text-white", "pt-2", "text-xl"], [1, "uppercase"], [1, "text-center", "text-white", "p-4", "text-6xl"], [1, "w-full"], ["src", "../../assets/images/brorfelde-landscape.jpg", "alt", "Brorfelde landscape photo", 1, "mx-auto"], [1, "p-4", "w-full"], ["routerLink", "/signup"], ["src", "../../assets/images/sun.png", "alt", "The sun", 1, "max-h-72", "mx-auto"]], template: function PlanethuntStartpageComponent_Template(rf, ctx) { if (rf & 1) {
+PlanethuntStartpageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntStartpageComponent, selectors: [["planethunt-startpage"]], decls: 14, vars: 0, consts: [[1, "h-screen", "flex", "flex-col"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "text-center", "text-white", "pt-2", "text-2xl"], [1, "uppercase"], [1, "max-w-full", "text-center", "text-white", "p-4", "text-4xl"], [1, "w-full"], ["src", "../../assets/images/brorfelde-landscape.jpg", "alt", "Brorfelde landscape photo", 1, "w-full"], [1, "p-4", "w-full"], ["routerLink", "/signup"], ["src", "../../assets/images/sun.png", "alt", "The sun", 1, "max-h-72", "mx-auto"]], template: function PlanethuntStartpageComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0, 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "img", 2);
@@ -308,7 +308,7 @@ class PlanethuntSignupComponent {
     ngOnInit() { }
 }
 PlanethuntSignupComponent.ɵfac = function PlanethuntSignupComponent_Factory(t) { return new (t || PlanethuntSignupComponent)(); };
-PlanethuntSignupComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntSignupComponent, selectors: [["planethunt-signup"]], decls: 12, vars: 0, consts: [[1, "h-screen", "flex", "flex-col"], [1, "flex", "flex-row"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "uppercase", "text-white", "text-4xl", "text-center", "pt-4"], [1, "text-white", "text-2xl", "m-12", "text-center"], [1, "mx-auto"]], template: function PlanethuntSignupComponent_Template(rf, ctx) { if (rf & 1) {
+PlanethuntSignupComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntSignupComponent, selectors: [["planethunt-signup"]], decls: 10, vars: 0, consts: [[1, "h-screen", "flex", "flex-col"], [1, "flex", "flex-row"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "uppercase", "text-white", "text-2xl", "text-center", "pt-4"], [1, "text-white", "text-xl", "m-12", "text-center"], [1, "mx-auto"]], template: function PlanethuntSignupComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0, 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -319,12 +319,10 @@ PlanethuntSignupComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵ
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, " For at kunne jagte planeter, skal du v\u00E6lge et brugernavn. Det beh\u00F8ver ikke at v\u00E6re dit eget, s\u00E5 alt fra ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, " Han Solo til Niels Bohr eller Supernova er godt. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, " For at kunne jagte planeter, skal du v\u00E6lge et brugernavn. Det beh\u00F8ver ikke at v\u00E6re dit eget, s\u00E5 alt fra Han Solo til Niels Bohr eller Supernova er godt. ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](11, "planethunt-username-form");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "planethunt-username-form");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
     } }, directives: [_planethunt_username_form_planethunt_username_form_component__WEBPACK_IMPORTED_MODULE_1__["PlanethuntUsernameFormComponent"]], encapsulation: 2 });
@@ -541,7 +539,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function PlanethuntWordpuzzleComponent_div_15_Template(rf, ctx) { if (rf & 1) {
+function PlanethuntWordpuzzleComponent_div_12_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 12);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -550,12 +548,14 @@ function PlanethuntWordpuzzleComponent_div_15_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](letter_r2);
 } }
-function PlanethuntWordpuzzleComponent_div_16_Template(rf, ctx) { if (rf & 1) {
+function PlanethuntWordpuzzleComponent_div_13_Template(rf, ctx) { if (rf & 1) {
     const _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 13);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "button", 14);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function PlanethuntWordpuzzleComponent_div_16_Template_button_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r4); const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r3.onSubmitClicked(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, " rigtigt! indsend dit svar ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "a", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "button", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function PlanethuntWordpuzzleComponent_div_13_Template_button_click_2_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r4); const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r3.onSubmitClicked(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, " rigtigt! indsend dit svar ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } }
@@ -595,7 +595,7 @@ class PlanethuntWordpuzzleComponent {
     }
 }
 PlanethuntWordpuzzleComponent.ɵfac = function PlanethuntWordpuzzleComponent_Factory(t) { return new (t || PlanethuntWordpuzzleComponent)(); };
-PlanethuntWordpuzzleComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: PlanethuntWordpuzzleComponent, selectors: [["planethunt-wordpuzzle"]], decls: 17, vars: 2, consts: [[1, "h-screen", "flex", "flex-col"], [1, "grid", "grid-cols-3"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "uppercase", "text-white", "text-4xl", "text-center", "pt-4"], [1, "top-0", "right-0", "mt-4", "mr-4", "fixed", "focus:outline-none"], ["routerLink", "/inventory"], ["src", "../../assets/images/inventory-icon-bg.png", "alt", "inventory navigation", 1, "max-h-14"], [1, "text-white", "text-2xl", "m-12", "text-center"], ["id", "wordpuzzle", "cdkDropList", "", "cdkDropListOrientation", "horizontal", 1, "px-4", "py-28", "w-full", "flex", "flex-row", 3, "cdkDropListDropped"], ["class", "cursor-move shadow-sm border-r-1 mr-2 border-solid border-black rounded text-center bg-tile text-4xl text-black h-10 w-10", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["class", "text-center", 4, "ngIf"], ["cdkDrag", "", 1, "cursor-move", "shadow-sm", "border-r-1", "mr-2", "border-solid", "border-black", "rounded", "text-center", "bg-tile", "text-4xl", "text-black", "h-10", "w-10"], [1, "text-center"], ["type", "submit", 1, "p-4", "mt-4", "uppercase", "text-xl", "text-white", "text-center", "rounded", "bg-gradient-to-r", "from-brorfelde-dark", "to-blue-900", 3, "click"]], template: function PlanethuntWordpuzzleComponent_Template(rf, ctx) { if (rf & 1) {
+PlanethuntWordpuzzleComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: PlanethuntWordpuzzleComponent, selectors: [["planethunt-wordpuzzle"]], decls: 14, vars: 2, consts: [[1, "h-screen", "flex", "flex-col"], [1, "flex", "flex-row"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "uppercase", "text-white", "text-3xl", "text-center", "pt-4"], [1, "top-0", "right-0", "mt-2", "mr-2", "fixed"], ["routerLink", "/inventory"], ["src", "../../assets/images/inventory-icon-bg.png", "alt", "inventory navigation", 1, "max-h-14"], [1, "text-white", "text-xl", "mx-2", "my-4", "text-center"], ["id", "wordpuzzle", "cdkDropList", "", "cdkDropListOrientation", "horizontal", 1, "px-4", "py-28", "w-full", "flex", "flex-row", 3, "cdkDropListDropped"], ["class", "cursor-move shadow-sm border-r-1 mr-2 border-solid border-black rounded text-center bg-tile text-4xl text-black h-10 w-10", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["class", "text-center", 4, "ngIf"], ["cdkDrag", "", 1, "cursor-move", "shadow-sm", "border-r-1", "mr-2", "border-solid", "border-black", "rounded", "text-center", "bg-tile", "text-4xl", "text-black", "h-10", "w-10"], [1, "text-center"], ["routerLink", "/correctanswer"], ["type", "submit", 1, "p-4", "mt-4", "uppercase", "text-xl", "text-white", "text-center", "rounded", "bg-gradient-to-r", "from-brorfelde-dark", "to-blue-900", 3, "click"]], template: function PlanethuntWordpuzzleComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerStart"](0, 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 2);
@@ -611,19 +611,16 @@ PlanethuntWordpuzzleComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](10, " Tillykke. Du har samlet alle planeterne og alle bogstaverne. ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](11, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](12, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](13, " Tr\u00E6k i bogstaverne og arranger dem s\u00E5 de danner navnet p\u00E5 en kendt videnskabsperson. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](10, " Tillykke. Du har samlet alle planeterne og alle bogstaverne. Tr\u00E6k i bogstaverne og arranger dem s\u00E5 de danner navnet p\u00E5 en kendt videnskabsperson. ");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "div", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("cdkDropListDropped", function PlanethuntWordpuzzleComponent_Template_div_cdkDropListDropped_14_listener($event) { return ctx.drop($event); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](15, PlanethuntWordpuzzleComponent_div_15_Template, 2, 1, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "div", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("cdkDropListDropped", function PlanethuntWordpuzzleComponent_Template_div_cdkDropListDropped_11_listener($event) { return ctx.drop($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](12, PlanethuntWordpuzzleComponent_div_12_Template, 2, 1, "div", 10);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](16, PlanethuntWordpuzzleComponent_div_16_Template, 3, 0, "div", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](13, PlanethuntWordpuzzleComponent_div_13_Template, 4, 0, "div", 11);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](12);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx.lettersArray);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.correctanswer);
@@ -907,6 +904,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/cdk/drag-drop */ "5+WD");
 /* harmony import */ var _planethunt_wordpuzzle_planethunt_wordpuzzle_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./planethunt-wordpuzzle/planethunt-wordpuzzle.component */ "Ufys");
 /* harmony import */ var _planethunt_correctanswer_planethunt_correctanswer_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./planethunt-correctanswer/planethunt-correctanswer.component */ "IM9A");
+/* harmony import */ var _planethunt_highscore_planethunt_highscore_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./planethunt-highscore/planethunt-highscore.component */ "maft");
+
 
 
 
@@ -937,7 +936,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
         _planethunt_signup_planethunt_signup_component__WEBPACK_IMPORTED_MODULE_7__["PlanethuntSignupComponent"],
         _planethunt_username_form_planethunt_username_form_component__WEBPACK_IMPORTED_MODULE_8__["PlanethuntUsernameFormComponent"],
         _planethunt_wordpuzzle_planethunt_wordpuzzle_component__WEBPACK_IMPORTED_MODULE_11__["PlanethuntWordpuzzleComponent"],
-        _planethunt_correctanswer_planethunt_correctanswer_component__WEBPACK_IMPORTED_MODULE_12__["PlanethuntCorrectanswerComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+        _planethunt_correctanswer_planethunt_correctanswer_component__WEBPACK_IMPORTED_MODULE_12__["PlanethuntCorrectanswerComponent"],
+        _planethunt_highscore_planethunt_highscore_component__WEBPACK_IMPORTED_MODULE_13__["PlanethuntHighscoreComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
         _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"],
         _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_10__["DragDropModule"]] }); })();
@@ -952,7 +952,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     _planethunt_signup_planethunt_signup_component__WEBPACK_IMPORTED_MODULE_7__["PlanethuntSignupComponent"],
                     _planethunt_username_form_planethunt_username_form_component__WEBPACK_IMPORTED_MODULE_8__["PlanethuntUsernameFormComponent"],
                     _planethunt_wordpuzzle_planethunt_wordpuzzle_component__WEBPACK_IMPORTED_MODULE_11__["PlanethuntWordpuzzleComponent"],
-                    _planethunt_correctanswer_planethunt_correctanswer_component__WEBPACK_IMPORTED_MODULE_12__["PlanethuntCorrectanswerComponent"]
+                    _planethunt_correctanswer_planethunt_correctanswer_component__WEBPACK_IMPORTED_MODULE_12__["PlanethuntCorrectanswerComponent"],
+                    _planethunt_highscore_planethunt_highscore_component__WEBPACK_IMPORTED_MODULE_13__["PlanethuntHighscoreComponent"]
                 ],
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -964,6 +965,36 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                 bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
             }]
     }], null, null); })();
+
+
+/***/ }),
+
+/***/ "maft":
+/*!************************************************************************!*\
+  !*** ./src/app/planethunt-highscore/planethunt-highscore.component.ts ***!
+  \************************************************************************/
+/*! exports provided: PlanethuntHighscoreComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlanethuntHighscoreComponent", function() { return PlanethuntHighscoreComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
+class PlanethuntHighscoreComponent {
+    constructor() { }
+    ngOnInit() { }
+}
+PlanethuntHighscoreComponent.ɵfac = function PlanethuntHighscoreComponent_Factory(t) { return new (t || PlanethuntHighscoreComponent)(); };
+PlanethuntHighscoreComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntHighscoreComponent, selectors: [["planethunt-highscore"]], decls: 0, vars: 0, template: function PlanethuntHighscoreComponent_Template(rf, ctx) { }, encapsulation: 2 });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PlanethuntHighscoreComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'planethunt-highscore',
+                templateUrl: 'planethunt-highscore.component.html'
+            }]
+    }], function () { return []; }, null); })();
 
 
 /***/ }),
@@ -981,11 +1012,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "tyNb");
 /* harmony import */ var _planethunt_correctanswer_planethunt_correctanswer_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./planethunt-correctanswer/planethunt-correctanswer.component */ "IM9A");
-/* harmony import */ var _planethunt_inventory_planethunt_inventory_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./planethunt-inventory/planethunt-inventory.component */ "YSlc");
-/* harmony import */ var _planethunt_signup_planethunt_signup_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./planethunt-signup/planethunt-signup.component */ "NNSq");
-/* harmony import */ var _planethunt_startpage_planethunt_startpage_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./planethunt-startpage/planethunt-startpage.component */ "LYdu");
-/* harmony import */ var _planethunt_tutorial_planethunt_tutorial_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./planethunt-tutorial/planethunt-tutorial.component */ "F2+r");
-/* harmony import */ var _planethunt_wordpuzzle_planethunt_wordpuzzle_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./planethunt-wordpuzzle/planethunt-wordpuzzle.component */ "Ufys");
+/* harmony import */ var _planethunt_highscore_planethunt_highscore_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./planethunt-highscore/planethunt-highscore.component */ "maft");
+/* harmony import */ var _planethunt_inventory_planethunt_inventory_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./planethunt-inventory/planethunt-inventory.component */ "YSlc");
+/* harmony import */ var _planethunt_signup_planethunt_signup_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./planethunt-signup/planethunt-signup.component */ "NNSq");
+/* harmony import */ var _planethunt_startpage_planethunt_startpage_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./planethunt-startpage/planethunt-startpage.component */ "LYdu");
+/* harmony import */ var _planethunt_tutorial_planethunt_tutorial_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./planethunt-tutorial/planethunt-tutorial.component */ "F2+r");
+/* harmony import */ var _planethunt_wordpuzzle_planethunt_wordpuzzle_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./planethunt-wordpuzzle/planethunt-wordpuzzle.component */ "Ufys");
+
 
 
 
@@ -998,12 +1031,13 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     { path: '', redirectTo: '/startpag', pathMatch: 'full' },
-    { path: 'startpage', component: _planethunt_startpage_planethunt_startpage_component__WEBPACK_IMPORTED_MODULE_5__["PlanethuntStartpageComponent"] },
-    { path: 'tutorial', component: _planethunt_tutorial_planethunt_tutorial_component__WEBPACK_IMPORTED_MODULE_6__["PlanetHuntTutorialComponent"] },
-    { path: 'inventory', component: _planethunt_inventory_planethunt_inventory_component__WEBPACK_IMPORTED_MODULE_3__["PlanethuntInventoryComponent"] },
-    { path: 'wordpuzzle', component: _planethunt_wordpuzzle_planethunt_wordpuzzle_component__WEBPACK_IMPORTED_MODULE_7__["PlanethuntWordpuzzleComponent"] },
-    { path: 'signup', component: _planethunt_signup_planethunt_signup_component__WEBPACK_IMPORTED_MODULE_4__["PlanethuntSignupComponent"] },
+    { path: 'startpage', component: _planethunt_startpage_planethunt_startpage_component__WEBPACK_IMPORTED_MODULE_6__["PlanethuntStartpageComponent"] },
+    { path: 'tutorial', component: _planethunt_tutorial_planethunt_tutorial_component__WEBPACK_IMPORTED_MODULE_7__["PlanetHuntTutorialComponent"] },
+    { path: 'inventory', component: _planethunt_inventory_planethunt_inventory_component__WEBPACK_IMPORTED_MODULE_4__["PlanethuntInventoryComponent"] },
+    { path: 'wordpuzzle', component: _planethunt_wordpuzzle_planethunt_wordpuzzle_component__WEBPACK_IMPORTED_MODULE_8__["PlanethuntWordpuzzleComponent"] },
+    { path: 'signup', component: _planethunt_signup_planethunt_signup_component__WEBPACK_IMPORTED_MODULE_5__["PlanethuntSignupComponent"] },
     { path: 'correctanswer', component: _planethunt_correctanswer_planethunt_correctanswer_component__WEBPACK_IMPORTED_MODULE_2__["PlanethuntCorrectanswerComponent"] },
+    { path: 'highscore', component: _planethunt_highscore_planethunt_highscore_component__WEBPACK_IMPORTED_MODULE_3__["PlanethuntHighscoreComponent"] },
 ];
 class AppRoutingModule {
 }
