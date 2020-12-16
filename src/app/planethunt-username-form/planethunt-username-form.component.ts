@@ -15,7 +15,6 @@ export class PlanethuntUsernameFormComponent implements OnInit {
   ngOnInit() {}
 
   onSubmit() {
-    localStorage.setItem('username', this.username);
     // let user knows that username already exist if createUser returns false
     // add ngOnDestroy and unsubscribe to observable
     this.userService.createUser(this.username);
