@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'planethunt-highscore',
@@ -60,8 +61,17 @@ export class PlanethuntHighscoreComponent implements OnInit {
     }
   ]
 
+  highScoreArray: any[] = [];
 
-  constructor() { }
 
-  ngOnInit() { }
+  constructor(private userService: UserService) { }
+
+  ngOnInit() {
+    this.userService
+      .getTopTenUsers()
+      .subscribe((response) => {
+        this.highScoreArray = response;
+        console.log(this.highScoreArray);
+      });
+  }
 }

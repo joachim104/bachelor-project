@@ -248,7 +248,7 @@ __webpack_require__.r(__webpack_exports__);
 class PlanethuntStartpageComponent {
     constructor() { }
     ngOnInit() {
-        console.log('logged baby!');
+        this.checkPlatformAndBrowser();
     }
     checkPlatformAndBrowser() {
         // Check for different iOS devices and Chrome

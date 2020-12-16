@@ -22,6 +22,8 @@ export class PlanethuntInventoryComponent implements OnInit {
     this.userService
       .getUser('5fd7948f288c8372b2745de9')
       .subscribe((response) => {
+        console.log(response);
+        console.log(this.username);
         this.planetArray = response.planets;
         this.calculatePointTotal();
       });

@@ -21,4 +21,9 @@ export class UserService {
   getUser(id: string) {
     return this.http.get<any>(`${this.baseUrl}/treasurehunt/getUser/${id}`);
   }
+
+  getTopTenUsers() {
+    return this.http.get<any>(`${this.baseUrl}/treasurehunt/getTopTenUsers`);
+  }
+
 }
