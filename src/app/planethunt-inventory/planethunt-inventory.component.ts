@@ -10,21 +10,23 @@ export class PlanethuntInventoryComponent implements OnInit {
 
   totalpoints: number = 0;
 
-  username: any = '';
+  userId: any = '';
 
   baseUrl: string = '';
 
   constructor(private userService: UserService) {}
 
   ngOnInit() {
-    this.username = localStorage.getItem('username');
-    this.baseUrl = `https://viewer.bachelor.hololink.io/5fcdff656aaa6af4ba799606?username=${this.username}&planet=`;
-    this.userService
-      .getUser('5fd7948f288c8372b2745de9')
-      .subscribe((response) => {
-        this.planetArray = response.planets;
-        this.calculatePointTotal();
-      });
+    this.userId = localStorage.getItem('userId');
+    this.baseUrl = `https://viewer.bachelor.hololink.io/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
+    // THIS IS ONLY FOR DEVELOPMENT - CHANGE TO ABOVE WHEN DEPLOYING
+    // this.baseUrl = `https://10.25.142.129:8080/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
+    // this.baseUrl =
+    //   'https://viewer.bachelor.hololink.io/5fcdff656aaa6af4ba799606';
+    this.userService.getUser(this.userId).subscribe((response) => {
+      this.planetArray = response.planets;
+      this.calculatePointTotal();
+    });
   }
   // TODO: When first hololink is opened, start timer
   // TODO: When a hololink is visited, update the image for that planet in the database

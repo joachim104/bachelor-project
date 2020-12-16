@@ -12,9 +12,11 @@ export class UserService {
       username: username,
     };
     return this.http
-      .post<any>(`${this.baseUrl}/treasurehunt/createUser`, newUser)
+      .post<any>(`${this.baseUrl}/treasurehunt/createUser`, {
+        username: username,
+      })
       .subscribe((resp) => {
-        console.log('resp', resp);
+        localStorage.setItem('userId', resp);
       });
   }
 
