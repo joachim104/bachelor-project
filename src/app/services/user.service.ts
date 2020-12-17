@@ -8,9 +8,6 @@ export class UserService {
   baseUrl: string = 'https://api.bachelor.hololink.io';
 
   createUser(username: string) {
-    const newUser = {
-      username: username,
-    };
     return this.http
       .post<any>(`${this.baseUrl}/treasurehunt/createUser`, {
         username: username,
@@ -27,5 +24,4 @@ export class UserService {
   getTopTenUsers() {
     return this.http.get<any>(`${this.baseUrl}/treasurehunt/getTopTenUsers`);
   }
-
 }

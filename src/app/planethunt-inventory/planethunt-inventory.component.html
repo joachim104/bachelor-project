@@ -1,16 +1,21 @@
 <div id="inventory" class="grid grid-cols-3 gap-4 p-4 text-white">
-  <div class="col-span-3 text-center p-4 text-4xl uppercase">mine planeter</div>
+  <div class="col-span-3 text-center p-4 text-4xl uppercase">
+    {{ username }}'s planeter
+  </div>
   <div *ngFor="let planet of planetArray">
     <button (click)="scroll(planet.name)">
-      <img *ngIf="planet.visited === 0"
+      <img
+        *ngIf="planet.visited === 0"
         src="{{ planet.unVisitedImageUrl }}"
         alt="unvisited planet image"
       />
-      <img *ngIf="planet.visited === 1"
+      <img
+        *ngIf="planet.visited === 1"
         src="{{ planet.visitedImageUrl }}"
         alt="visited planet image"
       />
-      Point: {{ planet.points }} <br>
+      {{ planet.name }} <br />
+      Point: {{ planet.points }} <br />
       Bogstav: {{ planet.letter }}
     </button>
   </div>
@@ -37,12 +42,14 @@
       {{ planet.name }}
     </p>
     <a href="{{ baseUrl }}{{ planet.name }}">
-      <img *ngIf="planet.visited === 0"
+      <img
+        *ngIf="planet.visited === 0"
         class="mx-auto max-h-planetcard max-w-planetcard"
         src="{{ planet.unVisitedImageUrl }}"
         alt="unvisited planet image"
       />
-      <img *ngIf="planet.visited === 1"
+      <img
+        *ngIf="planet.visited === 1"
         class="mx-auto max-h-planetcard max-w-planetcard"
         src="{{ planet.visitedImageUrl }}"
         alt="visited planet image"
@@ -51,8 +58,8 @@
     <div class="p-4">
       <p class="text-2xl capitalize pb-2">Fakta om {{ planet.name }}:</p>
       <p class="text-lg py-2">
-        Diameter: {{ planet.diameterKm }} km <br>
-			  Afstand fra jorden: {{ planet.distanceEarthKm }} km <br>
+        Diameter: {{ planet.diameterKm }} km <br />
+        Afstand fra jorden: {{ planet.distanceEarthKm }} km <br />
         {{ planet.fakta }}
       </p>
       <p class="text-2xl py-2">
