@@ -1,39 +1,45 @@
-<div id="inventory" class="grid grid-cols-3 gap-4 p-4 text-white">
-  <div class="col-span-3 text-center p-4 text-4xl uppercase">
-    {{ username }}'s planeter
-  </div>
-  <div *ngFor="let planet of planetArray">
-    <button (click)="scroll(planet.name)">
-      <img
-        *ngIf="planet.visited === 0"
-        src="{{ planet.unVisitedImageUrl }}"
-        alt="unvisited planet image"
-      />
-      <img
-        *ngIf="planet.visited === 1"
-        src="{{ planet.visitedImageUrl }}"
-        alt="visited planet image"
-      />
-      {{ planet.name }} <br />
-      Point: {{ planet.points }} <br />
-      Bogstav: {{ planet.letter }}
-    </button>
-  </div>
-  <div class="col-start-2 col-end-4 p-1 grid grid-col">
-    <div class="grid grid-col text-xl">
-      <div>Point Total: {{ totalpoints }}</div>
-      <div>Tid: 00:12:34</div>
-      <div>Mine bogstaver:</div>
+<div id="inventory">
+  <div class="grid grid-cols-3 gap-4 p-4 text-white">
+    <div class="col-span-3 text-center p-bottom-4 text-4xl uppercase">
+      <span class="text-xl">{{ username }}'s</span> planeter
     </div>
-    <div>
-      <div
-        class="float-left text-center uppercase bg-tile text-black m-1"
-        *ngFor="let planet of planetArray"
-      >
-        {{ planet.letter }} &nbsp;
+    <div class="col-start-1 col-end-4 grid grid-col">
+      <div class="grid grid-col text-xl text-white">
+        <div>Point Total: {{ totalpoints }}</div>
+        <div>Tid: 00:12:34</div>
+        <div>Mine bogstaver:</div>
+      </div>
+      <div class="px-2 p-top-2">
+        <div
+          class="float-left text-center uppercase bg-tile text-black mr-1 px-1"
+          *ngFor="let planet of planetArray"
+        >
+          {{ planet.letter }} &nbsp;
+        </div>
       </div>
     </div>
+    <div *ngFor="let planet of planetArray">
+      <button (click)="scroll(planet.name)">
+        <img
+          *ngIf="planet.visited === 0"
+          src="{{ planet.unVisitedImageUrl }}"
+          alt="unvisited planet image"
+        />
+        <img
+          *ngIf="planet.visited === 1"
+          src="{{ planet.visitedImageUrl }}"
+          alt="visited planet image"
+        />
+        <!--{{ planet.name }} <br />-->
+        <p class="text-left text-sm">
+          Point: {{ planet.points }} <br />
+          Bogstav: {{ planet.letter }}
+        </p>
+      </button>
+    </div>
   </div>
+
+
 </div>
 
 <ng-container *ngFor="let planet of planetArray">
@@ -56,13 +62,13 @@
       />
     </a>
     <div class="p-4">
-      <p class="text-2xl capitalize pb-2">Fakta om {{ planet.name }}:</p>
-      <p class="text-lg py-2">
+      <p class="py-2">
+        <span class="text-xl capitalize pb-2">Fakta om {{ planet.name }}: <br></span>
         Diameter: {{ planet.diameterKm }} km <br />
         Afstand fra jorden: {{ planet.distanceEarthKm }} km <br />
         {{ planet.fakta }}
       </p>
-      <p class="text-2xl py-2">
+      <p class="text-lg py-2">
         Point: {{ planet.points }}
         <br />
         Bogstav: <span class="uppercase">{{ planet.letter }}</span>
