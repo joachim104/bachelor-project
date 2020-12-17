@@ -74,4 +74,8 @@ export class PlanethuntHighscoreComponent implements OnInit {
         console.log(this.highScoreArray);
       });
   }
+
+  // TODO: Get current user. Check if current user is in top ten. If so, do nothing, otherwise
+  // substitute tenth position with current user, but show their position as their actual position
+  // not as number ten
 }

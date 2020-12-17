@@ -15,8 +15,8 @@
 
   <div class="text-white w-full text-center">
     <ul class="list-disc">
-      <li *ngFor="let user of hiScorePlaceholder; let i = index">
-        {{ i + 1 }}. {{ user.name }} &nbsp; {{ user.points }}p &nbsp; {{ user.time }}
+      <li *ngFor="let user of highScoreArray; let i = index">
+        {{ i + 1 }}. {{ user.username }} &nbsp; {{ user.totalPoints }}p &nbsp; {{ user.timeTaken }}
       </li>
     </ul>
   </div>
