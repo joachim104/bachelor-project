@@ -3,6 +3,21 @@
     <div class="col-span-3 text-center p-bottom-4 text-4xl uppercase">
       <span class="text-xl">{{ username }}'s</span> planeter
     </div>
+    <div class="col-start-1 col-end-4 grid grid-col">
+      <div class="grid grid-col text-xl text-white">
+        <div>Point Total: {{ totalpoints }}</div>
+        <div>Tid: 00:12:34</div>
+        <div>Mine bogstaver:</div>
+      </div>
+      <div class="px-2 p-top-2">
+        <div
+          class="float-left text-center uppercase bg-tile text-black mr-1 px-1"
+          *ngFor="let planet of planetArray"
+        >
+          {{ planet.letter }} &nbsp;
+        </div>
+      </div>
+    </div>
     <div *ngFor="let planet of planetArray">
       <button (click)="scroll(planet.name)">
         <img
@@ -24,21 +39,7 @@
     </div>
   </div>
 
-  <div class="col-start-2 col-end-4 p-1 grid grid-col">
-    <div class="grid grid-col text-xl text-white">
-      <div>Point Total: {{ totalpoints }}</div>
-      <div>Tid: 00:12:34</div>
-      <div>Mine bogstaver:</div>
-    </div>
-    <div>
-      <div
-        class="float-left text-center uppercase bg-tile text-black m-1 px-1"
-        *ngFor="let planet of planetArray"
-      >
-        {{ planet.letter }} &nbsp;
-      </div>
-    </div>
-  </div>
+
 </div>
 
 <ng-container *ngFor="let planet of planetArray">
