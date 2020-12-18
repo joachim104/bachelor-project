@@ -13,10 +13,20 @@
     </div>
   </div>
 
-  <div class="text-white w-full text-center">
-    <ul class="list-disc">
-      <li *ngFor="let user of highScoreArray; let i = index">
-        {{ i + 1 }}. {{ user.username }} &nbsp; {{ user.totalPoints }}p &nbsp; {{ user.timeTaken }}
+  <div class="text-white w-full text-left px-8 mb-2">
+    <ul class="list-decimal mx-auto">
+      <li *ngFor="let user of highScoreArray">
+        <div class="grid grid-cols-5">
+          <div class="col-start-1 col-end-3 mr-2 truncate">
+            {{ user.username }}
+          </div>
+          <div class="col-start-3 col-end-4 mr-2">
+            {{ user.totalPoints }}p
+          </div>
+          <div class="col-start-4 col-end-5 mr-2">
+            {{ user.timeTaken }}
+          </div>
+        </div>
       </li>
     </ul>
   </div>

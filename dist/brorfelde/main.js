@@ -721,7 +721,8 @@ class PlanethuntInventoryComponent {
         this.userId = localStorage.getItem('userId');
         // this.baseUrl = `https://viewer.bachelor.hololink.io/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
         // THIS IS ONLY FOR DEVELOPMENT - CHANGE TO ABOVE WHEN DEPLOYING
-        this.baseUrl = `https://10.25.142.129:8080/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
+        // this.baseUrl = `https://10.25.142.129:8080/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
+        this.baseUrl = `https://10.25.142.129:8080/5fdb58c05c5f98b6cbf06d4b?userId=${this.userId}&planet=`;
         this.userService.getUser(this.userId).subscribe((response) => {
             this.planetArray = response.planets;
             this.username = response.username;
@@ -744,7 +745,7 @@ class PlanethuntInventoryComponent {
     }
 }
 PlanethuntInventoryComponent.ɵfac = function PlanethuntInventoryComponent_Factory(t) { return new (t || PlanethuntInventoryComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_user_service__WEBPACK_IMPORTED_MODULE_1__["UserService"])); };
-PlanethuntInventoryComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntInventoryComponent, selectors: [["planethunt-inventory"]], decls: 21, vars: 5, consts: [["id", "inventory"], [1, "grid", "grid-cols-3", "gap-4", "p-4", "text-white"], [1, "col-span-3", "text-center", "p-bottom-4", "text-4xl", "uppercase"], [1, "text-xl"], [1, "col-start-1", "col-end-4", "grid", "grid-col"], [1, "grid", "grid-col", "text-xl", "text-white"], [1, "px-2", "p-top-2"], ["class", "float-left text-center uppercase bg-tile text-black mr-1 px-1", 4, "ngFor", "ngForOf"], [4, "ngFor", "ngForOf"], [1, "top-0", "right-0", "mt-4", "mr-4", "fixed", "focus:outline-none"], [3, "click"], ["src", "../../assets/images/inventory-icon-bg.png", "alt", "inventory navigation", 1, "max-h-14"], [1, "float-left", "text-center", "uppercase", "bg-tile", "text-black", "mr-1", "px-1"], ["alt", "unvisited planet image", 3, "src", 4, "ngIf"], ["alt", "visited planet image", 3, "src", 4, "ngIf"], [1, "text-left", "text-sm"], ["alt", "unvisited planet image", 3, "src"], ["alt", "visited planet image", 3, "src"], [1, "flex", "flex-col", "p-4", "h-screen", "text-white", 3, "id"], [1, "text-white", "text-6xl", "text-center", "uppercase", "p-4"], [3, "href"], ["class", "mx-auto max-h-planetcard max-w-planetcard", "alt", "unvisited planet image", 3, "src", 4, "ngIf"], ["class", "mx-auto max-h-planetcard max-w-planetcard", "alt", "visited planet image", 3, "src", 4, "ngIf"], [1, "p-4"], [1, "py-2"], [1, "text-xl", "capitalize", "pb-2"], [1, "text-lg", "py-2"], [1, "uppercase"], ["alt", "unvisited planet image", 1, "mx-auto", "max-h-planetcard", "max-w-planetcard", 3, "src"], ["alt", "visited planet image", 1, "mx-auto", "max-h-planetcard", "max-w-planetcard", 3, "src"]], template: function PlanethuntInventoryComponent_Template(rf, ctx) { if (rf & 1) {
+PlanethuntInventoryComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntInventoryComponent, selectors: [["planethunt-inventory"]], decls: 21, vars: 5, consts: [["id", "inventory"], [1, "grid", "grid-cols-3", "gap-4", "p-4", "text-white"], [1, "col-span-3", "text-center", "p-bottom-4", "text-4xl", "uppercase"], [1, "text-xl"], [1, "col-start-1", "col-end-4", "grid", "grid-col"], [1, "grid", "grid-col", "text-xl", "p-left-12", "text-white"], [1, "px-2", "p-top-2"], ["class", "float-left text-center uppercase bg-tile text-black mr-1 px-1", 4, "ngFor", "ngForOf"], [4, "ngFor", "ngForOf"], [1, "top-0", "right-0", "mt-4", "mr-4", "fixed", "focus:outline-none"], [3, "click"], ["src", "../../assets/images/inventory-icon-bg.png", "alt", "inventory navigation", 1, "max-h-14"], [1, "float-left", "text-center", "uppercase", "bg-tile", "text-black", "mr-1", "px-1"], ["alt", "unvisited planet image", 3, "src", 4, "ngIf"], ["alt", "visited planet image", 3, "src", 4, "ngIf"], [1, "text-left", "text-sm", "p-left-12"], ["alt", "unvisited planet image", 3, "src"], ["alt", "visited planet image", 3, "src"], [1, "flex", "flex-col", "p-4", "h-screen", "text-white", 3, "id"], [1, "text-white", "text-6xl", "text-center", "uppercase", "p-4"], [3, "href"], ["class", "mx-auto max-h-planetcard max-w-planetcard", "alt", "unvisited planet image", 3, "src", 4, "ngIf"], ["class", "mx-auto max-h-planetcard max-w-planetcard", "alt", "visited planet image", 3, "src", 4, "ngIf"], [1, "p-4"], [1, "py-2"], [1, "text-xl", "capitalize", "pb-2"], [1, "text-lg", "py-2"], [1, "uppercase"], ["alt", "unvisited planet image", 1, "mx-auto", "max-h-planetcard", "max-w-planetcard", 3, "src"], ["alt", "visited planet image", 1, "mx-auto", "max-h-planetcard", "max-w-planetcard", 3, "src"]], template: function PlanethuntInventoryComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -924,7 +925,7 @@ function PlanethuntHighscoreComponent_li_11_Template(rf, ctx) { if (rf & 1) {
     const user_r1 = ctx.$implicit;
     const i_r2 = ctx.index;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate4"](" ", i_r2 + 1, ". ", user_r1.name, " \u00A0 ", user_r1.points, "p \u00A0 ", user_r1.time, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate4"](" ", i_r2 + 1, ". ", user_r1.username, " \u00A0 ", user_r1.totalPoints, "p \u00A0 ", user_r1.timeTaken, " ");
 } }
 class PlanethuntHighscoreComponent {
     constructor(userService) {
@@ -1021,7 +1022,7 @@ PlanethuntHighscoreComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__[
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.hiScorePlaceholder);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.highScoreArray);
     } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLinkWithHref"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"]], encapsulation: 2 });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PlanethuntHighscoreComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
