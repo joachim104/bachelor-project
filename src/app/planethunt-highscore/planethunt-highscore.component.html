@@ -14,11 +14,11 @@
   </div>
 
   <div class="text-white w-full text-left px-8 mb-2">
-    <ul class="list-decimal mx-auto">
+    <ul class="list-none">
       <li *ngFor="let user of highScoreArray">
         <div class="grid grid-cols-5">
           <div class="col-start-1 col-end-3 mr-2 truncate">
-            {{ user.username }}
+              {{ user.username }}
           </div>
           <div class="col-start-3 col-end-4 mr-2">
             {{ user.totalPoints }}p

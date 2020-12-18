@@ -23,6 +23,7 @@ export class PlanethuntHighscoreComponent implements OnInit {
     this.baseUrl = `https://10.25.142.129:8080/5fdb58c05c5f98b6cbf06d4b?userId=${this.userId}&planet=`;
     this.userService.getUser(this.userId).subscribe((response) => {
       this.currentUser = response;
+      console.log(this.currentUser);
     });
     this.userService
       .getTopTenUsers()
@@ -34,7 +35,7 @@ export class PlanethuntHighscoreComponent implements OnInit {
   // check if user is in array
   containsUser(user: any, userArray: [any]) {
     for (var i = 0; i < userArray.length; i++) {
-        if (userArray[i] === user) {
+        if (userArray[i]._id === user._id) {
             return true;
         }
     }
@@ -49,21 +50,25 @@ export class PlanethuntHighscoreComponent implements OnInit {
 
   // create topTenArray with only relevant data
   createLimitedTopTenUsers(userArray: [any]) {
-    // TODO: finish this to substitute number ten for currentUser if currentUser is not in array
-    this.containsUser(this.currentUser, userArray);
-
+    if (!this.containsUser(this.currentUser, userArray)) {
+      userArray.pop();
+      userArray.push(this.currentUser);
+    }
+    var position = 1;
     userArray.forEach(user => {
       var tempUser = {
         username: "",
         totalPoints: 0,
         timeTaken: ""
       };
-      tempUser.username = user.username;
+      tempUser.username = position.toString() + ". " + user.username;
       tempUser.totalPoints = user.totalPoints;
       var timeInSeconds = user.timeTaken;
       tempUser.timeTaken = this.convertSecondsToHMS(timeInSeconds);
       this.highScoreArray.push(tempUser);
+      position = position + 1;
     });
+
   }
 
 }

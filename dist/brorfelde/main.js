@@ -919,82 +919,81 @@ __webpack_require__.r(__webpack_exports__);
 
 function PlanethuntHighscoreComponent_li_11_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "li");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const user_r1 = ctx.$implicit;
-    const i_r2 = ctx.index;
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate4"](" ", i_r2 + 1, ". ", user_r1.username, " \u00A0 ", user_r1.totalPoints, "p \u00A0 ", user_r1.timeTaken, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", user_r1.username, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", user_r1.totalPoints, "p ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", user_r1.timeTaken, " ");
 } }
 class PlanethuntHighscoreComponent {
     constructor(userService) {
         this.userService = userService;
-        this.hiScorePlaceholder = [
-            {
-                name: "Marsmanden",
-                points: 30,
-                time: "00:12:01"
-            },
-            {
-                name: "Marsmanden",
-                points: 30,
-                time: "00:12:01"
-            },
-            {
-                name: "Marsmanden",
-                points: 30,
-                time: "00:12:01"
-            },
-            {
-                name: "Marsmanden",
-                points: 30,
-                time: "00:12:01"
-            },
-            {
-                name: "Marsmanden",
-                points: 30,
-                time: "00:12:01"
-            },
-            {
-                name: "Marsmanden",
-                points: 30,
-                time: "00:12:01"
-            },
-            {
-                name: "Marsmanden",
-                points: 30,
-                time: "00:12:01"
-            },
-            {
-                name: "Marsmanden",
-                points: 30,
-                time: "00:12:01"
-            },
-            {
-                name: "Marsmanden",
-                points: 30,
-                time: "00:12:01"
-            },
-            {
-                name: "Marsmanden",
-                points: 30,
-                time: "00:12:01"
-            }
-        ];
         this.highScoreArray = [];
+        this.baseUrl = '';
     }
     ngOnInit() {
+        this.userId = localStorage.getItem('userId');
+        // this.baseUrl = `https://viewer.bachelor.hololink.io/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
+        // THIS IS ONLY FOR DEVELOPMENT - CHANGE TO ABOVE WHEN DEPLOYING
+        // this.baseUrl = `https://10.25.142.129:8080/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
+        this.baseUrl = `https://10.25.142.129:8080/5fdb58c05c5f98b6cbf06d4b?userId=${this.userId}&planet=`;
+        this.userService.getUser(this.userId).subscribe((response) => {
+            this.currentUser = response;
+        });
         this.userService
             .getTopTenUsers()
             .subscribe((response) => {
-            this.highScoreArray = response;
-            console.log(this.highScoreArray);
+            this.createLimitedTopTenUsers(response);
+        });
+    }
+    // check if user is in array
+    containsUser(user, userArray) {
+        for (var i = 0; i < userArray.length; i++) {
+            if (userArray[i] === user) {
+                return true;
+            }
+        }
+        return false;
+    }
+    // TODO: Turn timeTaken in seconds into hours:minutes:seconds
+    convertSecondsToHMS(timeInSeconds) {
+        return new Date(timeInSeconds * 1000).toISOString().substr(11, 8);
+    }
+    // create topTenArray with only relevant data
+    createLimitedTopTenUsers(userArray) {
+        // TODO: finish this to substitute number ten for currentUser if currentUser is not in array
+        this.containsUser(this.currentUser, userArray);
+        userArray.forEach(user => {
+            var tempUser = {
+                username: "",
+                totalPoints: 0,
+                timeTaken: ""
+            };
+            tempUser.username = user.username;
+            tempUser.totalPoints = user.totalPoints;
+            var timeInSeconds = user.timeTaken;
+            tempUser.timeTaken = this.convertSecondsToHMS(timeInSeconds);
+            this.highScoreArray.push(tempUser);
         });
     }
 }
 PlanethuntHighscoreComponent.ɵfac = function PlanethuntHighscoreComponent_Factory(t) { return new (t || PlanethuntHighscoreComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_user_service__WEBPACK_IMPORTED_MODULE_1__["UserService"])); };
-PlanethuntHighscoreComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntHighscoreComponent, selectors: [["planethunt-highscore"]], decls: 15, vars: 1, consts: [[1, "relative", "h-screen", "flex", "flex-col"], [1, "flex", "flex-row"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "uppercase", "text-white", "text-3xl", "text-center", "pt-4"], [1, "top-0", "right-0", "mt-2", "mr-2", "fixed"], ["routerLink", "/inventory"], ["src", "../../assets/images/inventory-icon-bg.png", "alt", "inventory navigation", 1, "max-h-14"], [1, "text-white", "w-full", "text-center"], [1, "list-disc"], [4, "ngFor", "ngForOf"], ["rel", "ar", "href", "../../assets/3dmodels/Moon_1_3474.usdz"], ["src", "../../assets/images/visited-images/m\u00E5nen.png", "alt", "the moon", 1, "mx-auto", "max-h-planetcard"]], template: function PlanethuntHighscoreComponent_Template(rf, ctx) { if (rf & 1) {
+PlanethuntHighscoreComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntHighscoreComponent, selectors: [["planethunt-highscore"]], decls: 15, vars: 1, consts: [[1, "relative", "h-screen", "flex", "flex-col"], [1, "flex", "flex-row"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "uppercase", "text-white", "text-3xl", "text-center", "pt-4"], [1, "top-0", "right-0", "mt-2", "mr-2", "fixed"], ["routerLink", "/inventory"], ["src", "../../assets/images/inventory-icon-bg.png", "alt", "inventory navigation", 1, "max-h-14"], [1, "text-white", "w-full", "text-left", "px-8", "mb-2"], [1, "list-decimal", "mx-auto"], [4, "ngFor", "ngForOf"], ["rel", "ar", "href", "../../assets/3dmodels/Moon_1_3474.usdz"], ["src", "../../assets/images/visited-images/m\u00E5nen.png", "alt", "the moon", 1, "mx-auto", "max-h-planetcard"], [1, "grid", "grid-cols-5"], [1, "col-start-1", "col-end-3", "mr-2", "truncate"], [1, "col-start-3", "col-end-4", "mr-2"], [1, "col-start-4", "col-end-5", "mr-2"]], template: function PlanethuntHighscoreComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0, 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -1011,7 +1010,7 @@ PlanethuntHighscoreComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__[
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "ul", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](11, PlanethuntHighscoreComponent_li_11_Template, 2, 4, "li", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](11, PlanethuntHighscoreComponent_li_11_Template, 8, 3, "li", 10);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div");

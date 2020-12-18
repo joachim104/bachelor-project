@@ -12,20 +12,22 @@
       </a>
     </div>
   </div>
-  <div class="text-white text-xl text-center mx-2 mt-4 mb-2">
-    Tillykke. Vis denne skærm i billetkassen for at deltage i konkurrencen om en astronomisk præmie.
+  <div class="text-white text-xl text-center mx-2 mt-2 mb-2">
+    Vis denne skærm i billetkassen for at deltage i konkurrencen om en astronomisk præmie.
+  </div>
+  <div class="w-full text-center uppercase absolute text-white text-2xl mb-2">
+    {{ correctAnswer }}
   </div>
   <div class="w-full">
-    <img class="mx-auto max-h-planetcard" src="../../assets/images/goldmoon.png" alt="golden moon">
-    <div class="w-full text-center uppercase absolute text-white text-4xl">
-        {{ correctAnswer }}
-    </div>
+    <img class="mx-auto max-h-planetcard mt-8" src="../../assets/images/goldmoon.png" alt="golden moon">
   </div>
 
   <div class="absolute text-center bottom-4">
-    <button type="submit" (click)="onSubmitClicked()"
-            class="p-4 mt-4 mx-4 uppercase text-xl text-white text-center rounded bg-gradient-to-r from-brorfelde-dark to-blue-900">
-              gem high score og få en bonusoplevelse
-    </button>
+    <a routerLink="/highscore">
+      <button type="submit"
+      class="p-4 mt-4 mx-4 uppercase text-xl text-white text-center rounded bg-gradient-to-r from-brorfelde-dark to-blue-900">
+        se high score og få en bonusoplevelse
+      </button>
+    </a>
   </div>
 </ng-container>
