@@ -48,8 +48,7 @@
     <p class="text-white text-6xl text-center uppercase p-4">
       {{ planet.name }}
     </p>
-    <!--remove target="_blank" below after debugging-->
-    <a href="{{ baseUrl }}{{ planet.name }}" target="_blank">
+    <a href="{{ baseUrl }}{{ planet.name }}">
       <button (click)="visitPlanet()">
         <img
           *ngIf="planet.visited === 0"
