@@ -9,6 +9,14 @@ export class PlanethuntInventoryComponent implements OnInit {
   planetArray: any[] = [];
 
   totalpoints: number = 0;
+  timeStarted: any;
+  currentTime: any;
+  timeElapsed: any;
+  timeInSeconds: number = 0;
+  timeToDisplay: any;
+  interval: any;
+  planetsVisited: number = 0;
+  finishTime: boolean = false;
 
   userId: any = '';
 
@@ -19,6 +27,38 @@ export class PlanethuntInventoryComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   ngOnInit() {
+
+    var tempVis = window.localStorage.getItem('planetsVisited');
+    if (tempVis) {
+      this.planetsVisited = parseInt(tempVis!);
+    }
+
+    // Check if planetsVisited is larger than zero.
+    // if planetsVisited > 0, get timeStarted and current time. Subtract timeStarted from current time
+    // to get total elapsed time.
+    if (this.planetsVisited > 0) {
+      var currentTime = new Date().getTime() / 1000;
+      this.timeStarted = window.localStorage.getItem('timeStarted');
+      this.timeElapsed = currentTime - this.timeStarted;
+      if (this.planetsVisited > 10) {
+        console.log('more than ten planets visited');
+        // if planetsVisited > 10, subtract timeStarted from current time and save the result to user on mongoDB atlas
+        // as timeTaken
+        this.timeToDisplay = new Date(this.timeElapsed * 1000).toISOString().substr(11, 8);
+        this.finishTime = true;
+      } else {
+        console.log('less than ten planets visited');
+        // Otherwise, set timer to run from the current time point.
+        this.startTime(this.timeElapsed);
+      }
+    } else {
+      console.log('ZERO planets visited');
+      // if planetsVisited === 0, Start timer at zero
+      this.startTime(0);
+    }
+
+
+
     this.userId = localStorage.getItem('userId');
     // this.baseUrl = `https://viewer.bachelor.hololink.io/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
     // THIS IS ONLY FOR DEVELOPMENT - CHANGE TO ABOVE WHEN DEPLOYING
@@ -46,4 +86,24 @@ export class PlanethuntInventoryComponent implements OnInit {
       this.totalpoints = this.totalpoints + planet.points;
     });
   }
+
+  visitPlanet() {
+    this.planetsVisited++;
+    window.localStorage.setItem('planetsVisited', this.planetsVisited.toString());
+    console.log(this.planetsVisited);
+    if (this.planetsVisited === 1) {
+      this.timeStarted = new Date().getTime() / 1000;
+      window.localStorage.setItem('timeStarted', this.timeStarted);
+    }
+  }
+
+  startTime(seconds: number) {
+    this.interval = setInterval(() => {
+      seconds++;
+      this.timeToDisplay = new Date(seconds * 1000).toISOString().substr(11, 8);
+      },1000);
+  }
+
 }
+
+// var seconds = new Date().getTime() / 1000;

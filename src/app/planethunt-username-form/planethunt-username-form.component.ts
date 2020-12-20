@@ -19,5 +19,6 @@ export class PlanethuntUsernameFormComponent implements OnInit {
     // add ngOnDestroy and unsubscribe to observable
     this.userService.createUser(this.username);
     this.submitted = true;
+    window.localStorage.setItem('planetsVisited', '0');
   }
 }

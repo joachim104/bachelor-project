@@ -6,7 +6,8 @@
     <div class="col-start-1 col-end-4 grid grid-col">
       <div class="grid grid-col text-xl p-left-12 text-white">
         <div>Point Total: {{ totalpoints }}</div>
-        <div>Tid: 00:12:34</div>
+        <div *ngIf="!finishTime">Tid: {{ timeToDisplay }}</div>
+        <div *ngIf="finishTime" class="text-green-200">Tid: {{ timeToDisplay }}</div>
         <div>Mine bogstaver:</div>
       </div>
       <div class="px-2 p-top-2">
@@ -47,19 +48,22 @@
     <p class="text-white text-6xl text-center uppercase p-4">
       {{ planet.name }}
     </p>
-    <a href="{{ baseUrl }}{{ planet.name }}">
-      <img
-        *ngIf="planet.visited === 0"
-        class="mx-auto max-h-planetcard max-w-planetcard"
-        src="{{ planet.unVisitedImageUrl }}"
-        alt="unvisited planet image"
-      />
-      <img
-        *ngIf="planet.visited === 1"
-        class="mx-auto max-h-planetcard max-w-planetcard"
-        src="{{ planet.visitedImageUrl }}"
-        alt="visited planet image"
-      />
+    <!--remove target="_blank" below after debugging-->
+    <a href="{{ baseUrl }}{{ planet.name }}" target="_blank">
+      <button (click)="visitPlanet()">
+        <img
+          *ngIf="planet.visited === 0"
+          class="mx-auto max-h-planetcard max-w-planetcard"
+          src="{{ planet.unVisitedImageUrl }}"
+          alt="unvisited planet image"
+        />
+        <img
+          *ngIf="planet.visited === 1"
+          class="mx-auto max-h-planetcard max-w-planetcard"
+          src="{{ planet.visitedImageUrl }}"
+          alt="visited planet image"
+        />
+      </button>
     </a>
     <div class="p-4">
       <p class="py-2">
