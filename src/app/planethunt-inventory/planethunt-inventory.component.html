@@ -1,7 +1,7 @@
 <div id="inventory">
   <div class="grid grid-cols-3 gap-4 p-4 text-white">
     <div class="col-span-3 text-center p-bottom-4 text-4xl uppercase">
-      <span class="text-xl">{{ username }}'s</span> planeter
+      <span class="text-xl">{{ username }}'s</span> <br> planeter
     </div>
     <div class="col-start-1 col-end-4 grid grid-col">
       <div class="grid grid-col text-xl p-left-12 text-white">
@@ -10,11 +10,11 @@
         <div *ngIf="finishTime" class="text-green-600">
           Tid: {{ timeToDisplay }}
         </div>
-        <div>Mine bogstaver:</div>
+        <div>Bogstaver:</div>
       </div>
       <div class="px-2 p-top-2">
         <div
-          class="float-left text-center uppercase bg-tile text-black mr-1 px-1"
+          class="shadow-sm rounded-sm float-left text-center uppercase bg-tile text-black mr-1 px-1 mb-1"
           *ngFor="let planet of planetArray"
         >
           <ng-container *ngIf="planet.visited; else notVisited">
@@ -24,7 +24,7 @@
         </div>
       </div>
     </div>
-    <div *ngFor="let planet of planetArray">
+    <div class="shadow-lg" *ngFor="let planet of planetArray">
       <button (click)="scroll(planet.name)">
         <img
           *ngIf="!planet.visited"
@@ -52,11 +52,11 @@
 </div>
 
 <ng-container *ngFor="let planet of planetArray">
-  <div id="{{ planet.name }}" class="flex flex-col p-4 h-screen text-white">
-    <p class="text-white text-6xl text-center uppercase p-4">
+  <div id="{{ planet.name }}" class="shadow-lg m-2 flex flex-col p-4 h-screen text-white">
+    <p class="text-white text-5xl text-center uppercase p-4">
       {{ planet.name }}
     </p>
-    <a href="{{ baseUrl }}{{ planet.name }}">
+    <a class="text-center" href="{{ baseUrl }}{{ planet.name }}">
       <button (click)="visitPlanet()">
         <img
           *ngIf="!planet.visited"
@@ -73,13 +73,17 @@
       </button>
     </a>
     <div class="p-4">
-      <p class="py-2">
-        <span class="text-xl capitalize pb-2"
+      <span class="text-xl capitalize pb-2"
           >Fakta om {{ planet.name }}: <br
         /></span>
+      <p *ngIf="planet.visited" class="">
         Diameter: {{ planet.diameterKm }} km <br />
         Afstand fra jorden: {{ planet.distanceEarthKm }} km <br />
         {{ planet.fakta }}
+      </p>
+      <p *ngIf="!planet.visited">
+        Du har ikke fundet {{ planet.name }} endnu.
+        Find den for at få mere at vide.
       </p>
       <p class="text-lg py-2">
         Point: {{ planet.points }}
