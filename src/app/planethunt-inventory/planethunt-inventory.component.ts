@@ -39,7 +39,7 @@ export class PlanethuntInventoryComponent implements OnInit {
       var currentTime = new Date().getTime() / 1000;
       this.timeStarted = window.localStorage.getItem('timeStarted');
       this.timeElapsed = currentTime - this.timeStarted;
-      if (this.planetsVisited > 10) {
+      if (this.planetsVisited === 10) {
         console.log('more than ten planets visited');
         // if planetsVisited > 10, subtract timeStarted from current time and save the result to user on mongoDB atlas
         // as timeTaken
@@ -60,7 +60,7 @@ export class PlanethuntInventoryComponent implements OnInit {
     // this.baseUrl = `https://viewer.bachelor.hololink.io/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
     // THIS IS ONLY FOR DEVELOPMENT - CHANGE TO ABOVE WHEN DEPLOYING
     // this.baseUrl = `https://10.25.142.129:8080/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
-    this.baseUrl = `https://10.25.142.129:8080/5fdb58c05c5f98b6cbf06d4b?userId=${this.userId}&planet=`;
+    this.baseUrl = `https://192.168.0.108:8080/5fdb58c05c5f98b6cbf06d4b?userId=${this.userId}&planet=`;
     this.userService.getUser(this.userId).subscribe((response) => {
       this.planetArray = response.planets;
       this.username = response.username;
