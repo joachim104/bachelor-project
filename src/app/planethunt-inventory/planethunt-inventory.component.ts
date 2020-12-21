@@ -27,12 +27,11 @@ export class PlanethuntInventoryComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   ngOnInit() {
-
+    this.userId = localStorage.getItem('userId');
     var tempVis = window.localStorage.getItem('planetsVisited');
     if (tempVis) {
       this.planetsVisited = parseInt(tempVis!);
     }
-
     // Check if planetsVisited is larger than zero.
     // if planetsVisited > 0, get timeStarted and current time. Subtract timeStarted from current time
     // to get total elapsed time.
@@ -46,6 +45,8 @@ export class PlanethuntInventoryComponent implements OnInit {
         // as timeTaken
         this.timeToDisplay = new Date(this.timeElapsed * 1000).toISOString().substr(11, 8);
         this.finishTime = true;
+        console.log('final time: ', this.timeElapsed);
+        this.userService.updateTimeTaken(this.userId ,this.timeElapsed);
       } else {
         console.log('less than ten planets visited');
         // Otherwise, set timer to run from the current time point.
@@ -53,13 +54,9 @@ export class PlanethuntInventoryComponent implements OnInit {
       }
     } else {
       console.log('ZERO planets visited');
-      // if planetsVisited === 0, Start timer at zero
-      this.startTime(0);
+      // if planetsVisited === 0, set timer to zero, without counting
+      this.timeToDisplay = new Date(0).toISOString().substr(11, 8);
     }
-
-
-
-    this.userId = localStorage.getItem('userId');
     // this.baseUrl = `https://viewer.bachelor.hololink.io/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
     // THIS IS ONLY FOR DEVELOPMENT - CHANGE TO ABOVE WHEN DEPLOYING
     // this.baseUrl = `https://10.25.142.129:8080/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
@@ -70,8 +67,6 @@ export class PlanethuntInventoryComponent implements OnInit {
       this.calculatePointTotal();
     });
   }
-  // TODO: When first hololink is opened, start timer
-  // TODO: When a hololink is visited, update the image for that planet in the database
 
   // Scroll to specific HTML element on page
   scroll(id: any) {
@@ -87,6 +82,8 @@ export class PlanethuntInventoryComponent implements OnInit {
     });
   }
 
+  // When following a planet's Hololink, check if this is the first planet to be visited
+  // If so, set timestamp in localstorage
   visitPlanet() {
     this.planetsVisited++;
     window.localStorage.setItem('planetsVisited', this.planetsVisited.toString());
@@ -97,6 +94,7 @@ export class PlanethuntInventoryComponent implements OnInit {
     }
   }
 
+  // set the timer being displayed, incrementing every second in real time
   startTime(seconds: number) {
     this.interval = setInterval(() => {
       seconds++;
@@ -105,5 +103,3 @@ export class PlanethuntInventoryComponent implements OnInit {
   }
 
 }
-
-// var seconds = new Date().getTime() / 1000;

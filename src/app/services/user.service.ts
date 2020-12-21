@@ -24,4 +24,18 @@ export class UserService {
   getTopTenUsers() {
     return this.http.get<any>(`${this.baseUrl}/treasurehunt/getTopTenUsers`);
   }
+
+  updateTimeTaken(userId: string, timeTaken: number) {
+    console.log('inside updateTimeTaken');
+    return this.http
+    .patch<any>(`${this.baseUrl}/treasurehunt/updateTimeTaken`, {
+      userId: userId,
+      timeTaken: timeTaken,
+    })
+    .subscribe((resp) => {
+      console.log(resp);
+    });
+  }
 }
+
+

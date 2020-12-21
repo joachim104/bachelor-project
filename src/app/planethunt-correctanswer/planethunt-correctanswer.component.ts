@@ -13,9 +13,4 @@ export class PlanethuntCorrectanswerComponent implements OnInit {
 
   ngOnInit() { }
 
-  onSubmitClicked() {
-
-  }
-
-
 }
