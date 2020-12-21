@@ -7,7 +7,9 @@
       <div class="grid grid-col text-xl p-left-12 text-white">
         <div>Point Total: {{ totalpoints }}</div>
         <div *ngIf="!finishTime">Tid: {{ timeToDisplay }}</div>
-        <div *ngIf="finishTime" class="text-green-600">Tid: {{ timeToDisplay }}</div>
+        <div *ngIf="finishTime" class="text-green-600">
+          Tid: {{ timeToDisplay }}
+        </div>
         <div>Mine bogstaver:</div>
       </div>
       <div class="px-2 p-top-2">
@@ -22,12 +24,12 @@
     <div *ngFor="let planet of planetArray">
       <button (click)="scroll(planet.name)">
         <img
-          *ngIf="planet.visited === 0"
+          *ngIf="!planet.visited"
           src="{{ planet.unVisitedImageUrl }}"
           alt="unvisited planet image"
         />
         <img
-          *ngIf="planet.visited === 1"
+          *ngIf="planet.visited"
           src="{{ planet.visitedImageUrl }}"
           alt="visited planet image"
         />
@@ -39,8 +41,6 @@
       </button>
     </div>
   </div>
-
-
 </div>
 
 <ng-container *ngFor="let planet of planetArray">
@@ -51,13 +51,13 @@
     <a href="{{ baseUrl }}{{ planet.name }}">
       <button (click)="visitPlanet()">
         <img
-          *ngIf="planet.visited === 0"
+          *ngIf="!planet.visited"
           class="mx-auto max-h-planetcard max-w-planetcard"
           src="{{ planet.unVisitedImageUrl }}"
           alt="unvisited planet image"
         />
         <img
-          *ngIf="planet.visited === 1"
+          *ngIf="planet.visited"
           class="mx-auto max-h-planetcard max-w-planetcard"
           src="{{ planet.visitedImageUrl }}"
           alt="visited planet image"
@@ -66,7 +66,9 @@
     </a>
     <div class="p-4">
       <p class="py-2">
-        <span class="text-xl capitalize pb-2">Fakta om {{ planet.name }}: <br></span>
+        <span class="text-xl capitalize pb-2"
+          >Fakta om {{ planet.name }}: <br
+        /></span>
         Diameter: {{ planet.diameterKm }} km <br />
         Afstand fra jorden: {{ planet.distanceEarthKm }} km <br />
         {{ planet.fakta }}
