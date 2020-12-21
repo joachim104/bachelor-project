@@ -17,7 +17,10 @@
           class="float-left text-center uppercase bg-tile text-black mr-1 px-1"
           *ngFor="let planet of planetArray"
         >
-          {{ planet.letter }} &nbsp;
+          <ng-container *ngIf="planet.visited; else notVisited">
+            {{ planet.letter }} &nbsp;</ng-container
+          >
+          <ng-template #notVisited>? &nbsp;</ng-template>
         </div>
       </div>
     </div>
@@ -34,10 +37,16 @@
           alt="visited planet image"
         />
         <!--{{ planet.name }} <br />-->
-        <p class="text-left text-sm p-left-12">
-          Point: {{ planet.points }} <br />
+        <p class="text-left text-sm p-left-12">Point: {{ planet.points }}</p>
+        <p
+          *ngIf="planet.visited; else questionmark"
+          class="text-left text-sm p-left-12"
+        >
           Bogstav: {{ planet.letter }}
         </p>
+        <ng-template #questionmark class="text-left text-sm p-left-12"
+          >Bogstav: ?</ng-template
+        >
       </button>
     </div>
   </div>
