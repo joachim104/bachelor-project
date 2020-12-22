@@ -28,10 +28,14 @@ export class PlanethuntInventoryComponent implements OnInit {
 
   ngOnInit() {
     this.userId = localStorage.getItem('userId');
-    var tempVis = window.localStorage.getItem('planetsVisited');
-    if (tempVis) {
-      this.planetsVisited = parseInt(tempVis!);
-    }
+    // this.baseUrl = `https://viewer.bachelor.hololink.io/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
+    // THIS IS ONLY FOR DEVELOPMENT - CHANGE TO ABOVE WHEN DEPLOYING
+    // this.baseUrl = `https://10.25.142.129:8080/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
+    this.baseUrl = `https://192.168.0.108:8080/5fdb58c05c5f98b6cbf06d4b?userId=${this.userId}&planet=`;
+    this.userService.getUser(this.userId).subscribe((response) => {
+    this.planetArray = response.planets;
+    this.checkNumberOfPlanetsVisitedAndCalulatePoints();
+    this.username = response.username;
     // Check if planetsVisited is larger than zero.
     // if planetsVisited > 0, get timeStarted and current time. Subtract timeStarted from current time
     // to get total elapsed time.
@@ -46,7 +50,8 @@ export class PlanethuntInventoryComponent implements OnInit {
         this.timeToDisplay = new Date(this.timeElapsed * 1000).toISOString().substr(11, 8);
         this.finishTime = true;
         console.log('final time: ', this.timeElapsed);
-        this.userService.updateTimeTaken(this.userId ,this.timeElapsed);
+        console.log('total points: ', this.totalpoints);
+        this.userService.updateTimeAndTotalScore(this.userId ,this.timeElapsed, this.totalpoints);
       } else {
         console.log('less than ten planets visited');
         // Otherwise, set timer to run from the current time point.
@@ -55,16 +60,10 @@ export class PlanethuntInventoryComponent implements OnInit {
     } else {
       console.log('ZERO planets visited');
       // if planetsVisited === 0, set timer to zero, without counting
+      this.timeStarted = new Date().getTime() / 1000;
+      window.localStorage.setItem('timeStarted', this.timeStarted);
       this.timeToDisplay = new Date(0).toISOString().substr(11, 8);
     }
-    // this.baseUrl = `https://viewer.bachelor.hololink.io/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
-    // THIS IS ONLY FOR DEVELOPMENT - CHANGE TO ABOVE WHEN DEPLOYING
-    // this.baseUrl = `https://10.25.142.129:8080/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
-    this.baseUrl = `https://192.168.0.108:8080/5fdb58c05c5f98b6cbf06d4b?userId=${this.userId}&planet=`;
-    this.userService.getUser(this.userId).subscribe((response) => {
-      this.planetArray = response.planets;
-      this.username = response.username;
-      this.calculatePointTotal();
     });
   }
 
@@ -75,22 +74,11 @@ export class PlanethuntInventoryComponent implements OnInit {
     el.scrollIntoView({ behavior: 'smooth' });
   }
 
-  // Calculate the total points based on the points for each planet
-  calculatePointTotal() {
-    this.planetArray.forEach((planet) => {
-      this.totalpoints = this.totalpoints + planet.points;
-    });
-  }
-
   // When following a planet's Hololink, check if this is the first planet to be visited
   // If so, set timestamp in localstorage
   visitPlanet() {
-    this.planetsVisited++;
-    window.localStorage.setItem('planetsVisited', this.planetsVisited.toString());
-    console.log(this.planetsVisited);
-    if (this.planetsVisited === 1) {
-      this.timeStarted = new Date().getTime() / 1000;
-      window.localStorage.setItem('timeStarted', this.timeStarted);
+    if (this.planetsVisited === 0) {
+      this.startTime(0);
     }
   }
 
@@ -102,4 +90,19 @@ export class PlanethuntInventoryComponent implements OnInit {
       },1000);
   }
 
+  checkNumberOfPlanetsVisitedAndCalulatePoints() {
+    var tempNumVisited = 0;
+    this.planetArray.forEach(planet => {
+      if (planet.visited === true) {
+        console.log(planet.visited);
+        tempNumVisited = tempNumVisited + 1;
+      }
+      this.totalpoints = this.totalpoints + planet.points;
+    });
+    console.log(tempNumVisited);
+    this.planetsVisited = tempNumVisited;
+  }
+
 }
+
+// dynamic button for wordpuzzle after ten planets are found

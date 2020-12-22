@@ -22,12 +22,16 @@ module.exports = (isProd) => ({
         },
         colors: {
           'brorfelde-dark': "#3a3967",
-        }
+        },
+        backgroundColor: {
+          'base': '#c33a5e',
+          'tile': '#e6ddc5',
+        },
       },
-      backgroundColor: theme => ({
+      /*backgroundColor: theme => ({
         'base': '#c33a5e',
         'tile': '#e6ddc5',
-      }),
+      }),*/
     },
     variants: {
       extend: {},

@@ -25,15 +25,16 @@ export class UserService {
     return this.http.get<any>(`${this.baseUrl}/treasurehunt/getTopTenUsers`);
   }
 
-  updateTimeTaken(userId: string, timeTaken: number) {
-    console.log('inside updateTimeTaken');
+  updateTimeAndTotalScore(userId: string, timeTaken: number, totalPoints: number) {
+    console.log('inside updateTimeAndTotalScore');
     return this.http
-    .patch<any>(`${this.baseUrl}/treasurehunt/updateTimeTaken`, {
+    .patch<any>(`${this.baseUrl}/treasurehunt/updateTimeAndTotalScore`, {
       userId: userId,
       timeTaken: timeTaken,
+      totalPoints: totalPoints
     })
     .subscribe((resp) => {
-      console.log(resp);
+      console.log('The response is: ', resp);
     });
   }
 }
