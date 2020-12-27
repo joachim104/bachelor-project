@@ -16,6 +16,7 @@ export class PlanethuntHighscoreComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit() {
+    this.checkOS();
     this.userId = localStorage.getItem('userId');
     // this.baseUrl = `https://viewer.bachelor.hololink.io/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
     // THIS IS ONLY FOR DEVELOPMENT - CHANGE TO ABOVE WHEN DEPLOYING
