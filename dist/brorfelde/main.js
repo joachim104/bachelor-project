@@ -1069,19 +1069,32 @@ function PlanethuntHighscoreComponent_li_11_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const user_r1 = ctx.$implicit;
+    const user_r3 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", user_r1.username, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", user_r3.username, " ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", user_r1.totalPoints, "p ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", user_r3.totalPoints, "p ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", user_r1.timeTaken, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", user_r3.timeTaken, " ");
+} }
+function PlanethuntHighscoreComponent_div_12_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "model-viewer", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function PlanethuntHighscoreComponent_div_13_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "img", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 class PlanethuntHighscoreComponent {
     constructor(userService) {
         this.userService = userService;
         this.highScoreArray = [];
         this.baseUrl = '';
+        this.isIphone = false;
     }
     ngOnInit() {
         this.userId = localStorage.getItem('userId');
@@ -1108,7 +1121,7 @@ class PlanethuntHighscoreComponent {
         }
         return false;
     }
-    // TODO: Turn timeTaken in seconds into hours:minutes:seconds
+    // Turn timeTaken in seconds into hours:minutes:seconds
     convertSecondsToHMS(timeInSeconds) {
         return new Date(timeInSeconds * 1000).toISOString().substr(11, 8);
     }
@@ -1133,9 +1146,12 @@ class PlanethuntHighscoreComponent {
             position = position + 1;
         });
     }
+    checkOS() {
+        this.isIphone = navigator.userAgent.indexOf('iPhone') != -1;
+    }
 }
 PlanethuntHighscoreComponent.ɵfac = function PlanethuntHighscoreComponent_Factory(t) { return new (t || PlanethuntHighscoreComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_user_service__WEBPACK_IMPORTED_MODULE_1__["UserService"])); };
-PlanethuntHighscoreComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntHighscoreComponent, selectors: [["planethunt-highscore"]], decls: 14, vars: 1, consts: [[1, "relative", "h-screen", "flex", "flex-col"], [1, "flex", "flex-row"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "uppercase", "text-white", "text-3xl", "text-center", "pt-4"], [1, "top-0", "right-0", "mt-2", "mr-2", "fixed"], ["routerLink", "/inventory"], ["src", "../../assets/images/inventory-icon-bg.png", "alt", "inventory navigation", 1, "max-h-14"], [1, "text-white", "w-full", "text-left", "px-8", "mb-2"], [1, "list-none"], [4, "ngFor", "ngForOf"], ["src", "./../assets/3dmodels/Moon_1_3474.glb", "ar", "", "exposure", "1.02", "shadow-intensity", "2.2", "shadow-softness", "0", "camera-controls", "", "auto-rotate", ""], [1, "grid", "grid-cols-5"], [1, "col-start-1", "col-end-3", "mr-2", "truncate"], [1, "col-start-3", "col-end-4", "mr-2"], [1, "col-start-4", "col-end-5", "mr-2"]], template: function PlanethuntHighscoreComponent_Template(rf, ctx) { if (rf & 1) {
+PlanethuntHighscoreComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntHighscoreComponent, selectors: [["planethunt-highscore"]], decls: 14, vars: 3, consts: [[1, "relative", "h-screen", "flex", "flex-col"], [1, "flex", "flex-row"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "uppercase", "text-white", "text-3xl", "text-center", "pt-4"], [1, "top-0", "right-0", "mt-2", "mr-2", "fixed"], ["routerLink", "/inventory"], ["src", "../../assets/images/inventory-icon-bg.png", "alt", "inventory navigation", 1, "max-h-14"], [1, "text-white", "w-full", "text-left", "px-8", "mb-2"], [1, "list-none"], [4, "ngFor", "ngForOf"], [4, "ngIf"], [1, "grid", "grid-cols-5"], [1, "col-start-1", "col-end-3", "mr-2", "truncate"], [1, "col-start-3", "col-end-4", "mr-2"], [1, "col-start-4", "col-end-5", "mr-2"], ["src", "./../assets/3dmodels/Moon_1_3474.glb", "ar", "", "shadow-intensity", "2.2", "shadow-softness", "0", "auto-rotate", ""], ["rel", "ar", "href", "../../assets/3dmodels/Moon_1_3474.usdz"], ["src", "../../assets/images/visited-images/m\u00E5nen.png", "alt", "the moon", 1, "mx-auto", "max-h-planetcard"]], template: function PlanethuntHighscoreComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0, 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -1155,14 +1171,17 @@ PlanethuntHighscoreComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__[
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](11, PlanethuntHighscoreComponent_li_11_Template, 8, 3, "li", 10);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "model-viewer", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, PlanethuntHighscoreComponent_div_12_Template, 2, 0, "div", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](13, PlanethuntHighscoreComponent_div_13_Template, 3, 0, "div", 11);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](11);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.highScoreArray);
-    } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLinkWithHref"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"]], encapsulation: 2 });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.isIphone);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.isIphone);
+    } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLinkWithHref"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"]], encapsulation: 2 });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PlanethuntHighscoreComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{

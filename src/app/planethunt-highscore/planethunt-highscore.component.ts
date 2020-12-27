@@ -11,6 +11,7 @@ export class PlanethuntHighscoreComponent implements OnInit {
   currentUser: any;
   userId: any;
   baseUrl: string = '';
+  isIphone: boolean = false;
 
   constructor(private userService: UserService) { }
 
@@ -39,10 +40,10 @@ export class PlanethuntHighscoreComponent implements OnInit {
         }
     }
     return false;
-}
+  }
 
 
-  // TODO: Turn timeTaken in seconds into hours:minutes:seconds
+  // Turn timeTaken in seconds into hours:minutes:seconds
   convertSecondsToHMS(timeInSeconds: number) {
     return new Date(timeInSeconds * 1000).toISOString().substr(11, 8);
   }
@@ -68,6 +69,10 @@ export class PlanethuntHighscoreComponent implements OnInit {
       position = position + 1;
     });
 
+  }
+
+  checkOS() {
+    this.isIphone = navigator.userAgent.indexOf('iPhone') != -1;
   }
 
 }
