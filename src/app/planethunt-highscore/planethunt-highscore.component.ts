@@ -3,11 +3,10 @@ import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'planethunt-highscore',
-  templateUrl: 'planethunt-highscore.component.html'
+  templateUrl: 'planethunt-highscore.component.html',
 })
 
 export class PlanethuntHighscoreComponent implements OnInit {
-
   highScoreArray: any[] = [];
   currentUser: any;
   userId: any;
