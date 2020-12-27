@@ -32,12 +32,21 @@
   </div>
 
   <div>
-    <model-viewer
+    <!--<model-viewer
       src="../../assets/3dmodels/Moon_1_3474.glb"
       ios-src="../../assets/3dmodels/Moon_1_3474.usdz"
       ar
       alt="a 3D model of the moon"
       >
+    </model-viewer>-->
+    <model-viewer src="./../assets/3dmodels/Moon_1_3474.glb"
+                  ar
+                  exposure="1.02"
+                  shadow-intensity="2.2"
+                  shadow-softness="0"
+                  camera-controls
+                  auto-rotate>
+
     </model-viewer>
     <!--<a rel="ar" href="../../assets/3dmodels/Moon_1_3474.usdz">
         <img class="mx-auto max-h-planetcard" src="../../assets/images/visited-images/månen.png" alt="the moon">
