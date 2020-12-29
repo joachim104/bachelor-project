@@ -21,7 +21,7 @@ export class PlanetHuntTutorialComponent implements OnInit {
     if (this.position !== 4) {
       document.getElementById('skip')!.textContent = 'skip vejledning';
     }
-    this.scroll(this.position);
+    //this.scroll(this.position);
   }
 
   clickRight() {
@@ -31,7 +31,7 @@ export class PlanetHuntTutorialComponent implements OnInit {
     if (this.position === 4) {
       document.getElementById('skip')!.textContent = 'start planetjagten';
     }
-    this.scroll(this.position);
+    //this.scroll(this.position);
   }
 
   // Scroll to specific HTML element on page
