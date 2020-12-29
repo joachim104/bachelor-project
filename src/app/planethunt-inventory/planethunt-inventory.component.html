@@ -21,13 +21,12 @@
       </div>
       <div class="col-span-3 px-2 p-top-2">
         <div
-          class="shadow-sm rounded-sm float-left text-center uppercase bg-tile text-black mr-1 px-1 mb-1"
+          class="shadow-sm rounded-sm float-left text-center uppercase bg-tile text-black mr-1 mb-1"
           *ngFor="let planet of planetArray"
         >
-          <ng-container *ngIf="planet.visited; else notVisited">
-            {{ planet.letter }} &nbsp;</ng-container
-          >
-          <ng-template #notVisited>? &nbsp;</ng-template>
+          <ng-container *ngIf="planet.visited">
+            &nbsp; {{ planet.letter }} &nbsp;
+          </ng-container>
         </div>
       </div>
     </div>

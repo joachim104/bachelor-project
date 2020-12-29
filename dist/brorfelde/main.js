@@ -633,7 +633,7 @@ function PlanethuntInventoryComponent_div_12_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Tid: ", ctx_r0.timeToDisplay, "");
 } }
 function PlanethuntInventoryComponent_div_13_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 19);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -642,8 +642,8 @@ function PlanethuntInventoryComponent_div_13_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" Tid: ", ctx_r1.timeToDisplay, " ");
 } }
 function PlanethuntInventoryComponent_div_16_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 18);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 21);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, " Tillykke. Klik her for at l\u00F8se ordg\u00E5den ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -653,88 +653,88 @@ function PlanethuntInventoryComponent_div_18_ng_container_1_Template(rf, ctx) { 
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
 } if (rf & 2) {
-    const planet_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
+    const planet_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", planet_r6.letter, " \u00A0");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", planet_r8.letter, " \u00A0");
 } }
 function PlanethuntInventoryComponent_div_18_ng_template_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, "? \u00A0");
 } }
 function PlanethuntInventoryComponent_div_18_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 20);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, PlanethuntInventoryComponent_div_18_ng_container_1_Template, 2, 1, "ng-container", 21);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, PlanethuntInventoryComponent_div_18_ng_template_2_Template, 1, 0, "ng-template", null, 22, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, PlanethuntInventoryComponent_div_18_ng_container_1_Template, 2, 1, "ng-container", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, PlanethuntInventoryComponent_div_18_ng_template_2_Template, 1, 0, "ng-template", null, 24, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const planet_r6 = ctx.$implicit;
-    const _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](3);
+    const planet_r8 = ctx.$implicit;
+    const _r10 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", planet_r6.visited)("ngIfElse", _r8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", planet_r8.visited)("ngIfElse", _r10);
 } }
 function PlanethuntInventoryComponent_div_19_img_2_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "img", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "img", 29);
 } if (rf & 2) {
-    const planet_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("src", planet_r11.unVisitedImageUrl, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+    const planet_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("src", planet_r13.unVisitedImageUrl, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
 } }
 function PlanethuntInventoryComponent_div_19_img_3_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "img", 31);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "img", 30);
 } if (rf & 2) {
-    const planet_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("src", planet_r11.visitedImageUrl, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+    const planet_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("src", planet_r13.visitedImageUrl, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
 } }
-function PlanethuntInventoryComponent_div_19_p_6_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p", 26);
+function PlanethuntInventoryComponent_div_19_span_8_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const planet_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
+    const planet_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" Bogstav: ", planet_r11.letter, " ");
-} }
-function PlanethuntInventoryComponent_div_19_ng_template_7_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, "Bogstav: ?");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](planet_r13.letter);
 } }
 function PlanethuntInventoryComponent_div_19_Template(rf, ctx) { if (rf & 1) {
     const _r21 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 23);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "button", 15);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PlanethuntInventoryComponent_div_19_Template_button_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r21); const planet_r11 = ctx.$implicit; const ctx_r20 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r20.scroll(planet_r11.name); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, PlanethuntInventoryComponent_div_19_img_2_Template, 1, 1, "img", 24);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, PlanethuntInventoryComponent_div_19_img_3_Template, 1, 1, "img", 25);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "p", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "button", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PlanethuntInventoryComponent_div_19_Template_button_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r21); const planet_r13 = ctx.$implicit; const ctx_r20 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r20.scroll(planet_r13.name); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, PlanethuntInventoryComponent_div_19_img_2_Template, 1, 1, "img", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, PlanethuntInventoryComponent_div_19_img_3_Template, 1, 1, "img", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "p", 28);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, PlanethuntInventoryComponent_div_19_p_6_Template, 2, 1, "p", 27);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](7, PlanethuntInventoryComponent_div_19_ng_template_7_Template, 1, 0, "ng-template", 28, 29, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "p", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, " Bogstav: ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, PlanethuntInventoryComponent_div_19_span_8_Template, 2, 1, "span", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const planet_r11 = ctx.$implicit;
-    const _r15 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](8);
+    const planet_r13 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    const _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](22);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !planet_r11.visited);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !planet_r13.visited);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", planet_r11.visited);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", planet_r13.visited);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Point: ", planet_r11.points, "");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", planet_r11.visited)("ngIfElse", _r15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Point: ", planet_r13.points, "");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", planet_r13.visited)("ngIfElse", _r6);
 } }
 function PlanethuntInventoryComponent_ng_container_20_img_5_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "img", 42);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "img", 41);
 } if (rf & 2) {
     const planet_r22 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("src", planet_r22.unVisitedImageUrl, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
 } }
 function PlanethuntInventoryComponent_ng_container_20_img_6_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "img", 43);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "img", 42);
 } if (rf & 2) {
     const planet_r22 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("src", planet_r22.visitedImageUrl, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
 } }
 function PlanethuntInventoryComponent_ng_container_20_p_11_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p", 44);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p", 43);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "br");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3);
@@ -759,30 +759,37 @@ function PlanethuntInventoryComponent_ng_container_20_p_12_Template(rf, ctx) { i
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" Du har ikke fundet ", planet_r22.name, " endnu. Find den for at f\u00E5 mere at vide. ");
 } }
+function PlanethuntInventoryComponent_ng_container_20_span_17_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 44);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const planet_r22 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](planet_r22.letter);
+} }
 function PlanethuntInventoryComponent_ng_container_20_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 32);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "p", 33);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 31);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "p", 32);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "a", 34);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, PlanethuntInventoryComponent_ng_container_20_img_5_Template, 1, 1, "img", 35);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, PlanethuntInventoryComponent_ng_container_20_img_6_Template, 1, 1, "img", 36);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "a", 33);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, PlanethuntInventoryComponent_ng_container_20_img_5_Template, 1, 1, "img", 34);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, PlanethuntInventoryComponent_ng_container_20_img_6_Template, 1, 1, "img", 35);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 37);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "span", 38);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 36);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "span", 37);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](10, "br");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](11, PlanethuntInventoryComponent_ng_container_20_p_11_Template, 6, 3, "p", 39);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](11, PlanethuntInventoryComponent_ng_container_20_p_11_Template, 6, 3, "p", 38);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, PlanethuntInventoryComponent_ng_container_20_p_12_Template, 2, 1, "p", 7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "p", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "p", 39);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](15, "br");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, " Bogstav: ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "span", 41);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, PlanethuntInventoryComponent_ng_container_20_span_17_Template, 2, 1, "span", 40);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -790,6 +797,7 @@ function PlanethuntInventoryComponent_ng_container_20_Template(rf, ctx) { if (rf
 } if (rf & 2) {
     const planet_r22 = ctx.$implicit;
     const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    const _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](22);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("id", planet_r22.name);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
@@ -808,8 +816,11 @@ function PlanethuntInventoryComponent_ng_container_20_Template(rf, ctx) { if (rf
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !planet_r22.visited);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" Point: ", planet_r22.points, " ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](planet_r22.letter);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", planet_r22.visited)("ngIfElse", _r6);
+} }
+function PlanethuntInventoryComponent_ng_template_21_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, "?");
 } }
 class PlanethuntInventoryComponent {
     constructor(userService) {
@@ -900,7 +911,7 @@ class PlanethuntInventoryComponent {
     }
 }
 PlanethuntInventoryComponent.ɵfac = function PlanethuntInventoryComponent_Factory(t) { return new (t || PlanethuntInventoryComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_user_service__WEBPACK_IMPORTED_MODULE_1__["UserService"])); };
-PlanethuntInventoryComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntInventoryComponent, selectors: [["planethunt-inventory"]], decls: 24, vars: 8, consts: [["id", "inventory"], [1, "grid", "grid-cols-3", "gap-4", "p-4", "text-white"], [1, "col-span-3", "text-center", "p-bottom-4", "text-4xl", "uppercase"], [1, "text-xl"], [1, "col-span-3", "grid", "grid-col"], [1, "col-start-1", "col-end-2"], [1, "grid", "grid-col", "text-xl", "p-left-12", "text-white"], [4, "ngIf"], ["class", "text-green-600", 4, "ngIf"], ["class", "shadow-lg col-start-3 col-end-4 rounded bg-green-600 ml-4 mr-1 mb-2 p-2 uppercase text-center", 4, "ngIf"], [1, "col-span-3", "px-2", "p-top-2"], ["class", "shadow-sm rounded-sm float-left text-center uppercase bg-tile text-black mr-1 px-1 mb-1", 4, "ngFor", "ngForOf"], ["class", "shadow-lg", 4, "ngFor", "ngForOf"], [4, "ngFor", "ngForOf"], [1, "top-0", "right-0", "mt-4", "mr-4", "fixed", "focus:outline-none"], [3, "click"], ["src", "../../assets/images/inventory-icon-bg.png", "alt", "inventory navigation", 1, "max-h-14"], [1, "text-green-600"], [1, "shadow-lg", "col-start-3", "col-end-4", "rounded", "bg-green-600", "ml-4", "mr-1", "mb-2", "p-2", "uppercase", "text-center"], ["routerLink", "/wordpuzzle"], [1, "shadow-sm", "rounded-sm", "float-left", "text-center", "uppercase", "bg-tile", "text-black", "mr-1", "px-1", "mb-1"], [4, "ngIf", "ngIfElse"], ["notVisited", ""], [1, "shadow-lg"], ["alt", "unvisited planet image", 3, "src", 4, "ngIf"], ["alt", "visited planet image", 3, "src", 4, "ngIf"], [1, "text-left", "text-sm", "p-left-12"], ["class", "text-left text-sm p-left-12", 4, "ngIf", "ngIfElse"], ["class", "text-left text-sm p-left-12"], ["questionmark", ""], ["alt", "unvisited planet image", 3, "src"], ["alt", "visited planet image", 3, "src"], [1, "shadow-lg", "m-2", "flex", "flex-col", "p-4", "h-screen", "text-white", 3, "id"], [1, "text-white", "text-5xl", "text-center", "uppercase", "p-4"], [1, "text-center", 3, "href"], ["class", "mx-auto max-h-planetcard max-w-planetcard", "alt", "unvisited planet image", 3, "src", 4, "ngIf"], ["class", "mx-auto max-h-planetcard max-w-planetcard", "alt", "visited planet image", 3, "src", 4, "ngIf"], [1, "p-4"], [1, "text-xl", "capitalize", "pb-2"], ["class", "", 4, "ngIf"], [1, "text-lg", "py-2"], [1, "uppercase"], ["alt", "unvisited planet image", 1, "mx-auto", "max-h-planetcard", "max-w-planetcard", 3, "src"], ["alt", "visited planet image", 1, "mx-auto", "max-h-planetcard", "max-w-planetcard", 3, "src"], [1, ""]], template: function PlanethuntInventoryComponent_Template(rf, ctx) { if (rf & 1) {
+PlanethuntInventoryComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanethuntInventoryComponent, selectors: [["planethunt-inventory"]], decls: 26, vars: 8, consts: [["id", "inventory"], [1, "grid", "grid-cols-3", "gap-4", "p-4", "text-white"], [1, "col-span-3", "text-center", "p-bottom-4", "text-4xl", "uppercase"], [1, "text-xl"], [1, "col-span-3", "grid", "grid-col"], [1, "col-start-1", "col-end-2"], [1, "grid", "grid-col", "text-xl", "p-left-12", "text-white"], [4, "ngIf"], ["class", "text-green-600", 4, "ngIf"], ["class", "shadow-lg col-start-3 col-end-4 rounded bg-green-600 ml-4 mr-1 mb-2 p-2 uppercase text-center", 4, "ngIf"], [1, "col-span-3", "px-2", "p-top-2"], ["class", "shadow-sm rounded-sm float-left text-center uppercase bg-tile text-black mr-1 px-1 mb-1", 4, "ngFor", "ngForOf"], ["class", "shadow-lg", 4, "ngFor", "ngForOf"], [4, "ngFor", "ngForOf"], ["class", "text-left text-sm p-left-12"], ["questionmark", ""], [1, "top-0", "right-0", "mt-4", "mr-4", "fixed", "focus:outline-none"], [3, "click"], ["src", "../../assets/images/inventory-icon-bg.png", "alt", "inventory navigation", 1, "max-h-14"], [1, "text-green-600"], [1, "shadow-lg", "col-start-3", "col-end-4", "rounded", "bg-green-600", "ml-4", "mr-1", "mb-2", "p-2", "uppercase", "text-center"], ["routerLink", "/wordpuzzle"], [1, "shadow-sm", "rounded-sm", "float-left", "text-center", "uppercase", "bg-tile", "text-black", "mr-1", "px-1", "mb-1"], [4, "ngIf", "ngIfElse"], ["notVisited", ""], [1, "shadow-lg"], ["alt", "unvisited planet image", 3, "src", 4, "ngIf"], ["alt", "visited planet image", 3, "src", 4, "ngIf"], [1, "text-left", "text-sm", "p-left-12"], ["alt", "unvisited planet image", 3, "src"], ["alt", "visited planet image", 3, "src"], [1, "shadow-lg", "m-2", "flex", "flex-col", "p-4", "h-screen", "text-white", 3, "id"], [1, "text-white", "text-5xl", "text-center", "uppercase", "p-4"], [1, "text-center", 3, "href"], ["class", "mx-auto max-h-planetcard max-w-planetcard", "alt", "unvisited planet image", 3, "src", 4, "ngIf"], ["class", "mx-auto max-h-planetcard max-w-planetcard", "alt", "visited planet image", 3, "src", 4, "ngIf"], [1, "p-4"], [1, "text-xl", "capitalize", "pb-2"], ["class", "", 4, "ngIf"], [1, "text-lg", "py-2"], ["class", "uppercase", 4, "ngIf", "ngIfElse"], ["alt", "unvisited planet image", 1, "mx-auto", "max-h-planetcard", "max-w-planetcard", 3, "src"], ["alt", "visited planet image", 1, "mx-auto", "max-h-planetcard", "max-w-planetcard", 3, "src"], [1, ""], [1, "uppercase"]], template: function PlanethuntInventoryComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -931,11 +942,12 @@ PlanethuntInventoryComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__[
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](19, PlanethuntInventoryComponent_div_19_Template, 9, 5, "div", 12);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](20, PlanethuntInventoryComponent_ng_container_20_Template, 19, 11, "ng-container", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "button", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PlanethuntInventoryComponent_Template_button_click_22_listener() { return ctx.scroll("inventory"); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "img", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](20, PlanethuntInventoryComponent_ng_container_20_Template, 18, 12, "ng-container", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](21, PlanethuntInventoryComponent_ng_template_21_Template, 1, 0, "ng-template", 14, 15, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "button", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PlanethuntInventoryComponent_Template_button_click_24_listener() { return ctx.scroll("inventory"); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](25, "img", 18);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
