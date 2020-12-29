@@ -44,15 +44,9 @@
           alt="visited planet image"
         />
         <p class="text-left text-sm p-left-12">Point: {{ planet.points }}</p>
-        <p
-          *ngIf="planet.visited; else questionmark"
-          class="text-left text-sm p-left-12"
-        >
-          Bogstav: {{ planet.letter }}
+        <p class="text-left text-sm p-left-12">
+          Bogstav: <span *ngIf="planet.visited; else questionmark">{{ planet.letter }}</span>
         </p>
-        <ng-template #questionmark class="text-left text-sm p-left-12"
-          >Bogstav: ?</ng-template
-        >
       </button>
     </div>
   </div>
@@ -95,11 +89,14 @@
       <p class="text-lg py-2">
         Point: {{ planet.points }}
         <br />
-        Bogstav: <span class="uppercase">{{ planet.letter }}</span>
+        Bogstav: <span *ngIf="planet.visited; else questionmark" class="uppercase">{{ planet.letter }}</span>
       </p>
     </div>
   </div>
 </ng-container>
+
+<ng-template #questionmark class="text-left text-sm p-left-12"
+          >?</ng-template>
 
 <div class="top-0 right-0 mt-4 mr-4 fixed focus:outline-none">
   <button (click)="scroll('inventory')">
