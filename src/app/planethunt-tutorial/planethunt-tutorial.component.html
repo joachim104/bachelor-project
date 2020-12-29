@@ -1,8 +1,8 @@
 <div class="text-white max-h-screen flex flex-col">
 
-  <div>
+  <div class="mt-2">
 
-    <div class="top-0 left-0 grid grid-cols-5 fixed text-center w-screen p-4">
+    <div class="grid grid-cols-5 text-center w-screen px-4">
       <div *ngIf="position !== 1">
         <button (click)="clickLeft()">
           <img class="max-h-8" src="../../assets/images/arrow-left.png" alt="left arrow">
@@ -23,25 +23,25 @@
   <div>
 
     <div>
-      <div *ngIf="position === 1" id="1" class="w-screen px-4 py-16">
+      <div *ngIf="position === 1" id="1" class="w-screen px-4">
         <p class="text-center text-2xl">
           1. Vælg en planet
         </p>
         <img src="../../assets/images/tutorial-1.png" alt="tutorial 1">
       </div>
-      <div *ngIf="position === 2" id="2" class="w-screen px-4 py-16">
+      <div *ngIf="position === 2" id="2" class="w-screen px-4">
         <p class="text-center text-2xl">
           2. Klik på planeten
         </p>
         <img src="../../assets/images/tutorial-2.png" alt="tutorial 2">
       </div>
-      <div *ngIf="position === 3" id="3" class="w-screen px-4 py-16">
+      <div *ngIf="position === 3" id="3" class="w-screen px-4">
         <p class="text-center text-2xl">
           3. Find et planetsymbol
         </p>
         <img src="../../assets/images/tutorial-3.png" alt="tutorial 3">
       </div>
-      <div *ngIf="position === 4" id="4" class="w-screen px-4 py-16">
+      <div *ngIf="position === 4" id="4" class="w-screen px-4">
         <p class="text-center text-2xl">
           4. Scan planetsymbolet
         </p>
@@ -54,7 +54,7 @@
   <div>
 
     <a routerLink="/inventory">
-      <p id="skip" class="bottom-0 left-0 fixed text-center w-screen p-4 uppercase text-2xl">
+      <p id="skip" class="text-center w-screen px-4 uppercase text-2xl">
         skip vejledning
       </p>
     </a>
