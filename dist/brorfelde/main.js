@@ -412,7 +412,7 @@ class PlanethuntUsernameFormComponent {
         // add ngOnDestroy and unsubscribe to observable
         this.userService.createUser(this.username);
         this.submitted = true;
-        window.localStorage.setItem('planetsVisited', '0');
+        // window.localStorage.setItem('planetsVisited', '0');
     }
 }
 PlanethuntUsernameFormComponent.ɵfac = function PlanethuntUsernameFormComponent_Factory(t) { return new (t || PlanethuntUsernameFormComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_user_service__WEBPACK_IMPORTED_MODULE_1__["UserService"])); };
@@ -741,7 +741,7 @@ function PlanethuntInventoryComponent_ng_container_20_p_11_Template(rf, ctx) { i
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" Diameter: ", planet_r20.diameterKm, " km ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" Afstand fra jorden: ", planet_r20.distanceEarthKm, " km ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" Afstand fra Solen: ", planet_r20.distanceSunKm, " km ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", planet_r20.fakta, " ");
 } }
