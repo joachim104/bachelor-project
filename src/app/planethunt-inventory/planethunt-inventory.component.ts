@@ -36,7 +36,7 @@ export class PlanethuntInventoryComponent implements OnInit {
     // this.baseUrl = `https://192.168.0.108:8080/5fdb58c05c5f98b6cbf06d4b?userId=${this.userId}&planet=`;
     this.userService.getUser(this.userId).subscribe((response) => {
       this.planetArray = response.planets;
-      this.checkNumberOfPlanetsVisitedAndCalulatePoints();
+      this.checkNumberOfPlanetsVisitedAndCalculatePoints();
       this.username = response.username;
       // Check if planetsVisited is larger than zero.
       // if planetsVisited > 0, get timeStarted and current time. Subtract timeStarted from current time
@@ -61,16 +61,12 @@ export class PlanethuntInventoryComponent implements OnInit {
             this.totalpoints
           );
         } else {
-          console.log('less than ten planets visited');
-          // Otherwise, set timer to run from the current time point.
-          this.startTime(this.timeElapsed);
+          console.log('ZERO planets visited');
+          // if planetsVisited === 0, set timer to zero, without counting
+          this.timeStarted = new Date().getTime() / 1000;
+          window.localStorage.setItem('timeStarted', this.timeStarted);
+          this.timeToDisplay = new Date(0).toISOString().substr(11, 8);
         }
-      } else {
-        console.log('ZERO planets visited');
-        // if planetsVisited === 0, set timer to zero, without counting
-        this.timeStarted = new Date().getTime() / 1000;
-        window.localStorage.setItem('timeStarted', this.timeStarted);
-        this.timeToDisplay = new Date(0).toISOString().substr(11, 8);
       }
     });
   }
@@ -98,7 +94,7 @@ export class PlanethuntInventoryComponent implements OnInit {
     }, 1000);
   }
 
-  checkNumberOfPlanetsVisitedAndCalulatePoints() {
+  checkNumberOfPlanetsVisitedAndCalculatePoints() {
     var tempNumVisited = 0;
     this.planetArray.forEach((planet) => {
       if (planet.visited === true) {
