@@ -798,7 +798,7 @@ function PlanethuntInventoryComponent_ng_container_20_Template(rf, ctx) { if (rf
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", planet_r20.name, " ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate2"]("href", "", ctx_r5.baseUrl, "", planet_r20.name, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate4"]("href", "", ctx_r5.baseUrl, "", planet_r20.hololinkId, "?userId=", ctx_r5.userId, "&planet=", planet_r20.name, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !planet_r20.visited);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
@@ -832,13 +832,14 @@ class PlanethuntInventoryComponent {
     ngOnInit() {
         // localStorage.setItem('userId', '5fe1f549b996bc056d8b9b2f');
         this.userId = localStorage.getItem('userId');
-        this.baseUrl = `https://viewer.bachelor.hololink.io/5fdb58c05c5f98b6cbf06d4b?userId=${this.userId}&planet=`;
+        // this.baseUrl = `https://viewer.bachelor.hololink.io/5fed9833debc6c433fc6281a?userId=${this.userId}&planet=`;
+        this.baseUrl = `https://viewer.bachelor.hololink.io/`;
         // THIS IS ONLY FOR DEVELOPMENT - CHANGE TO ABOVE WHEN DEPLOYING
         // this.baseUrl = `https://10.25.142.129:8080/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
         // this.baseUrl = `https://192.168.0.108:8080/5fdb58c05c5f98b6cbf06d4b?userId=${this.userId}&planet=`;
         this.userService.getUser(this.userId).subscribe((response) => {
             this.planetArray = response.planets;
-            this.checkNumberOfPlanetsVisitedAndCalulatePoints();
+            this.checkNumberOfPlanetsVisitedAndCalculatePoints();
             this.username = response.username;
             // Check if planetsVisited is larger than zero.
             // if planetsVisited > 0, get timeStarted and current time. Subtract timeStarted from current time
@@ -851,24 +852,21 @@ class PlanethuntInventoryComponent {
                     console.log('more than ten planets visited');
                     // if planetsVisited > 10, subtract timeStarted from current time and save the result to user on mongoDB atlas
                     // as timeTaken
-                    this.timeToDisplay = new Date(this.timeElapsed * 1000).toISOString().substr(11, 8);
+                    this.timeToDisplay = new Date(this.timeElapsed * 1000)
+                        .toISOString()
+                        .substr(11, 8);
                     this.finishTime = true;
                     console.log('final time: ', this.timeElapsed);
                     console.log('total points: ', this.totalpoints);
                     this.userService.updateTimeAndTotalScore(this.userId, this.timeElapsed, this.totalpoints);
                 }
                 else {
-                    console.log('less than ten planets visited');
-                    // Otherwise, set timer to run from the current time point.
-                    this.startTime(this.timeElapsed);
+                    console.log('ZERO planets visited');
+                    // if planetsVisited === 0, set timer to zero, without counting
+                    this.timeStarted = new Date().getTime() / 1000;
+                    window.localStorage.setItem('timeStarted', this.timeStarted);
+                    this.timeToDisplay = new Date(0).toISOString().substr(11, 8);
                 }
-            }
-            else {
-                console.log('ZERO planets visited');
-                // if planetsVisited === 0, set timer to zero, without counting
-                this.timeStarted = new Date().getTime() / 1000;
-                window.localStorage.setItem('timeStarted', this.timeStarted);
-                this.timeToDisplay = new Date(0).toISOString().substr(11, 8);
             }
         });
     }
@@ -892,9 +890,9 @@ class PlanethuntInventoryComponent {
             this.timeToDisplay = new Date(seconds * 1000).toISOString().substr(11, 8);
         }, 1000);
     }
-    checkNumberOfPlanetsVisitedAndCalulatePoints() {
+    checkNumberOfPlanetsVisitedAndCalculatePoints() {
         var tempNumVisited = 0;
-        this.planetArray.forEach(planet => {
+        this.planetArray.forEach((planet) => {
             if (planet.visited === true) {
                 console.log(planet.visited);
                 tempNumVisited = tempNumVisited + 1;
@@ -937,7 +935,7 @@ PlanethuntInventoryComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__[
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](19, PlanethuntInventoryComponent_div_19_Template, 9, 5, "div", 12);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](20, PlanethuntInventoryComponent_ng_container_20_Template, 18, 12, "ng-container", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](20, PlanethuntInventoryComponent_ng_container_20_Template, 18, 14, "ng-container", 13);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](21, PlanethuntInventoryComponent_ng_template_21_Template, 1, 0, "ng-template", 14, 15, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 16);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "button", 17);
