@@ -1,7 +1,8 @@
 <div id="inventory">
   <div class="grid grid-cols-3 gap-4 p-4 text-white">
     <div class="col-span-3 text-center p-bottom-4 text-4xl uppercase">
-      <span class="text-xl">{{ username }}'s</span> <br> planeter
+      <span class="text-xl">{{ username }}'s</span> <br />
+      planeter
     </div>
     <div class="col-span-3 grid grid-col">
       <div class="col-start-1 col-end-2">
@@ -14,7 +15,10 @@
           <div>Bogstaver:</div>
         </div>
       </div>
-      <div *ngIf="planetsVisited > 9" class="shadow-lg col-start-3 col-end-4 rounded bg-green-600 ml-4 mr-1 mb-2 p-2 uppercase text-center">
+      <div
+        *ngIf="planetsVisited > 9"
+        class="shadow-lg col-start-3 col-end-4 rounded bg-green-600 ml-4 mr-1 mb-2 p-2 uppercase text-center"
+      >
         <a routerLink="/wordpuzzle">
           Tillykke. Klik her for at løse ordgåden
         </a>
@@ -44,7 +48,10 @@
         />
         <p class="text-left text-sm p-left-12">Point: {{ planet.points }}</p>
         <p class="text-left text-sm p-left-12">
-          Bogstav: <span *ngIf="planet.visited; else questionmark">{{ planet.letter }}</span>
+          Bogstav:
+          <span *ngIf="planet.visited; else questionmark">{{
+            planet.letter
+          }}</span>
         </p>
       </button>
     </div>
@@ -52,50 +59,55 @@
 </div>
 
 <ng-container *ngFor="let planet of planetArray">
-  <div id="{{ planet.name }}" class="shadow-lg m-2 flex flex-col p-4 h-screen text-white">
+  <div
+    id="{{ planet.name }}"
+    class="shadow-lg m-2 flex flex-col p-4 h-screen text-white"
+  >
     <p class="text-white text-5xl text-center uppercase p-4">
       {{ planet.name }}
     </p>
     <a class="text-center" href="{{ baseUrl }}{{ planet.name }}">
       <!--<button (click)="visitPlanet()">-->
-        <img
-          *ngIf="!planet.visited"
-          class="mx-auto max-h-planetcard max-w-planetcard"
-          src="{{ planet.unVisitedImageUrl }}"
-          alt="unvisited planet image"
-        />
-        <img
-          *ngIf="planet.visited"
-          class="mx-auto max-h-planetcard max-w-planetcard"
-          src="{{ planet.visitedImageUrl }}"
-          alt="visited planet image"
-        />
+      <img
+        *ngIf="!planet.visited"
+        class="mx-auto max-h-planetcard max-w-planetcard"
+        src="{{ planet.unVisitedImageUrl }}"
+        alt="unvisited planet image"
+      />
+      <img
+        *ngIf="planet.visited"
+        class="mx-auto max-h-planetcard max-w-planetcard"
+        src="{{ planet.visitedImageUrl }}"
+        alt="visited planet image"
+      />
       <!--</button>-->
     </a>
     <div class="p-4">
       <span class="text-xl capitalize pb-2"
-          >Fakta om {{ planet.name }}: <br
-        /></span>
+        >Fakta om {{ planet.name }}: <br
+      /></span>
       <p *ngIf="planet.visited" class="">
         Diameter: {{ planet.diameterKm }} km <br />
         Afstand fra jorden: {{ planet.distanceEarthKm }} km <br />
         {{ planet.fakta }}
       </p>
       <p *ngIf="!planet.visited">
-        Du har ikke fundet {{ planet.name }} endnu.
-        Find den for at få mere at vide.
+        Du har ikke fundet {{ planet.name }} endnu. Find den for at få mere at
+        vide.
       </p>
       <p class="text-lg py-2">
         Point: {{ planet.points }}
         <br />
-        Bogstav: <span *ngIf="planet.visited; else questionmark" class="uppercase">{{ planet.letter }}</span>
+        Bogstav:
+        <span *ngIf="planet.visited; else questionmark" class="uppercase">{{
+          planet.letter
+        }}</span>
       </p>
     </div>
   </div>
 </ng-container>
 
-<ng-template #questionmark class="text-left text-sm p-left-12"
-          >?</ng-template>
+<ng-template #questionmark class="text-left text-sm p-left-12">?</ng-template>
 
 <div class="top-0 right-0 mt-4 mr-4 fixed focus:outline-none">
   <button (click)="scroll('inventory')">
