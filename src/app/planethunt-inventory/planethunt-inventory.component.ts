@@ -35,7 +35,7 @@ export class PlanethuntInventoryComponent implements OnInit {
     // this.baseUrl = `https://192.168.0.108:8080/5fdb58c05c5f98b6cbf06d4b?userId=${this.userId}&planet=`;
     this.userService.getUser(this.userId).subscribe((response) => {
     this.planetArray = response.planets;
-    this.checkNumberOfPlanetsVisitedAndCalulatePoints();
+    this.checkNumberOfPlanetsVisitedAndCalculatePoints();
     this.username = response.username;
     // Check if planetsVisited is larger than zero.
     // if planetsVisited > 0, get timeStarted and current time. Subtract timeStarted from current time
@@ -91,7 +91,7 @@ export class PlanethuntInventoryComponent implements OnInit {
       },1000);
   }
 
-  checkNumberOfPlanetsVisitedAndCalulatePoints() {
+  checkNumberOfPlanetsVisitedAndCalculatePoints() {
     var tempNumVisited = 0;
     this.planetArray.forEach(planet => {
       if (planet.visited === true) {

@@ -562,7 +562,7 @@ class PlanethuntWordpuzzleComponent {
     }
 }
 PlanethuntWordpuzzleComponent.ɵfac = function PlanethuntWordpuzzleComponent_Factory(t) { return new (t || PlanethuntWordpuzzleComponent)(); };
-PlanethuntWordpuzzleComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: PlanethuntWordpuzzleComponent, selectors: [["planethunt-wordpuzzle"]], decls: 14, vars: 2, consts: [[1, "h-screen", "flex", "flex-col"], [1, "flex", "flex-row"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "uppercase", "text-white", "text-3xl", "text-center", "pt-4"], [1, "top-0", "right-0", "mt-2", "mr-2", "fixed"], ["routerLink", "/inventory"], ["src", "../../assets/images/inventory-icon-bg.png", "alt", "inventory navigation", 1, "max-h-14"], [1, "text-white", "text-xl", "mx-2", "my-4", "text-center"], ["id", "wordpuzzle", "cdkDropList", "", "cdkDropListOrientation", "horizontal", 1, "px-4", "py-18", "w-full", "flex", "flex-row", 3, "cdkDropListDropped"], ["class", "cursor-move shadow-sm border-r-1 mr-2 border-solid border-black rounded text-center bg-tile text-4xl text-black h-10 w-10", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["class", "text-center", 4, "ngIf"], ["cdkDrag", "", 1, "cursor-move", "shadow-sm", "border-r-1", "mr-2", "border-solid", "border-black", "rounded", "text-center", "bg-tile", "text-4xl", "text-black", "h-10", "w-10"], [1, "text-center"], ["routerLink", "/correctanswer"], ["type", "submit", 1, "p-4", "mt-4", "uppercase", "text-xl", "text-white", "text-center", "rounded", "bg-gradient-to-r", "from-brorfelde-dark", "to-blue-900", 3, "click"]], template: function PlanethuntWordpuzzleComponent_Template(rf, ctx) { if (rf & 1) {
+PlanethuntWordpuzzleComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: PlanethuntWordpuzzleComponent, selectors: [["planethunt-wordpuzzle"]], decls: 14, vars: 2, consts: [[1, "h-screen", "flex", "flex-col"], [1, "flex", "flex-row"], [1, "l-0", "t-0", "p-2"], ["src", "../../assets/images/logo-cirkel.png", "alt", "Brorfelde Logo", 1, "max-h-16"], [1, "uppercase", "text-white", "text-3xl", "text-center", "pt-4"], [1, "top-0", "right-0", "mt-2", "mr-2", "fixed"], ["routerLink", "/inventory"], ["src", "../../assets/images/inventory-icon-bg.png", "alt", "inventory navigation", 1, "max-h-14"], [1, "text-white", "text-xl", "mx-2", "my-4", "text-center"], ["id", "wordpuzzle", "cdkDropList", "", "cdkDropListOrientation", "horizontal", 1, "px-4", "py-24", "w-full", "flex", "flex-row", 3, "cdkDropListDropped"], ["class", "cursor-move shadow-sm border-r-1 mr-2 border-solid border-black rounded text-center bg-tile text-4xl text-black h-10 w-10", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["class", "text-center", 4, "ngIf"], ["cdkDrag", "", 1, "cursor-move", "shadow-sm", "border-r-1", "mr-2", "border-solid", "border-black", "rounded", "text-center", "bg-tile", "text-4xl", "text-black", "h-10", "w-10"], [1, "text-center"], ["routerLink", "/correctanswer"], ["type", "submit", 1, "p-4", "mt-4", "uppercase", "text-xl", "text-white", "text-center", "rounded", "bg-gradient-to-r", "from-brorfelde-dark", "to-blue-900", 3, "click"]], template: function PlanethuntWordpuzzleComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerStart"](0, 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 2);
@@ -1132,16 +1132,11 @@ class PlanethuntHighscoreComponent {
     constructor(userService) {
         this.userService = userService;
         this.highScoreArray = [];
-        this.baseUrl = '';
         this.isIphone = false;
     }
     ngOnInit() {
         this.checkOS();
         this.userId = localStorage.getItem('userId');
-        // this.baseUrl = `https://viewer.bachelor.hololink.io/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
-        // THIS IS ONLY FOR DEVELOPMENT - CHANGE TO ABOVE WHEN DEPLOYING
-        // this.baseUrl = `https://10.25.142.129:8080/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
-        this.baseUrl = `https://10.25.142.129:8080/5fdb58c05c5f98b6cbf06d4b?userId=${this.userId}&planet=`;
         this.userService.getUser(this.userId).subscribe((response) => {
             this.currentUser = response;
             console.log(this.currentUser);
