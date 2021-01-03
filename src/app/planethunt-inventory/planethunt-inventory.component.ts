@@ -42,9 +42,11 @@ export class PlanethuntInventoryComponent implements OnInit {
       // if planetsVisited > 0, get timeStarted and current time. Subtract timeStarted from current time
       // to get total elapsed time.
       if (this.planetsVisited > 0) {
+        console.log('planets actually visited 1: ', this.planetsVisited);
         var currentTime = new Date().getTime() / 1000;
         this.timeStarted = window.localStorage.getItem('timeStarted');
         this.timeElapsed = currentTime - this.timeStarted;
+        this.startTime(this.timeElapsed);
         if (this.planetsVisited === 10) {
           console.log('more than ten planets visited');
           // if planetsVisited > 10, subtract timeStarted from current time and save the result to user on mongoDB atlas
@@ -60,13 +62,14 @@ export class PlanethuntInventoryComponent implements OnInit {
             this.timeElapsed,
             this.totalpoints
           );
-        } else {
-          console.log('ZERO planets visited');
-          // if planetsVisited === 0, set timer to zero, without counting
-          this.timeStarted = new Date().getTime() / 1000;
-          window.localStorage.setItem('timeStarted', this.timeStarted);
-          this.timeToDisplay = new Date(0).toISOString().substr(11, 8);
         }
+      } else {
+        console.log('planets actually visited 2: ', this.planetsVisited);
+        console.log('ZERO planets visited');
+        // if planetsVisited === 0, set timer to zero, without counting
+        this.timeStarted = new Date().getTime() / 1000;
+        window.localStorage.setItem('timeStarted', this.timeStarted);
+        this.timeToDisplay = new Date(0).toISOString().substr(11, 8);
       }
     });
   }
@@ -98,7 +101,7 @@ export class PlanethuntInventoryComponent implements OnInit {
     var tempNumVisited = 0;
     this.planetArray.forEach((planet) => {
       if (planet.visited === true) {
-        console.log(planet.visited);
+        console.log('planet visited: ', planet);
         tempNumVisited = tempNumVisited + 1;
       }
       this.totalpoints = this.totalpoints + planet.points;
