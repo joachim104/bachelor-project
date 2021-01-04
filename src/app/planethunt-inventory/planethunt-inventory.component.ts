@@ -27,13 +27,13 @@ export class PlanethuntInventoryComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   ngOnInit() {
-    this.userId = localStorage.getItem('userId');
+    this.userId = window.localStorage.getItem('userId');
     this.baseUrl = `https://viewer.bachelor.hololink.io/`;
 
     console.log('1 USER ID FROM LOCAL STORAGE', this.userId);
     console.log(
       '2 USER ID FROM LOCAL STORAGE',
-      localStorage.getItem(this.userId)
+      window.localStorage.getItem(this.userId)
     );
 
     this.userService.getUser(this.userId).subscribe((response) => {

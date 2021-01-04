@@ -139,12 +139,6 @@ class PlanetHuntTutorialComponent {
         }
         //this.scroll(this.position);
     }
-    // Scroll to specific HTML element on page
-    scroll(id) {
-        const elId = String(id);
-        const el = document.getElementById(elId);
-        el.scrollIntoView({ behavior: "smooth" });
-    }
 }
 PlanetHuntTutorialComponent.ɵfac = function PlanetHuntTutorialComponent_Factory(t) { return new (t || PlanetHuntTutorialComponent)(); };
 PlanetHuntTutorialComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PlanetHuntTutorialComponent, selectors: [["planethunt-tutorial"]], decls: 19, vars: 7, consts: [[1, "text-white", "max-h-screen", "flex", "flex-col"], [1, "mt-2"], [1, "grid", "grid-cols-5", "text-center", "w-screen", "px-4"], [4, "ngIf"], [1, "col-start-2", "col-end-5", "uppercase", "text-xl"], ["id", "1", "class", "w-screen px-4", 4, "ngIf"], ["id", "2", "class", "w-screen px-4", 4, "ngIf"], ["id", "3", "class", "w-screen px-4", 4, "ngIf"], ["id", "4", "class", "w-screen px-4", 4, "ngIf"], ["routerLink", "/inventory"], ["id", "skip", 1, "text-center", "w-screen", "px-4", "uppercase", "text-2xl"], [3, "click"], ["src", "../../assets/images/arrow-left.png", "alt", "left arrow", 1, "max-h-8"], ["src", "../../assets/images/arrow-left.png", "alt", "left arrow", 1, "max-h-8", "transform", "rotate-180", "float-right"], ["id", "1", 1, "w-screen", "px-4"], [1, "text-center", "text-2xl"], ["src", "../../assets/images/tutorial-1.png", "alt", "tutorial 1", 1, "mx-auto"], ["id", "2", 1, "w-screen", "px-4"], ["src", "../../assets/images/tutorial-2.png", "alt", "tutorial 2", 1, "mx-auto"], ["id", "3", 1, "w-screen", "px-4"], ["src", "../../assets/images/tutorial-3.png", "alt", "tutorial 3", 1, "mx-auto"], ["id", "4", 1, "w-screen", "px-4"], ["src", "../../assets/images/tutorial-4.png", "alt", "tutorial 4", 1, "mx-auto"]], template: function PlanetHuntTutorialComponent_Template(rf, ctx) { if (rf & 1) {
@@ -844,13 +838,10 @@ class PlanethuntInventoryComponent {
         this.baseUrl = '';
     }
     ngOnInit() {
-        // localStorage.setItem('userId', '5fe1f549b996bc056d8b9b2f');
         this.userId = localStorage.getItem('userId');
-        // this.baseUrl = `https://viewer.bachelor.hololink.io/5fed9833debc6c433fc6281a?userId=${this.userId}&planet=`;
         this.baseUrl = `https://viewer.bachelor.hololink.io/`;
-        // THIS IS ONLY FOR DEVELOPMENT - CHANGE TO ABOVE WHEN DEPLOYING
-        // this.baseUrl = `https://10.25.142.129:8080/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
-        // this.baseUrl = `https://192.168.0.108:8080/5fdb58c05c5f98b6cbf06d4b?userId=${this.userId}&planet=`;
+        console.log('1 USER ID FROM LOCAL STORAGE', this.userId);
+        console.log('2 USER ID FROM LOCAL STORAGE', localStorage.getItem(this.userId));
         this.userService.getUser(this.userId).subscribe((response) => {
             this.planetArray = response.planets;
             this.checkNumberOfPlanetsVisitedAndCalculatePoints();
@@ -895,11 +886,11 @@ class PlanethuntInventoryComponent {
     }
     // When following a planet's Hololink, check if this is the first planet to be visited
     // If so, set timestamp in localstorage
-    visitPlanet() {
-        if (this.planetsVisited === 0) {
-            this.startTime(0);
-        }
-    }
+    /*visitPlanet() {
+      if (this.planetsVisited === 0) {
+        this.startTime(0);
+      }
+    }*/
     // set the timer being displayed, incrementing every second in real time
     startTime(seconds) {
         this.interval = setInterval(() => {
@@ -1279,15 +1270,14 @@ class UserService {
         return this.http.get(`${this.baseUrl}/treasurehunt/getTopTenUsers`);
     }
     updateTimeAndTotalScore(userId, timeTaken, totalPoints) {
-        console.log('inside updateTimeAndTotalScore');
         return this.http
             .patch(`${this.baseUrl}/treasurehunt/updateTimeAndTotalScore`, {
             userId: userId,
             timeTaken: timeTaken,
-            totalPoints: totalPoints
+            totalPoints: totalPoints,
         })
             .subscribe((resp) => {
-            console.log('The response is: ', resp);
+            console.log('resp: ', resp);
         });
     }
 }
