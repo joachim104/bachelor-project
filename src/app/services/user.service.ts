@@ -26,7 +26,6 @@ export class UserService {
   }
 
   updateTimeAndTotalScore(userId: string, timeTaken: number, totalPoints: number) {
-    console.log('inside updateTimeAndTotalScore');
     return this.http
     .patch<any>(`${this.baseUrl}/treasurehunt/updateTimeAndTotalScore`, {
       userId: userId,

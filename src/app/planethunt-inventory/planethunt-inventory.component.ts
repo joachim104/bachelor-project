@@ -83,11 +83,11 @@ export class PlanethuntInventoryComponent implements OnInit {
 
   // When following a planet's Hololink, check if this is the first planet to be visited
   // If so, set timestamp in localstorage
-  visitPlanet() {
+  /*visitPlanet() {
     if (this.planetsVisited === 0) {
       this.startTime(0);
     }
-  }
+  }*/
 
   // set the timer being displayed, incrementing every second in real time
   startTime(seconds: number) {
