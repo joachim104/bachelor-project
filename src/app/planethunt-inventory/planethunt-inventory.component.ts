@@ -27,17 +27,20 @@ export class PlanethuntInventoryComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   ngOnInit() {
-    // localStorage.setItem('userId', '5fe1f549b996bc056d8b9b2f');
     this.userId = localStorage.getItem('userId');
-    // this.baseUrl = `https://viewer.bachelor.hololink.io/5fed9833debc6c433fc6281a?userId=${this.userId}&planet=`;
     this.baseUrl = `https://viewer.bachelor.hololink.io/`;
-    // THIS IS ONLY FOR DEVELOPMENT - CHANGE TO ABOVE WHEN DEPLOYING
-    // this.baseUrl = `https://10.25.142.129:8080/5fcdff656aaa6af4ba799606?userId=${this.userId}&planet=`;
-    // this.baseUrl = `https://192.168.0.108:8080/5fdb58c05c5f98b6cbf06d4b?userId=${this.userId}&planet=`;
+
+    console.log('1 USER ID FROM LOCAL STORAGE', this.userId);
+    console.log(
+      '2 USER ID FROM LOCAL STORAGE',
+      localStorage.getItem(this.userId)
+    );
+
     this.userService.getUser(this.userId).subscribe((response) => {
       this.planetArray = response.planets;
       this.checkNumberOfPlanetsVisitedAndCalculatePoints();
       this.username = response.username;
+
       // Check if planetsVisited is larger than zero.
       // if planetsVisited > 0, get timeStarted and current time. Subtract timeStarted from current time
       // to get total elapsed time.
