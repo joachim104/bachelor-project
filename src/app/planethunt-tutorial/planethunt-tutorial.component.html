@@ -11,10 +11,19 @@
       <div class="col-start-2 col-end-5 uppercase text-xl">
         sådan gør du
       </div>
-      <div *ngIf="position !== 4">
-        <button (click)="clickRight()">
-          <img class="max-h-8 transform rotate-180 float-right" src="../../assets/images/arrow-left.png" alt="left arrow">
-        </button>
+      <div>
+        <ng-container *ngIf="position !== 4">
+          <button (click)="clickRight()">
+            <img class="max-h-8 transform rotate-180 float-right" src="../../assets/images/arrow-left.png" alt="left arrow">
+          </button>
+        </ng-container>
+        <ng-container *ngIf="position === 4">
+          <a routerLink="/inventory">
+            <button>
+              <img class="max-h-8 transform rotate-180 float-right" src="../../assets/images/arrow-left.png" alt="left arrow">
+            </button>
+          </a>
+        </ng-container>
       </div>
     </div>
 

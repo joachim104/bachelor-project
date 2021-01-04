@@ -9,7 +9,6 @@ export class PlanetHuntTutorialComponent implements OnInit {
 
   position = 1;
 
-
   constructor() { }
 
   ngOnInit() { }
@@ -35,10 +34,10 @@ export class PlanetHuntTutorialComponent implements OnInit {
   }
 
   // Scroll to specific HTML element on page
-  scroll(id: number) {
+  /*scroll(id: number) {
     const elId = String(id);
     const el: any = document.getElementById(elId);
     el.scrollIntoView({behavior: "smooth"});
-  }
+  }*/
 
 }
