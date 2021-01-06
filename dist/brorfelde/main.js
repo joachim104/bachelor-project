@@ -838,10 +838,10 @@ class PlanethuntInventoryComponent {
         this.baseUrl = '';
     }
     ngOnInit() {
-        this.userId = localStorage.getItem('userId');
+        this.userId = window.localStorage.getItem('userId');
         this.baseUrl = `https://viewer.bachelor.hololink.io/`;
         console.log('1 USER ID FROM LOCAL STORAGE', this.userId);
-        console.log('2 USER ID FROM LOCAL STORAGE', localStorage.getItem(this.userId));
+        console.log('2 USER ID FROM LOCAL STORAGE', window.localStorage.getItem(this.userId));
         this.userService.getUser(this.userId).subscribe((response) => {
             this.planetArray = response.planets;
             this.checkNumberOfPlanetsVisitedAndCalculatePoints();
