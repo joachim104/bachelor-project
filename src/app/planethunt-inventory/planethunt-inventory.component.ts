@@ -29,37 +29,25 @@ export class PlanethuntInventoryComponent implements OnInit {
   ngOnInit() {
     this.userId = window.localStorage.getItem('userId');
     this.baseUrl = `https://viewer.bachelor.hololink.io/`;
-
-    console.log('1 USER ID FROM LOCAL STORAGE', this.userId);
-    console.log(
-      '2 USER ID FROM LOCAL STORAGE',
-      window.localStorage.getItem(this.userId)
-    );
-
     this.userService.getUser(this.userId).subscribe((response) => {
       this.planetArray = response.planets;
       this.checkNumberOfPlanetsVisitedAndCalculatePoints();
       this.username = response.username;
-
       // Check if planetsVisited is larger than zero.
       // if planetsVisited > 0, get timeStarted and current time. Subtract timeStarted from current time
       // to get total elapsed time.
       if (this.planetsVisited > 0) {
-        console.log('planets actually visited 1: ', this.planetsVisited);
         var currentTime = new Date().getTime() / 1000;
         this.timeStarted = window.localStorage.getItem('timeStarted');
         this.timeElapsed = currentTime - this.timeStarted;
         this.startTime(this.timeElapsed);
         if (this.planetsVisited === 10) {
-          console.log('more than ten planets visited');
-          // if planetsVisited > 10, subtract timeStarted from current time and save the result to user on mongoDB atlas
+          // if planetsVisited equals 10, subtract timeStarted from current time and save the result to user on mongoDB atlas
           // as timeTaken
           this.timeToDisplay = new Date(this.timeElapsed * 1000)
             .toISOString()
             .substr(11, 8);
           this.finishTime = true;
-          console.log('final time: ', this.timeElapsed);
-          console.log('total points: ', this.totalpoints);
           this.userService.updateTimeAndTotalScore(
             this.userId,
             this.timeElapsed,
@@ -67,8 +55,6 @@ export class PlanethuntInventoryComponent implements OnInit {
           );
         }
       } else {
-        console.log('planets actually visited 2: ', this.planetsVisited);
-        console.log('ZERO planets visited');
         // if planetsVisited === 0, set timer to zero, without counting
         this.timeStarted = new Date().getTime() / 1000;
         window.localStorage.setItem('timeStarted', this.timeStarted);
@@ -84,15 +70,7 @@ export class PlanethuntInventoryComponent implements OnInit {
     el.scrollIntoView({ behavior: 'smooth' });
   }
 
-  // When following a planet's Hololink, check if this is the first planet to be visited
-  // If so, set timestamp in localstorage
-  /*visitPlanet() {
-    if (this.planetsVisited === 0) {
-      this.startTime(0);
-    }
-  }*/
-
-  // set the timer being displayed, incrementing every second in real time
+  // Set the timer being displayed, incrementing every second in real time
   startTime(seconds: number) {
     this.interval = setInterval(() => {
       seconds++;
@@ -100,16 +78,16 @@ export class PlanethuntInventoryComponent implements OnInit {
     }, 1000);
   }
 
+  // Check the number of planets visited and calculate the total number of points. Set values to be sent to db
+  // if all planets are visited
   checkNumberOfPlanetsVisitedAndCalculatePoints() {
     var tempNumVisited = 0;
     this.planetArray.forEach((planet) => {
       if (planet.visited === true) {
-        console.log('planet visited: ', planet);
         tempNumVisited = tempNumVisited + 1;
       }
       this.totalpoints = this.totalpoints + planet.points;
     });
-    console.log(tempNumVisited);
     this.planetsVisited = tempNumVisited;
   }
 }

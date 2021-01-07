@@ -25,7 +25,7 @@ export class PlanethuntStartpageComponent implements OnInit {
     // If Chrome on iOS is accessed, show alert below
     if (isIos && isChrome) {
         window.alert(
-            'Desværre tillader Apple ikke AR oplevelser i din browser. Åben venligst Planetjagten'
+            'Desværre tillader Apple ikke AR oplevelser i din browser. Åben venligst Planetjagten i Safari.'
         );
     }
 };

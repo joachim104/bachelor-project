@@ -15,10 +15,7 @@ export class PlanethuntUsernameFormComponent implements OnInit {
   ngOnInit() {}
 
   onSubmit() {
-    // let user knows that username already exist if createUser returns false
-    // add ngOnDestroy and unsubscribe to observable
     this.userService.createUser(this.username);
     this.submitted = true;
-    // window.localStorage.setItem('planetsVisited', '0');
   }
 }
