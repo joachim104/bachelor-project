@@ -5,6 +5,7 @@ module.exports = (isProd) => ({
       content: [
         '**/*.html',
         '**/*.ts',
+        '**/*.js',
       ]
     },
     darkMode: false, // or 'media' or 'class'
