@@ -2,10 +2,10 @@ const compression = require('compression');
 const express = require('express');
 const app = express();
 
-app.use(express.static('./dist/brorfelde'));
-
 // Compress all HTTP responses
 app.use(compression());
+
+app.use(express.static('./dist/brorfelde'));
 
 app.get('/*', function(req, res) {
   res.sendFile('index.html', {root: 'dist/brorfelde/'}
