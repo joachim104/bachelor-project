@@ -12,6 +12,7 @@ module.exports = (isProd) => ({
     theme: {
       extend: {
         maxHeight: {
+          'bonusmoon': '30vh',
           'planetcard': '40vh',
           '1/2': '50vh',
         },
