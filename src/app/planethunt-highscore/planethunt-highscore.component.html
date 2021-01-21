@@ -31,9 +31,17 @@
     </ul>
   </div>
 
+  <div>
+    <p class="text-center text-xs text-white">
+      Klik på månen for at få en bonusopevelse
+      <br>
+      <br>
+    </p>
+  </div>
+
   <div *ngIf="!isIphone">
     <a href="intent://arvr.google.com/scene-viewer/1.0?file=https://www.brorfelde-dev.herokuapp.com/assets/3dmodels/Moon_1_3474.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;">
-      <img class="mx-auto max-h-planetcard" src="../../assets/images/visited-images/månen.png" alt="a 3D model of the moon">
+      <img class="mx-auto max-h-bonusmoon" src="../../assets/images/visited-images/månen.png" alt="a 3D model of the moon">
     </a>
     <!--Keep the commented code below for additional testing of Scene Viewer alternatives in the future-->
     <!--<model-viewer src="./../assets/3dmodels/Moon_1_3474.glb"
