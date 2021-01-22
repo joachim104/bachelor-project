@@ -6,16 +6,26 @@ import { UserService } from '../services/user.service';
   templateUrl: 'planethunt-username-form.component.html',
 })
 export class PlanethuntUsernameFormComponent implements OnInit {
+
   username: string = '';
+
+  nameTaken: boolean = false;
 
   submitted = false;
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService) {
+    this.userService.nameTaken.subscribe((flag: boolean) => this.nameTaken = flag);
+    console.log('ghete', this.nameTaken);
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log('nameTaken: ', this.nameTaken);
+    if (this.nameTaken) {
+
+    }
+  }
 
   onSubmit() {
     this.userService.createUser(this.username);
-    this.submitted = true;
   }
 }

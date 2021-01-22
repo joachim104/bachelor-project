@@ -1,9 +1,13 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
-  constructor(private http: HttpClient) {}
+
+  nameTaken = new EventEmitter<boolean>();
+
+  constructor(private http: HttpClient, private router: Router) {}
 
   baseUrl: string = 'https://api.bachelor.hololink.io';
 
@@ -13,7 +17,16 @@ export class UserService {
         username: username,
       })
       .subscribe((resp) => {
-        localStorage.setItem('userId', resp);
+        if (resp !== 'username already taken') {
+          //console.log(resp);
+          localStorage.setItem('userId', resp);
+          this.router.navigateByUrl('/tutorial');
+        } else {
+          //console.log(resp);
+          this.router.navigateByUrl('/signup');
+          this.nameTaken.emit(true);
+          //console.log('emitter', this.nameTaken);
+        }
       });
   }
 
