@@ -13,7 +13,7 @@ export class UserService {
 
   createUser(username: string) {
     return this.http
-      .post<any>(`${this.baseUrl}/treasurehunt/createUser`, {
+      .post<any>(`${this.baseUrl}/treasurehunt/sMKcreateUser`, {
         username: username,
       })
       .subscribe((resp) => {
@@ -31,11 +31,11 @@ export class UserService {
   }
 
   getUser(id: string) {
-    return this.http.get<any>(`${this.baseUrl}/treasurehunt/getUser/${id}`);
+    return this.http.get<any>(`${this.baseUrl}/treasurehunt/sMKgetUser/${id}`);
   }
 
   getTopTenUsers() {
-    return this.http.get<any>(`${this.baseUrl}/treasurehunt/getTopTenUsers`);
+    return this.http.get<any>(`${this.baseUrl}/treasurehunt/sMKgetTopTenUsers`);
   }
 
   updateTimeAndTotalScore(
@@ -44,7 +44,7 @@ export class UserService {
     totalPoints: number
   ) {
     return this.http
-      .patch<any>(`${this.baseUrl}/treasurehunt/updateTimeAndTotalScore`, {
+      .patch<any>(`${this.baseUrl}/treasurehunt/sMKupdateTimeAndTotalScore`, {
         userId: userId,
         timeTaken: timeTaken,
         totalPoints: totalPoints,

@@ -23,10 +23,10 @@ module.exports = (isProd) => ({
           'tutorial': '400vw',
         },
         colors: {
-          'brorfelde-dark': "#3a3967",
+          'brorfelde-dark': "#4c3b11",
         },
         backgroundColor: {
-          'base': '#c33a5e',
+          'base': '#decfb3',
           'tile': '#e6ddc5',
         },
       },

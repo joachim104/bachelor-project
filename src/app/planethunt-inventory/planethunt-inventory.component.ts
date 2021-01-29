@@ -6,7 +6,7 @@ import { UserService } from '../services/user.service';
   templateUrl: 'planethunt-inventory.component.html',
 })
 export class PlanethuntInventoryComponent implements OnInit {
-  planetArray: any[] = [];
+  artArray: any[] = [];
 
   totalpoints: number = 0;
   timeStarted: any;
@@ -30,7 +30,7 @@ export class PlanethuntInventoryComponent implements OnInit {
     this.userId = window.localStorage.getItem('userId');
     this.baseUrl = `https://viewer.bachelor.hololink.io/`;
     this.userService.getUser(this.userId).subscribe((response) => {
-      this.planetArray = response.planets;
+      this.artArray = response.artWorks;
       this.checkNumberOfPlanetsVisitedAndCalculatePoints();
       this.username = response.username;
       // Check if planetsVisited is larger than zero.
@@ -43,7 +43,7 @@ export class PlanethuntInventoryComponent implements OnInit {
         if (this.planetsVisited < 10) {
           this.startTime(this.timeElapsed);
         }
-        if (this.planetsVisited === 10) {
+        if (this.planetsVisited === 5) {
           // if planetsVisited equals 10, subtract timeStarted from current time and save the result to user on mongoDB atlas
           // as timeTaken
           this.timeToDisplay = new Date(this.timeElapsed * 1000)
@@ -84,11 +84,11 @@ export class PlanethuntInventoryComponent implements OnInit {
   // if all planets are visited
   checkNumberOfPlanetsVisitedAndCalculatePoints() {
     var tempNumVisited = 0;
-    this.planetArray.forEach((planet) => {
-      if (planet.visited === true) {
+    this.artArray.forEach((art) => {
+      if (art.visited === true) {
         tempNumVisited = tempNumVisited + 1;
       }
-      this.totalpoints = this.totalpoints + planet.points;
+      this.totalpoints = this.totalpoints + art.points;
     });
     this.planetsVisited = tempNumVisited;
   }
