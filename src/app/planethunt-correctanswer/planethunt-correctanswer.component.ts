@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class PlanethuntCorrectanswerComponent implements OnInit {
 
-  correctAnswer="Marie Curie";
+  correctAnswer="SHINE";
 
   constructor() { }
 

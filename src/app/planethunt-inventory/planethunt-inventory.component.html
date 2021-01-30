@@ -26,10 +26,10 @@
       <div class="col-span-3 px-2 p-top-2">
         <div
           class="shadow-sm rounded-sm float-left text-center uppercase bg-tile text-black mr-1 mb-1"
-          *ngFor="let planet of planetArray"
+          *ngFor="let art of artArray"
         >
-          <ng-container *ngIf="planet.visited">
-            &nbsp; {{ planet.letter }} &nbsp;
+          <ng-container *ngIf="art.visited">
+            &nbsp; {{ art.letter }} &nbsp;
           </ng-container>
         </div>
       </div>
@@ -93,7 +93,7 @@
         {{ art.facts }}
       </p>
       <p *ngIf="!art.visited">
-        You haven't found {{ art.name }} yet. Find it to learn more.
+        You haven't found {{ art.name }} yet.
       </p>
       <p class="text-lg py-2">
         Points: {{ art.points }}
