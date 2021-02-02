@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { config } from 'process';
 import { PlanethuntCorrectanswerComponent } from './planethunt-correctanswer/planethunt-correctanswer.component';
 import { PlanethuntHighscoreComponent } from './planethunt-highscore/planethunt-highscore.component';
 import { PlanethuntInventoryComponent } from './planethunt-inventory/planethunt-inventory.component';
