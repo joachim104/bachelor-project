@@ -22,7 +22,7 @@ export class PlanethuntWordpuzzleComponent implements OnInit {
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.lettersArray, event.previousIndex, event.currentIndex);
     if (this.compareArrays(this.lettersArray, this.correctArray)) {
-      document.getElementById("wordpuzzle")!.style.backgroundImage = "url('../../assets/images/brorfelde-landscape.jpg')";
+      document.getElementById("wordpuzzle")!.style.backgroundImage = "url('https://res.cloudinary.com/hololink-io/image/upload/v1611315812/brorfelde%20-%20PlanetHunt/brorfelde-landscape_slpi6b.jpg')";
       this.correctanswer = true;
     }
   }
