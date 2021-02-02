@@ -40,7 +40,7 @@ export class PlanethuntInventoryComponent implements OnInit {
         var currentTime = new Date().getTime() / 1000;
         this.timeStarted = window.localStorage.getItem('timeStarted');
         this.timeElapsed = currentTime - this.timeStarted;
-        if (this.planetsVisited < 10) {
+        if (this.planetsVisited < 5) {
           this.startTime(this.timeElapsed);
         }
         if (this.planetsVisited === 5) {
