@@ -9,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 
 export class PlanethuntWordpuzzleComponent implements OnInit {
 
-  lettersArray = ["a", "m", "r", "c", "u", "r", "i", "i", "e", "e"];
-  correctArray = ["m", "a", "r", "i", "e", "c", "u", "r", "i", "e"];
+  lettersArray = ["a", "l", "r", "c", "a", "n", "g", "a", "s"];
+  correctArray = ["c", "a", "r", "l", "s", "a", "g", "a", "n"];
   correctanswer = false;
 
   constructor() { }

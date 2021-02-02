@@ -40,11 +40,11 @@ export class PlanethuntInventoryComponent implements OnInit {
         var currentTime = new Date().getTime() / 1000;
         this.timeStarted = window.localStorage.getItem('timeStarted');
         this.timeElapsed = currentTime - this.timeStarted;
-        if (this.planetsVisited < 10) {
+        if (this.planetsVisited < 9) {
           this.startTime(this.timeElapsed);
         }
-        if (this.planetsVisited === 10) {
-          // if planetsVisited equals 10, subtract timeStarted from current time and save the result to user on mongoDB atlas
+        if (this.planetsVisited === 9) {
+          // if planetsVisited equals 9, subtract timeStarted from current time and save the result to user on mongoDB atlas
           // as timeTaken
           this.timeToDisplay = new Date(this.timeElapsed * 1000)
             .toISOString()
