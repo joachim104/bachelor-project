@@ -15,15 +15,9 @@ export class PlanethuntUsernameFormComponent implements OnInit {
 
   constructor(private userService: UserService) {
     this.userService.nameTaken.subscribe((flag: boolean) => this.nameTaken = flag);
-    console.log('ghete', this.nameTaken);
   }
 
-  ngOnInit() {
-    console.log('nameTaken: ', this.nameTaken);
-    if (this.nameTaken) {
-
-    }
-  }
+  ngOnInit() {}
 
   onSubmit() {
     this.userService.createUser(this.username);

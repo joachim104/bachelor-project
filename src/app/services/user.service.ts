@@ -18,14 +18,11 @@ export class UserService {
       })
       .subscribe((resp) => {
         if (resp !== 'username already taken') {
-          //console.log(resp);
           localStorage.setItem('userId', resp);
           this.router.navigateByUrl('/tutorial');
         } else {
-          //console.log(resp);
           this.router.navigateByUrl('/signup');
           this.nameTaken.emit(true);
-          //console.log('emitter', this.nameTaken);
         }
       });
   }
