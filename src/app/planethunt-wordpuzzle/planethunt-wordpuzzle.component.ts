@@ -1,5 +1,6 @@
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'planethunt-wordpuzzle',
@@ -9,14 +10,21 @@ import { Component, OnInit } from '@angular/core';
 
 export class PlanethuntWordpuzzleComponent implements OnInit {
 
-  lettersArray = ["a", "l", "r", "c", "a", "n", "g", "a", "s"];
-  correctArray = ["c", "a", "r", "l", "s", "a", "g", "a", "n"];
+  lettersArray: string[] = [];
+  correctArray: string[] = [];
   correctanswer = false;
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
-    console.log(this.lettersArray);
+    // håndter det ordentligt og tjek hvis der er noget i det. Service...
+    const tempArray = window.localStorage.getItem('puzzleWord')?.split('');
+    // parse JSON i stedet for at splitte string
+    const tempShuffledArray = window.localStorage.getItem('shuffledWord')?.split('');
+    this.correctArray = tempArray!;
+    this.lettersArray = tempShuffledArray!;
+    console.log('cla: ', this.correctArray);
+    console.log('la: ', this.lettersArray);
   }
 
   drop(event: CdkDragDrop<string[]>) {

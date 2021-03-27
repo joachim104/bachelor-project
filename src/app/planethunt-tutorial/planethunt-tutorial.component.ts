@@ -18,7 +18,7 @@ export class PlanetHuntTutorialComponent implements OnInit {
       this.position = this.position - 1;
     }
     if (this.position !== 4) {
-      document.getElementById('skip')!.textContent = 'skip vejledning';
+      document.getElementById('skip')!.textContent = 'skip tutorial';
     }
   }
 
@@ -27,7 +27,7 @@ export class PlanetHuntTutorialComponent implements OnInit {
       this.position = this.position + 1;
     }
     if (this.position === 4) {
-      document.getElementById('skip')!.textContent = 'start planetjagten';
+      document.getElementById('skip')!.textContent = 'start potter quest';
     }
   }
 }

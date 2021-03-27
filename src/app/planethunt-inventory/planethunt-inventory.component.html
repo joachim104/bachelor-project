@@ -1,26 +1,26 @@
 <div id="inventory">
-  <div class="grid grid-cols-3 gap-4 p-4 text-white">
+  <div class="grid grid-cols-3 gap-4 p-4 text-yellow-300">
     <div class="col-span-3 text-center p-bottom-4 text-4xl uppercase">
-      <span class="text-2xl">mine</span> <br>
-      planeter
+      <span class="text-2xl">my</span> <br>
+      locations
     </div>
     <div class="col-span-3 grid grid-col">
       <div class="col-start-1 col-end-2">
-        <div class="grid grid-col text-xl p-left-12 text-white">
-          <div>Point Total: {{ totalpoints }}</div>
-          <div *ngIf="!finishTime">Tid: {{ timeToDisplay }}</div>
+        <div class="grid grid-col text-xl p-left-12 text-yellow-300">
+          <div>Total Points: {{ totalpoints }}</div>
+          <div *ngIf="!finishTime">Time: {{ timeToDisplay }}</div>
           <div *ngIf="finishTime" class="text-green-600">
-            Tid: {{ timeToDisplay }}
+            Time: {{ timeToDisplay }}
           </div>
-          <div>Bogstaver:</div>
+          <div>Letters:</div>
         </div>
       </div>
       <div
         *ngIf="planetsVisited > 8"
-        class="shadow-lg col-start-3 col-end-4 rounded bg-green-600 ml-4 mr-1 mb-2 p-2 uppercase text-center"
+        class="shadow-lg col-start-3 text-black col-end-4 rounded bg-gradient-to-r from-yellow-800 to-yellow-200 ml-4 mr-1 mb-2 p-2 uppercase text-center"
       >
         <a routerLink="/wordpuzzle">
-          Tillykke. Klik her for at løse ordgåden
+          Congratulations. Click to solve the wordpuzzle
         </a>
       </div>
       <div class="col-span-3 px-2 p-top-2">
@@ -34,7 +34,7 @@
         </div>
       </div>
     </div>
-    <div class="shadow-lg" *ngFor="let planet of planetArray">
+    <div class="shadow-lg text-gray-900 rounded-sm p-1 bg-gradient-to-t from-yellow-800 to-yellow-500" *ngFor="let planet of planetArray">
       <button (click)="scroll(planet.name)">
         <img
           *ngIf="!planet.visited"
@@ -61,9 +61,9 @@
 <ng-container *ngFor="let planet of planetArray">
   <div
     id="{{ planet.name }}"
-    class="shadow-lg m-2 flex flex-col p-4 h-screen text-white"
+    class="shadow-lg m-2 flex flex-col p-4 h-screen text-yellow-300"
   >
-    <p class="text-white text-4xl text-center uppercase px-4">
+    <p class="text-yellow-300 text-4xl text-center uppercase px-4">
       {{ planet.name }}
     </p>
     <a
@@ -116,7 +116,7 @@
   <button (click)="scroll('inventory')">
     <img
       class="max-h-14"
-      src="https://res.cloudinary.com/hololink-io/image/upload/v1611315812/brorfelde%20-%20PlanetHunt/inventory-icon-bg_pacohz.png"
+      src="https://res.cloudinary.com/hololink-io/image/upload/v1611934003/SMK-tests/menu_xi3azy.png"
       alt="inventory navigation"
     />
   </button>

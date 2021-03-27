@@ -17,6 +17,7 @@ export class PlanethuntInventoryComponent implements OnInit {
   interval: any;
   planetsVisited: number = 0;
   finishTime: boolean = false;
+  shuffledLetterArray: string[] = [];
 
   userId: any = '';
 
@@ -40,11 +41,11 @@ export class PlanethuntInventoryComponent implements OnInit {
         var currentTime = new Date().getTime() / 1000;
         this.timeStarted = window.localStorage.getItem('timeStarted');
         this.timeElapsed = currentTime - this.timeStarted;
-        if (this.planetsVisited < 9) {
+        if (this.planetsVisited < 6) {
           this.startTime(this.timeElapsed);
         }
-        if (this.planetsVisited === 9) {
-          // if planetsVisited equals 9, subtract timeStarted from current time and save the result to user on mongoDB atlas
+        if (this.planetsVisited === 6) {
+          // if planetsVisited equals 6, subtract timeStarted from current time and save the result to user on mongoDB atlas
           // as timeTaken
           this.timeToDisplay = new Date(this.timeElapsed * 1000)
             .toISOString()
@@ -61,6 +62,16 @@ export class PlanethuntInventoryComponent implements OnInit {
         this.timeStarted = new Date().getTime() / 1000;
         window.localStorage.setItem('timeStarted', this.timeStarted);
         this.timeToDisplay = new Date(0).toISOString().substr(11, 8);
+        // set the letter array
+        this.setLettersForEachPlanet();
+        // Assign the letters in the shuffled array to each of the planets in the planet array
+        let counter = 0;
+        this.planetArray.forEach(object => {
+          object.letter = this.shuffledLetterArray[counter];
+          counter = counter + 1;
+        });
+        window.localStorage.setItem('shuffledWord', this.shuffledLetterArray.join(''));
+        console.log(this.planetArray);
       }
     });
   }
@@ -92,6 +103,14 @@ export class PlanethuntInventoryComponent implements OnInit {
     });
     this.planetsVisited = tempNumVisited;
   }
+
+  setLettersForEachPlanet() {
+    // split chosen word into array of letters
+    const puzzleWord = window.localStorage.getItem('puzzleWord');
+    const letterArray = puzzleWord?.split('');
+    // shuffle the array
+    const tempArray = letterArray!.sort(() => Math.random() - 0.5);
+    this.shuffledLetterArray = tempArray;
+  }
 }
 
-// dynamic button for wordpuzzle after ten planets are found
