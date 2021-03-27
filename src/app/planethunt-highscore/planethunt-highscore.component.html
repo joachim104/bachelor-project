@@ -3,17 +3,17 @@
     <div class="l-0 t-0 p-2">
       <img class="max-h-16" src="https://res.cloudinary.com/hololink-io/image/upload/c_scale,q_auto,w_464/v1616758650/SMK-tests/harry-potter-hogwarts-gryffindor-slytherin-house-clip-art-crest-72b74940620772b71b1b59f3fb4758e5_zrfnkg.png" alt="Hogwarts Crest">
     </div>
-    <div class="uppercase text-white text-3xl text-center pt-4">
+    <div class="uppercase text-yellow-300 italic text-3xl text-center pt-4">
       High Score
     </div>
     <div class="top-0 right-0 mt-2 mr-2 fixed">
       <a routerLink="/inventory">
-        <img class="max-h-14" src="https://res.cloudinary.com/hololink-io/image/upload/v1611315812/brorfelde%20-%20PlanetHunt/inventory-icon-bg_pacohz.png" alt="inventory navigation">
+        <img class="max-h-14" src="https://res.cloudinary.com/hololink-io/image/upload/v1611934003/SMK-tests/menu_xi3azy.png" alt="inventory navigation">
       </a>
     </div>
   </div>
 
-  <div class="text-white w-full text-left px-8 mb-2">
+  <div class="text-yellow-300 w-full text-left px-8 mb-2">
     <ul class="list-none">
       <li *ngFor="let user of highScoreArray">
         <div class="grid grid-cols-5">
@@ -31,6 +31,13 @@
     </ul>
   </div>
 
+  <div class="w-full">
+    <img class="" src="https://res.cloudinary.com/hololink-io/image/upload/c_scale,q_auto,w_474/v1616839215/SMK-tests/HappyHarry_rnuk92.png" alt="Quidditch Cup">
+  </div>
+
+</ng-container>
+
+<!--
   <div>
     <p class="text-center text-xs text-white">
       Klik på månen for at få en bonusopevelse
@@ -43,8 +50,8 @@
     <a href="intent://arvr.google.com/scene-viewer/1.0?file=https://res.cloudinary.com/hololink-io/image/upload/v1611319863/brorfelde%20-%20PlanetHunt/3dmodels/Moon_1_3474_b1jbts.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;">
       <img class="mx-auto max-h-bonusmoon" src="https://res.cloudinary.com/hololink-io/image/upload/v1611315814/brorfelde%20-%20PlanetHunt/visited-images/m%C3%A5nen_tegusp.png" alt="a 3D model of the moon">
     </a>
-    <!--Keep the commented code below for additional testing of Scene Viewer alternatives in the future-->
-    <!--<model-viewer src="./../assets/3dmodels/Moon_1_3474.glb"
+    Keep the commented code below for additional testing of Scene Viewer alternatives in the future
+    <model-viewer src="./../assets/3dmodels/Moon_1_3474.glb"
                   ar
                   shadow-intensity="2.2"
                   shadow-softness="0"
@@ -53,7 +60,7 @@
                   poster="../../assets/images/visited-images/månen.png"
                   mode="ar_preferred"
                   alt="a 3D model of the moon">
-    </model-viewer>-->
+    </model-viewer>
   </div>
   <div *ngIf="isIphone">
     <a rel="ar" href="https://res.cloudinary.com/hololink-io/raw/upload/v1611319862/brorfelde%20-%20PlanetHunt/3dmodels/Moon_1_3474_ys5lzk.usdz">
@@ -61,9 +68,10 @@
     </a>
   </div>
 
-</ng-container>
+
 
 <script type="module" src="https://unpkg.com/@google/model-viewer@0.3.1/dist/model-viewer.js">
 </script>
 <script nomodule src="https://unpkg.com/@google/model-viewer@0.3.1/dist/model-viewer-legacy.js">
-</script>
+</script> -->
+

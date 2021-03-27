@@ -30,7 +30,7 @@ export class PlanethuntWordpuzzleComponent implements OnInit {
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.lettersArray, event.previousIndex, event.currentIndex);
     if (this.compareArrays(this.lettersArray, this.correctArray)) {
-      document.getElementById("wordpuzzle")!.style.backgroundImage = "url('https://res.cloudinary.com/hololink-io/image/upload/v1611315812/brorfelde%20-%20PlanetHunt/brorfelde-landscape_slpi6b.jpg')";
+      document.getElementById("wordpuzzle")!.style.backgroundImage = "url('https://res.cloudinary.com/hololink-io/image/upload/v1616753333/SMK-tests/hogwarts-e1477515300694_mai5wv.jpg')";
       this.correctanswer = true;
     }
   }
