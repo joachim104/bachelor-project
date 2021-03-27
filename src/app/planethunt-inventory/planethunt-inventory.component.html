@@ -48,7 +48,7 @@
         />
         <p class="text-left text-sm p-left-12">Point: {{ planet.points }}</p>
         <p class="text-left text-sm p-left-12">
-          Bogstav:
+          Letter:
           <span *ngIf="planet.visited; else questionmark">{{
             planet.letter
           }}</span>
@@ -85,23 +85,20 @@
         alt="visited planet image"
       />
     </a>
-    <div class="py-2 px-1">
+    <div class="py-2 px-1 text-yellow-300 italic">
       <span class="text-xl capitalize pb-1"
-        >Fakta om {{ planet.name }}: <br
+        >Facts about {{ planet.name }}: <br
       /></span>
-      <p *ngIf="planet.visited" class="">
-        Diameter: {{ planet.diameterKm }} km <br />
-        Afstand fra Solen: {{ planet.distanceSunKm }} km <br />
+      <p *ngIf="planet.visited">
         {{ planet.facts }}
       </p>
       <p *ngIf="!planet.visited">
-        Du har ikke fundet {{ planet.name }} endnu. Find den for at få mere at
-        vide.
+        You have not found {{ planet.name }} yet. Find it to get points and to learn more.
       </p>
       <p class="text-lg py-2">
-        Point: {{ planet.points }}
+        Points: {{ planet.points }}
         <br />
-        Bogstav:
+        Letter:
         <span *ngIf="planet.visited; else questionmark" class="uppercase">{{
           planet.letter
         }}</span>

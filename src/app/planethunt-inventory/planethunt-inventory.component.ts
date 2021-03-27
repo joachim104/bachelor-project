@@ -41,11 +41,11 @@ export class PlanethuntInventoryComponent implements OnInit {
         var currentTime = new Date().getTime() / 1000;
         this.timeStarted = window.localStorage.getItem('timeStarted');
         this.timeElapsed = currentTime - this.timeStarted;
-        if (this.planetsVisited < 6) {
+        if (this.planetsVisited < 5) {
           this.startTime(this.timeElapsed);
         }
-        if (this.planetsVisited === 6) {
-          // if planetsVisited equals 6, subtract timeStarted from current time and save the result to user on mongoDB atlas
+        if (this.planetsVisited === 5) {
+          // if planetsVisited equals 5, subtract timeStarted from current time and save the result to user on mongoDB atlas
           // as timeTaken
           this.timeToDisplay = new Date(this.timeElapsed * 1000)
             .toISOString()
@@ -110,7 +110,10 @@ export class PlanethuntInventoryComponent implements OnInit {
     const letterArray = puzzleWord?.split('');
     // shuffle the array
     const tempArray = letterArray!.sort(() => Math.random() - 0.5);
-    this.shuffledLetterArray = tempArray;
+    while (tempArray !== letterArray || tempArray !== []) {
+      const tempArray = letterArray!.sort(() => Math.random() - 0.5);
+      this.shuffledLetterArray = tempArray;
+    }
   }
 }
 
