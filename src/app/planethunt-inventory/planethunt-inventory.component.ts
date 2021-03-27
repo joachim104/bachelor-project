@@ -28,10 +28,12 @@ export class PlanethuntInventoryComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   ngOnInit() {
+    console.log('HELLO INVENTORY!');
     this.userId = window.localStorage.getItem('userId');
-    this.baseUrl = `https://viewer.bachelor.hololink.io/`;
+    this.baseUrl = `https://view.quest.hololink.io/`;
     this.userService.getUser(this.userId).subscribe((response) => {
       this.planetArray = response.planets;
+      console.log('pa: ', this.planetArray);
       this.checkNumberOfPlanetsVisitedAndCalculatePoints();
       this.username = response.username;
       // Check if planetsVisited is larger than zero.
@@ -110,10 +112,7 @@ export class PlanethuntInventoryComponent implements OnInit {
     const letterArray = puzzleWord?.split('');
     // shuffle the array
     const tempArray = letterArray!.sort(() => Math.random() - 0.5);
-    while (tempArray !== letterArray || tempArray !== []) {
-      const tempArray = letterArray!.sort(() => Math.random() - 0.5);
-      this.shuffledLetterArray = tempArray;
-    }
+    this.shuffledLetterArray = tempArray;
   }
 }
 

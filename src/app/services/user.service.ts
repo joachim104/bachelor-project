@@ -9,11 +9,12 @@ export class UserService {
 
   constructor(private http: HttpClient, private router: Router) {}
 
-  baseUrl: string = 'https://api.bachelor.hololink.io';
+  // baseUrl: string = 'https://api.quest.hololink.io';
+  baseUrl: string = 'http://localhost:4041';
 
   createUser(username: string) {
     return this.http
-      .post<any>(`${this.baseUrl}/treasurehunt/createUser`, {
+      .post<any>(`${this.baseUrl}/treasurehunt/createPotterUser`, {
         username: username,
       })
       .subscribe((resp) => {
@@ -31,11 +32,11 @@ export class UserService {
   }
 
   getUser(id: string) {
-    return this.http.get<any>(`${this.baseUrl}/treasurehunt/getUser/${id}`);
+    return this.http.get<any>(`${this.baseUrl}/treasurehunt/getPotterUser/${id}`);
   }
 
   getTopTenUsers() {
-    return this.http.get<any>(`${this.baseUrl}/treasurehunt/getTopTenUsers`);
+    return this.http.get<any>(`${this.baseUrl}/treasurehunt/getTopTenPotterUsers`);
   }
 
   updateTimeAndTotalScore(
@@ -44,7 +45,7 @@ export class UserService {
     totalPoints: number
   ) {
     return this.http
-      .patch<any>(`${this.baseUrl}/treasurehunt/updateTimeAndTotalScore`, {
+      .patch<any>(`${this.baseUrl}/treasurehunt/updatePotterTimeAndTotalScore`, {
         userId: userId,
         timeTaken: timeTaken,
         totalPoints: totalPoints,
