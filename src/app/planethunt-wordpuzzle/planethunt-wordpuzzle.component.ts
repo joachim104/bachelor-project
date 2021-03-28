@@ -9,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 
 export class PlanethuntWordpuzzleComponent implements OnInit {
 
-  lettersArray = ["a", "l", "r", "c", "a", "n", "g", "a", "s"];
-  correctArray = ["c", "a", "r", "l", "s", "a", "g", "a", "n"];
+  lettersArray = ["p", "s", "t", "e", "h", "ru", "s", "t", "u"];
+  correctArray = ["s", "p", "ru", "t", "h", "u", "s", "e", "t"];
   correctanswer = false;
 
   constructor() { }
@@ -22,7 +22,7 @@ export class PlanethuntWordpuzzleComponent implements OnInit {
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.lettersArray, event.previousIndex, event.currentIndex);
     if (this.compareArrays(this.lettersArray, this.correctArray)) {
-      document.getElementById("wordpuzzle")!.style.backgroundImage = "url('https://res.cloudinary.com/hololink-io/image/upload/v1611315812/brorfelde%20-%20PlanetHunt/brorfelde-landscape_slpi6b.jpg')";
+      document.getElementById("wordpuzzle")!.style.backgroundImage = "url('https://res.cloudinary.com/hololink-io/image/upload/v1616927402/SMK-tests/tumbafoto_nrv93s.png')";
       this.correctanswer = true;
     }
   }

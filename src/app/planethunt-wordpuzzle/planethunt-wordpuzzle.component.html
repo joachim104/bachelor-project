@@ -4,17 +4,16 @@
       <img class="max-h-16" src="https://res.cloudinary.com/hololink-io/image/upload/f_auto,q_auto/v1616925278/SMK-tests/tumba-logo_dj14uj.png" alt="Tumba Museum Logo">
     </div>
     <div class="uppercase text-white text-3xl text-center pt-4">
-      ordgåden
+      ordgåtan
     </div>
     <div class="top-0 right-0 mt-2 mr-2 fixed">
       <a routerLink="/inventory">
-        <img class="max-h-14" src="https://res.cloudinary.com/hololink-io/image/upload/v1611315812/brorfelde%20-%20PlanetHunt/inventory-icon-bg_pacohz.png" alt="inventory navigation">
+        <img class="max-h-14" src="https://res.cloudinary.com/hololink-io/image/upload/v1611934003/SMK-tests/menu_xi3azy.png" alt="inventory navigation">
       </a>
     </div>
   </div>
   <div class="text-white text-xl mx-2 my-4 text-center">
-    Tillykke. Træk i bogstaverne og arranger dem så de danner navnet på en videnskabsformidler
-    som lavede Cosmos serien og arbejdede på Voyager.
+    Grattis. Dra i bokstäverna och bilda ordet som du kommer fram till i korsordet.
   </div>
 
   <div id="wordpuzzle" class="px-4 py-24 w-full flex flex-row" cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)">
@@ -24,8 +23,8 @@
   <div *ngIf="correctanswer" class="text-center">
     <a routerLink="/correctanswer">
       <button type="submit" (click)="onSubmitClicked()"
-      class="p-4 mt-4 uppercase text-xl text-white text-center rounded bg-gradient-to-r from-brorfelde-dark to-blue-900">
-        rigtigt! indsend dit svar
+      class="p-4 mt-4 uppercase text-xl text-center rounded text-black bg-gradient-to-t from-gray-900 to-white">
+        Bra jobbat! Fortsätt
       </button>
     </a>
   </div>
