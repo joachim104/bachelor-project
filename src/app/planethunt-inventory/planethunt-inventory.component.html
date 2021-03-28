@@ -2,17 +2,17 @@
   <div class="grid grid-cols-3 gap-4 p-4 text-white">
     <div class="col-span-3 text-center p-bottom-4 text-4xl uppercase">
       <span class="text-2xl">mine</span> <br>
-      planeter
+      platser
     </div>
     <div class="col-span-3 grid grid-col">
       <div class="col-start-1 col-end-2">
         <div class="grid grid-col text-xl p-left-12 text-white">
-          <div>Point Total: {{ totalpoints }}</div>
+          <div>Total Poäng: {{ totalpoints }}</div>
           <div *ngIf="!finishTime">Tid: {{ timeToDisplay }}</div>
           <div *ngIf="finishTime" class="text-green-600">
             Tid: {{ timeToDisplay }}
           </div>
-          <div>Bogstaver:</div>
+          <div>Bokstäver:</div>
         </div>
       </div>
       <div
@@ -20,7 +20,7 @@
         class="shadow-lg col-start-3 col-end-4 rounded bg-green-600 ml-4 mr-1 mb-2 p-2 uppercase text-center"
       >
         <a routerLink="/wordpuzzle">
-          Tillykke. Klik her for at løse ordgåden
+          Grattis. Klicka här för att lösa ordgåtan
         </a>
       </div>
       <div class="col-span-3 px-2 p-top-2">
@@ -46,9 +46,9 @@
           src="{{ planet.visitedImageUrl }}"
           alt="visited planet image"
         />
-        <p class="text-left text-sm p-left-12">Point: {{ planet.points }}</p>
+        <p class="text-left text-sm p-left-12">Poäng: {{ planet.points }}</p>
         <p class="text-left text-sm p-left-12">
-          Bogstav:
+          Bokstav:
           <span *ngIf="planet.visited; else questionmark">{{
             planet.letter
           }}</span>
@@ -87,21 +87,18 @@
     </a>
     <div class="py-2 px-1">
       <span class="text-xl capitalize pb-1"
-        >Fakta om {{ planet.name }}: <br
+        >Ledtråd från {{ planet.name }}: <br
       /></span>
       <p *ngIf="planet.visited" class="">
-        Diameter: {{ planet.diameterKm }} km <br />
-        Afstand fra Solen: {{ planet.distanceSunKm }} km <br />
         {{ planet.facts }}
       </p>
       <p *ngIf="!planet.visited">
-        Du har ikke fundet {{ planet.name }} endnu. Find den for at få mere at
-        vide.
+        Du har inte besökt {{ planet.name }} ännu. Hitta platsen för att få ledtråden.
       </p>
       <p class="text-lg py-2">
-        Point: {{ planet.points }}
+        Poäng: {{ planet.points }}
         <br />
-        Bogstav:
+        Bokstav:
         <span *ngIf="planet.visited; else questionmark" class="uppercase">{{
           planet.letter
         }}</span>
@@ -116,7 +113,7 @@
   <button (click)="scroll('inventory')">
     <img
       class="max-h-14"
-      src="https://res.cloudinary.com/hololink-io/image/upload/v1611315812/brorfelde%20-%20PlanetHunt/inventory-icon-bg_pacohz.png"
+      src="https://res.cloudinary.com/hololink-io/image/upload/v1611934003/SMK-tests/menu_xi3azy.png"
       alt="inventory navigation"
     />
   </button>

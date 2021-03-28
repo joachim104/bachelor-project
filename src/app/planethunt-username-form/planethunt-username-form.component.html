@@ -3,17 +3,17 @@
 </div>
 
 <form (ngSubmit)="onSubmit()" #usernameForm="ngForm">
-  <div class="text-center form-group">
+  <div class="text-center text-white form-group">
     <input [(ngModel)]="username"
-            class="m-4 form-control text-center bg-base border-2 text-xl border-solid"
+            class="m-4 form-control text-white text-center bg-base border-2 text-xl border-solid"
             type="text"
-            placeholder="skriv dit brugernavn her"
+            placeholder="skriv användarnamn här"
             required
             name="username">
   </div>
   <br><br>
   <div class="text-center">
-    <button type="submit" (click)="onSubmit()" class="text-white bg-gradient-to-r from-brorfelde-dark to-blue-900 rounded-lg p-4">START PLANETJAGTEN</button>
+    <button type="submit" (click)="onSubmit()" class="text-black bg-gradient-to-t from-gray-900 to-white rounded-lg p-4">börja leta</button>
   </div>
 </form>
 
