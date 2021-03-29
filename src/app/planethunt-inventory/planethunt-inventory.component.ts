@@ -28,12 +28,11 @@ export class PlanethuntInventoryComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   ngOnInit() {
-    console.log('HELLO INVENTORY!');
     this.userId = window.localStorage.getItem('userId');
     this.baseUrl = `https://view.quest.hololink.io/`;
+    // this.baseUrl = `https://0.0.0.0:8080/`
     this.userService.getUser(this.userId).subscribe((response) => {
       this.planetArray = response.planets;
-      console.log('pa: ', this.planetArray);
       this.checkNumberOfPlanetsVisitedAndCalculatePoints();
       this.username = response.username;
       // Check if planetsVisited is larger than zero.
@@ -53,6 +52,8 @@ export class PlanethuntInventoryComponent implements OnInit {
             .toISOString()
             .substr(11, 8);
           this.finishTime = true;
+          console.log('time: ', this.timeElapsed);
+          console.log('tp: ', this.totalpoints);
           this.userService.updateTimeAndTotalScore(
             this.userId,
             this.timeElapsed,
@@ -96,6 +97,7 @@ export class PlanethuntInventoryComponent implements OnInit {
   // Check the number of planets visited and calculate the total number of points. Set values to be sent to db
   // if all planets are visited
   checkNumberOfPlanetsVisitedAndCalculatePoints() {
+    console.log('checking');
     var tempNumVisited = 0;
     this.planetArray.forEach((planet) => {
       if (planet.visited === true) {
