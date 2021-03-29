@@ -15,7 +15,7 @@ export class PlanethuntInventoryComponent implements OnInit {
   timeInSeconds: number = 0;
   timeToDisplay: any;
   interval: any;
-  planetsVisited: number = 0;
+  planetsVisited:   number = 0;
   finishTime: boolean = false;
 
   userId: any = '';

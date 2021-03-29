@@ -16,7 +16,7 @@ export class PlanethuntHighscoreComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit() {
-    this.checkOS();
+    //this.checkOS();
     this.userId = localStorage.getItem('userId');
     this.userService.getUser(this.userId).subscribe((response) => {
       this.currentUser = response;
