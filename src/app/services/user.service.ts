@@ -45,7 +45,7 @@ export class UserService {
     totalPoints: number
   ) {
     return this.http
-      .patch<any>(`${this.baseUrl}/treasurehunt/updateTimeAndTotalDarioScore`, {
+      .patch<any>(`${this.baseUrl}/treasurehunt/updateDarioTimeAndTotalScore`, {
         userId: userId,
         timeTaken: timeTaken,
         totalPoints: totalPoints,
