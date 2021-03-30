@@ -11,6 +11,9 @@ export class PlanethuntStartpageComponent implements OnInit {
 
   ngOnInit() {
     this.checkPlatformAndBrowser();
+    if (window.localStorage.getItem('spruthuset')) {
+      window.localStorage.setItem('spruthuset', 'no');
+    }
   }
 
    checkPlatformAndBrowser() {

@@ -17,6 +17,7 @@ export class PlanethuntInventoryComponent implements OnInit {
   interval: any;
   planetsVisited:   number = 0;
   finishTime: boolean = false;
+  spruthusetVisited: string = '';
 
   userId: any = '';
 
@@ -27,11 +28,19 @@ export class PlanethuntInventoryComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   ngOnInit() {
+    const tempSprut = window.localStorage.getItem('spruthuset');
+    if (tempSprut === 'visited') {
+      this.spruthusetVisited = tempSprut;
+    }
     this.userId = window.localStorage.getItem('userId');
-    this.baseUrl = `https://view.quest.hololink.io/`;
-    //this.baseUrl = `https://0.0.0.0:8080/`
+    this.baseUrl = `https://view.tumbabruk.hololink.quest/`;
+    // this.baseUrl = `https://0.0.0.0:8080/`
     this.userService.getUser(this.userId).subscribe((response) => {
       this.planetArray = response.planets;
+      if (this.spruthusetVisited !== 'visited') {
+        this.planetArray.pop();
+        this.planetArray.pop();
+      }
       this.checkNumberOfPlanetsVisitedAndCalculatePoints();
       this.username = response.username;
       // Check if planetsVisited is larger than zero.

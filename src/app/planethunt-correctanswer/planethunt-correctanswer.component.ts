@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 
 export class PlanethuntCorrectanswerComponent implements OnInit {
 
-  correctAnswer="Carl Sagan";
-
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    window.localStorage.setItem('spruthuset', 'visited');
+  }
 
 }
