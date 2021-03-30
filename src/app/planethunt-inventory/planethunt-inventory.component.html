@@ -31,7 +31,7 @@
           Du klarade det! Klicka här för att se highscore.
         </a>
       </div>
-      <div class="col-span-3 px-2 p-top-2">
+      <div class="col-span-3 px-2 p-top-2" *ngIf="planetsVisited < 8">
         <div
           class="shadow-sm rounded-sm float-left text-center uppercase bg-tile text-black mr-1 mb-1"
           *ngFor="let planet of planetArray"
@@ -39,6 +39,14 @@
           <ng-container *ngIf="planet.visited">
             &nbsp; {{ planet.letter }} &nbsp;
           </ng-container>
+        </div>
+      </div>
+      <div class="col-span-3 px-2 p-top-2" *ngIf="planetsVisited > 6 && spruthusetVisited === 'visited'">
+        <div
+          class="shadow-sm rounded-sm float-left text-center uppercase bg-tile text-black mr-1 mb-1"
+          *ngFor="let letter of correctLetterArray"
+        >
+            &nbsp; {{ letter }} &nbsp;
         </div>
       </div>
     </div>

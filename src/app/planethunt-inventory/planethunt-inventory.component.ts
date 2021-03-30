@@ -18,6 +18,7 @@ export class PlanethuntInventoryComponent implements OnInit {
   planetsVisited:   number = 0;
   finishTime: boolean = false;
   spruthusetVisited: string = '';
+  correctLetterArray = ['s', 'p', 'ru', 't', 'h', 'u', 's', 'e', 't'];
 
   userId: any = '';
 
