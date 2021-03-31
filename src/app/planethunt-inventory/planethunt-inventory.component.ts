@@ -30,18 +30,18 @@ export class PlanethuntInventoryComponent implements OnInit {
 
   ngOnInit() {
     const tempSprut = window.localStorage.getItem('spruthuset');
-    if (tempSprut === 'visited') {
+    /*if (tempSprut === 'visited') {
       this.spruthusetVisited = tempSprut;
-    }
+    }*/
     this.userId = window.localStorage.getItem('userId');
     this.baseUrl = `https://view.tumbabruk.hololink.quest/`;
     // this.baseUrl = `https://0.0.0.0:8080/`
     this.userService.getUser(this.userId).subscribe((response) => {
       this.planetArray = response.planets;
-      if (this.spruthusetVisited !== 'visited') {
+      /*if (this.spruthusetVisited !== 'visited') {
         this.planetArray.pop();
         this.planetArray.pop();
-      }
+      }*/
       this.checkNumberOfPlanetsVisitedAndCalculatePoints();
       this.username = response.username;
       // Check if planetsVisited is larger than zero.
