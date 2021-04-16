@@ -22,13 +22,13 @@ export class PlanethuntInventoryComponent implements OnInit {
 
   username: string = '';
 
-  baseUrl: string = '';
+  baseUrl: string = 'https://view.quest.hololink.io/';
 
   constructor(private userService: UserService) {}
 
   ngOnInit() {
     this.userId = window.localStorage.getItem('userId');
-    this.baseUrl = `https://viewer.bachelor.hololink.io/`;
+    //this.baseUrl = `http://localhost:4041`;
     this.userService.getUser(this.userId).subscribe((response) => {
       this.planetArray = response.planets;
       this.checkNumberOfPlanetsVisitedAndCalculatePoints();

@@ -29,7 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     PlanethuntHighscoreComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     FormsModule,
     DragDropModule,

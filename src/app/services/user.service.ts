@@ -9,7 +9,7 @@ export class UserService {
 
   constructor(private http: HttpClient, private router: Router) {}
 
-  baseUrl: string = 'https://api.bachelor.hololink.io';
+  baseUrl: string = 'https://api.quest.hololink.io';
 
   createUser(username: string) {
     return this.http
