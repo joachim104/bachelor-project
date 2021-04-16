@@ -22,7 +22,7 @@ export class PlanethuntInventoryComponent implements OnInit {
 
   username: string = '';
 
-  baseUrl: string = '';
+  baseUrl: string = 'https://view.quest.hololink.io/';
 
   constructor(private userService: UserService) {}
 
